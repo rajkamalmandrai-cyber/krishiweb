@@ -4506,6 +4506,131 @@ body.modal-open {
   color: #dc2626;
 }
 
+/* --- Travel Time, Provenance & Freshness Tags --- */
+.farmer-traffic-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 6px;
+  vertical-align: middle;
+}
+
+.farmer-traffic-tag--live {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.farmer-traffic-tag--est {
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 1px solid #e5e7eb;
+}
+
+.farmer-best-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.farmer-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #374151;
+  font-size: 0.9375rem;
+}
+
+.farmer-meta-dot {
+  color: #9ca3af;
+}
+
+.farmer-best-card__stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-2);
+  margin-top: 6px;
+}
+
+.farmer-stat-pill {
+  background: #ffffff;
+  border: 1px solid #d1fae5;
+  border-radius: 10px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.farmer-stat-pill__label {
+  font-size: 0.8125rem;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.farmer-stat-pill__val {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #065f46;
+}
+
+.farmer-main-result__explanation {
+  font-size: 0.9375rem;
+  color: #166534;
+  line-height: 1.45;
+  margin: 6px 0 0 0;
+  padding: 8px 12px;
+  background: #f0fdf4;
+  border-radius: 8px;
+  border: 1px dashed #86efac;
+}
+
+.farmer-data-freshness-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.775rem;
+  color: #6b7280;
+  padding-top: 6px;
+  border-top: 1px dashed #e5e7eb;
+  margin-top: 6px;
+}
+
+.farmer-data-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.farmer-freshness-warning {
+  color: #b45309;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.farmer-price-unavailable-banner {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #92400e;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .market-modal-footer {
   display: flex;
   align-items: center;
@@ -4535,6 +4660,17 @@ body.modal-open {
   background: #f3f4f6;
   border-color: #9ca3af;
   color: #111827;
+}
+
+.modal-search-again-btn:disabled,
+.modal-search-again-btn.is-loading {
+  opacity: 0.75;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.modal-search-again-btn.is-loading svg {
+  animation: spin 0.8s linear infinite;
 }
 
 /* --- Mobile Breakpoint Adjustments --- */
@@ -4975,6 +5111,98 @@ body.modal-open {
   color: #b45309;
   font-weight: 600;
 }
+
+/* Voice Confirmation Box - Farmer Friendly */
+.voice-confirm-box {
+  background: #f0fdf4;
+  border: 1.5px solid #86efac;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 4px;
+  animation: fadeIn 220ms ease;
+}
+
+.voice-confirm-box--partial {
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.voice-confirm-box__header {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #166534;
+  margin-bottom: 6px;
+}
+
+.voice-confirm-box--partial .voice-confirm-box__header {
+  color: #92400e;
+}
+
+.voice-confirm-box__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.voice-confirm-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #ffffff;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.voice-confirm-item__icon {
+  font-size: 0.875rem;
+}
+
+.voice-confirm-item__val {
+  font-weight: 700;
+  color: #166534;
+}
+
+.voice-confirm-box__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #15803d;
+  padding-top: 4px;
+  border-top: 1px dashed #bbf7d0;
+}
+
+.voice-confirm-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #bbf7d0;
+  border-top-color: #16a34a;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.voice-confirm-box__missing {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed #fde68a;
+  font-size: 0.8125rem;
+  color: #92400e;
+  line-height: 1.4;
+}
+
+.voice-missing-note {
+  margin: 3px 0;
+  font-weight: 600;
+}
+
 
 
 /* ==========================================================================
