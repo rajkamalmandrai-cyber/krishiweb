@@ -3,3 +3,5 @@
 
 
 scratch/
+.vercel
+.env*
