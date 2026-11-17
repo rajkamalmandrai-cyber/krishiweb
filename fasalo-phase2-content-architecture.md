@@ -1,4 +1,4 @@
-# Fasalo SEO — Phase 2: Content Architecture
+# KrishiWeb (formerly Fasalo) SEO — Phase 2: Content Architecture
 
 **Builds on:** Phase 1 keyword map (confirmed locked)
 **Confirmed inputs:** Maharashtra = initial location focus | Rice + Paddy/Dhan both targeted | Price data = demo/static, no live/gov claims

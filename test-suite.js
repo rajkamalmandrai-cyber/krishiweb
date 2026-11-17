@@ -44,16 +44,17 @@ function createBrowserEnvironment() {
 
 async function runTestSuite() {
   console.log("==================================================================");
-  console.log("FASALO PRODUCTION READINESS VERIFICATION TEST SUITE (10 TESTS)");
+  console.log("KRISHIWEB PRODUCTION READINESS VERIFICATION TEST SUITE (10 TESTS)");
   console.log("==================================================================\n");
 
   let passedTests = 0;
   const totalTests = 10;
 
-  // Start test server on port 3099
+  // Start test server on dynamic port
   const { server } = require('./server.js');
-  await new Promise(resolve => server.listen(3099, resolve));
-  console.log("[Setup] Test server running on http://127.0.0.1:3099\n");
+  await new Promise(resolve => server.listen(0, resolve));
+  const testPort = server.address().port;
+  console.log(`[Setup] Test server running on http://127.0.0.1:${testPort}\n`);
 
   try {
     // -------------------------------------------------------------
@@ -62,7 +63,7 @@ async function runTestSuite() {
     console.log("TEST 1: Search Stability (Thane, Onion, 100 kg, 5 consecutive repeat queries)");
     let runResults = [];
     for (let i = 1; i <= 5; i++) {
-      const res = await get('http://127.0.0.1:3099/api/mandi-prices?crop=Onion&state=Maharashtra');
+      const res = await get(`http://127.0.0.1:${testPort}/api/mandi-prices?crop=Onion&state=Maharashtra`);
       if (res.status !== 200) throw new Error("Mandi prices API failed with status " + res.status);
       runResults.push(res.body.records.map(r => r.name).join(' | '));
     }
@@ -104,8 +105,8 @@ async function runTestSuite() {
     console.log("\nTEST 3: Geographic Filtering & Origin Prioritization");
     // Test route distances from Thane vs Nashik to Mumbai APMC (Vashi)
     // Vashi APMC is ~25 km from Thane, but ~160 km from Nashik
-    const routeThaneToVashi = await get('http://127.0.0.1:3099/api/routes?originLat=19.2183&originLng=72.9781&destLat=19.0760&destLng=72.9990');
-    const routeNashikToVashi = await get('http://127.0.0.1:3099/api/routes?originLat=19.9975&originLng=73.7898&destLat=19.0760&destLng=72.9990');
+    const routeThaneToVashi = await get(`http://127.0.0.1:${testPort}/api/routes?originLat=19.2183&originLng=72.9781&destLat=19.0760&destLng=72.9990`);
+    const routeNashikToVashi = await get(`http://127.0.0.1:${testPort}/api/routes?originLat=19.9975&originLng=73.7898&destLat=19.0760&destLng=72.9990`);
     
     console.log(`  -> Thane to Vashi APMC: ${routeThaneToVashi.body.distanceKm} km, ~${routeThaneToVashi.body.durationMinutes} mins`);
     console.log(`  -> Nashik to Vashi APMC: ${routeNashikToVashi.body.distanceKm} km, ~${routeNashikToVashi.body.durationMinutes} mins`);
@@ -145,7 +146,7 @@ async function runTestSuite() {
     // TEST 5: Travel Time Calculation & Display
     // -------------------------------------------------------------
     console.log("\nTEST 5: Route Distance and Travel Time Computation");
-    const routeSample = await get('http://127.0.0.1:3099/api/routes?originLat=19.2183&originLng=72.9781&destLat=18.5204&destLng=73.8567'); // Thane to Pune
+    const routeSample = await get(`http://127.0.0.1:${testPort}/api/routes?originLat=19.2183&originLng=72.9781&destLat=18.5204&destLng=73.8567`); // Thane to Pune
     console.log(`  -> Thane to Pune APMC: ${routeSample.body.distanceKm} km, ${routeSample.body.durationMinutes} mins`);
     
     if (routeSample.body.distanceKm > 120 && routeSample.body.durationMinutes > 150) {
@@ -188,7 +189,7 @@ async function runTestSuite() {
     // TEST 7: Official AGMARKNET Data Provenance & Freshness
     // -------------------------------------------------------------
     console.log("\nTEST 7: Official Mandi Price Provenance & Freshness");
-    const mandiData = await get('http://127.0.0.1:3099/api/mandi-prices?crop=Onion&state=Maharashtra');
+    const mandiData = await get(`http://127.0.0.1:${testPort}/api/mandi-prices?crop=Onion&state=Maharashtra`);
     const sampleRecord = mandiData.body.records && mandiData.body.records[0];
     
     if (sampleRecord) {
@@ -207,7 +208,7 @@ async function runTestSuite() {
     // TEST 8: Crop with No Daily APMC Records (e.g., Sugarcane) & Graceful Fallback
     // -------------------------------------------------------------
     console.log("\nTEST 8: Graceful Handling for Crops Lacking Daily APMC Data (Sugarcane)");
-    const caneData = await get('http://127.0.0.1:3099/api/mandi-prices?crop=Sugarcane&state=Maharashtra');
+    const caneData = await get(`http://127.0.0.1:${testPort}/api/mandi-prices?crop=Sugarcane&state=Maharashtra`);
     console.log(`  -> Sugarcane official records count: ${caneData.body.records.length}`);
     console.log(`  -> Status: "${caneData.body.status}"`);
     
@@ -243,7 +244,7 @@ async function runTestSuite() {
     // TEST 10: Server Health & Environment Security
     // -------------------------------------------------------------
     console.log("\nTEST 10: Server Health & Environment Key Security");
-    const health = await get('http://127.0.0.1:3099/api/health');
+    const health = await get(`http://127.0.0.1:${testPort}/api/health`);
     console.log(`  -> Server Status: ${health.body.status}`);
     console.log(`  -> dataGovConfigured: ${health.body.dataGovConfigured}`);
     console.log(`  -> googleMapsConfigured: ${health.body.googleMapsConfigured}`);

@@ -1,5 +1,5 @@
 /* --------------------------------------------------------------------------
-   Fasalo
+   KrishiWeb
    Harvest Premium visual identity
    -------------------------------------------------------------------------- */
 
@@ -1216,6 +1216,19 @@ a:hover {
   gap: var(--space-3);
   color: var(--color-text);
   text-decoration: none;
+}
+
+.brand-logo-img {
+  display: block;
+  height: 44px;
+  width: auto;
+  max-height: 48px;
+  object-fit: contain;
+  transition: transform 200ms var(--ease-out);
+}
+
+.brand:hover .brand-logo-img {
+  transform: translateY(-1px);
 }
 
 .brand-mark,
@@ -3561,6 +3574,11 @@ body.is-menu-open main#app {
 
 @media (max-width: 64rem) {
 
+  .brand-logo-img {
+    height: 38px;
+    max-height: 40px;
+  }
+
   .brand-mark,
   .icon-tile {
     width: 2.875rem;
@@ -4018,7 +4036,7 @@ body.is-menu-open main#app {
 }
 
 /* ==========================================================================
-   Fasalo Market Result Modal & Farmer-Friendly UI Styles
+   KrishiWeb Market Result Modal & Farmer-Friendly UI Styles
    ========================================================================== */
 
 body.modal-open {
@@ -5206,7 +5224,7 @@ body.modal-open {
 
 
 /* ==========================================================================
-   FASALO HIGH-QUALITY PERFORMANCE, RESPONSIVE & PREMIUM POLISH
+   KRISHIWEB HIGH-QUALITY PERFORMANCE, RESPONSIVE & PREMIUM POLISH
    ========================================================================== */
 
 /* Hardware acceleration & smooth rendering for hero background */

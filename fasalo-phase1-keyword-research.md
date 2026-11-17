@@ -1,4 +1,4 @@
-# Fasalo SEO — Phase 1: Site Audit, Research Findings & Keyword Map
+# KrishiWeb (formerly Fasalo) SEO — Phase 1: Site Audit, Research Findings & Keyword Map
 
 **Status:** Draft for review. Nothing in Phase 2+ (content clusters, pages, blogs) starts until this is signed off.
 **Live site audited:** https://fasalo-etv5.vercel.app/ (confirmed staging/current live deployment, not final domain)

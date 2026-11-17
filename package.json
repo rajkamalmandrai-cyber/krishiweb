@@ -1,7 +1,7 @@
 {
-  "name": "fasalo-market-intelligence",
+  "name": "krishiweb-market-intelligence",
   "version": "2.1.0",
-  "description": "Fasalo - Agricultural Market Intelligence for Farmers",
+  "description": "KrishiWeb - Agricultural Market Intelligence for Farmers",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -13,8 +13,9 @@
     "agriculture",
     "mandi-prices",
     "farmer",
-    "fasalo"
+    "krishiweb",
+    "krishi-mitra"
   ],
-  "author": "Fasalo Team",
+  "author": "KrishiWeb Team",
   "license": "ISC"
 }

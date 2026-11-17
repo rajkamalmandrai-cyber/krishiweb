@@ -1,5 +1,5 @@
-/* Fasalo UI foundation: progressive enhancement only. */
-(function initialiseFasaloUI() {
+/* KrishiWeb UI foundation: progressive enhancement only. */
+(function initialiseKrishiWebUI() {
   "use strict";
 
   const root = document.documentElement;
@@ -230,7 +230,7 @@
       marketNagpur: "Nagpur",
 
       // --- Quick Actions ---
-      quickActionsTitle: "How can Fasalo help you today?",
+      quickActionsTitle: "How can KrishiWeb help you today?",
       quickAction1Title: "Find Best Market", // Already correct
       quickAction1Desc: "Compare nearby mandi prices and maximize profit.", // Already correct
       quickAction2Title: "Compare Prices", // Already correct
@@ -244,10 +244,10 @@
       weatherTitle: "Local Weather Forecast",
       weatherDesc: "Plan your farming activities based on upcoming conditions.",
 
-      // --- Why Fasalo ---
-      whyBetterEyebrow: "Why Fasalo",
-      whyBetterTitle: "Why Fasalo Gives Better Results",
-      whyBetterSubtitle: "Fasalo combines market price information, intelligent analysis and transport considerations to help farmers make smarter selling decisions.",
+      // --- Why KrishiWeb ---
+      whyBetterEyebrow: "Why KrishiWeb",
+      whyBetterTitle: "Why KrishiWeb Gives Better Results",
+      whyBetterSubtitle: "KrishiWeb combines market price information, intelligent analysis and transport considerations to help farmers make smarter selling decisions.",
       whyBetterCard1Title: "Market Price Data", // Changed from "Government Mandi Data"
       whyBetterCard1Desc: "Uses available market prices.", // Changed from "Uses official mandi prices."
       whyBetterCard2Title: "AI Market Analysis",
@@ -316,13 +316,14 @@
       footerLinkPrivacy: "Privacy Policy", // Already correct
       footerLinkTerms: "Terms of Service", // Already correct
       footerMadeIn: "Made with ❤️ in India 🇮🇳",
-      footerCopyright: "&copy; 2026 Fasalo — Avishkar Project. All rights reserved.",
-      footerCopyrightMobile: "&copy; 2026 Fasalo — Avishkar Project. All rights reserved.",
+      footerCopyright: "&copy; 2026 KrishiWeb — Avishkar Project. All rights reserved.",
+      footerCopyrightMobile: "&copy; 2026 KrishiWeb — Avishkar Project. All rights reserved.",
 
       // Team Section
-      teamFasaloTitle: "Team Fasalo",
+      teamFasaloTitle: "Team KrishiWeb",
+      teamKrishiWebTitle: "Team KrishiWeb",
       avishkarProjectSubtitle: "Avishkar Project • 2026",
-      teamIntro: "Fasalo is a collaborative student project created as part of the Avishkar Project, focused on helping farmers make smarter crop-selling and market decisions.",
+      teamIntro: "KrishiWeb is a collaborative student project created as part of the Avishkar Project, focused on helping farmers make smarter crop-selling and market decisions.",
       rajkamalName: "Rajkamal S. Mandrai",
       rajkamalRole: "Website Design & Development",
       gargiName: "Gargi Singh",
@@ -332,7 +333,7 @@
       prasadName: "Prasad Devkate",
       omName: "Om Nerkar",
       teamMemberRole: "Team Member — Avishkar Project",
-      footerLinkTeam: "Team Fasalo",
+      footerLinkTeam: "Team KrishiWeb",
 
       // Live Table Rows
       tableCottonSub: "High trade volume in Vidarbha",
@@ -349,7 +350,7 @@
       fbmHeaderTitle: "Find Best Market",
       fbmHeaderSubtitle: "Find the most profitable market for your harvest based on price, transport cost, and distance.",
       fbmActionCardTitle: "Find Best Market",
-      fbmHowTitle: "How Fasalo Finds Your Best Market",
+      fbmHowTitle: "How KrishiWeb Finds Your Best Market",
       fbmHowSubtitle: "Our intelligent algorithm calculates net profit after transport costs so you take home more money.",
       fbmCard1Title: "Mandi Prices",
       fbmCard1Desc: "Real-time wholesale prices across major agricultural markets in Maharashtra and nearby states.",
@@ -548,7 +549,7 @@
       marketNagpur: "नागपुर",
 
       // Quick Actions
-      quickActionsTitle: "आज फसालो आपकी मदद कैसे कर सकता है?", // Restored
+      quickActionsTitle: "आज KrishiWeb आपकी मदद कैसे कर सकता है?", // Restored
       quickAction1Title: "सर्वोत्तम बाजार खोजें", // Restored
       quickAction1Desc: "आस-पास की मंडी की कीमतों की तुलना करें और मुनाफा बढ़ाएं।", // Restored
       quickAction2Title: "कीमतों की तुलना करें", // Restored
@@ -562,9 +563,9 @@
       weatherTitle: "स्थानीय मौसम का पूर्वानुमान",
       weatherDesc: "आने वाले मौसम के आधार पर अपनी खेती की योजना बनाएं।",
 
-      // Why Fasalo
-      whyBetterEyebrow: "फसालो ही क्यों",
-      whyBetterTitle: "फसालो बेहतर परिणाम क्यों देता है",
+      // Why KrishiWeb
+      whyBetterEyebrow: "KrishiWeb ही क्यों",
+      whyBetterTitle: "KrishiWeb बेहतर परिणाम क्यों देता है",
       whyBetterSubtitle: "हर सिफारिश सत्यापित सरकारी बाजार कीमतों, बुद्धिमान विश्लेषण और परिवहन अनुकूलन पर आधारित है।", // Restored
       whyBetterCard1Title: "सरकारी मंडी डेटा", // Restored
       whyBetterCard1Desc: "आधिकारिक मंडी कीमतों का उपयोग करता है।", // Restored
@@ -634,13 +635,15 @@
       footerLinkPrivacy: "गोपनीयता नीति", // Already correct
       footerLinkTerms: "सेवा की शर्तें", // Already correct
       footerMadeIn: "❤️ भारत में निर्मित 🇮🇳",
-      footerCopyright: "&copy; 2026 फसालो — अविष्कार प्रोजेक्ट। सर्वाधिकार सुरक्षित।",
-      footerCopyrightMobile: "&copy; 2026 फसालो — अविष्कार प्रोजेक्ट। सर्वाधिकार सुरक्षित।",
+      footerCopyright: "&copy; 2026 KrishiWeb — अविष्कार प्रोजेक्ट। सर्वाधिकार सुरक्षित।",
+      footerCopyrightMobile: "&copy; 2026 KrishiWeb — अविष्कार प्रोजेक्ट। सर्वाधिकार सुरक्षित।",
 
       // Team Section
-      teamFasaloTitle: "टीम फसालो",
+      teamFasaloTitle: "टीम KrishiWeb",
+      teamKrishiWebTitle: "टीम KrishiWeb",
+      teamKrishiWebTitle: "टीम KrishiWeb",
       avishkarProjectSubtitle: "अविष्कार प्रोजेक्ट • 2026",
-      teamIntro: "फसालो अविष्कार प्रोजेक्ट के हिस्से के रूप में बनाया गया एक सहयोगी छात्र प्रोजेक्ट है, जिसका उद्देश्य किसानों को फसल बेचने और बाजार के बेहतर निर्णय लेने में मदद करना है।",
+      teamIntro: "KrishiWeb अविष्कार प्रोजेक्ट के हिस्से के रूप में बनाया गया एक सहयोगी छात्र प्रोजेक्ट है, जिसका उद्देश्य किसानों को फसल बेचने और बाजार के बेहतर निर्णय लेने में मदद करना है।",
       rajkamalName: "राजकमल एस. मंदराई",
       rajkamalRole: "वेबसाइट डिजाइन और विकास",
       gargiName: "गार्गी सिंह",
@@ -650,7 +653,7 @@
       prasadName: "प्रसाद देवकाते",
       omName: "ओम नेरकर",
       teamMemberRole: "टीम सदस्य — अविष्कार प्रोजेक्ट",
-      footerLinkTeam: "टीम फसालो",
+      footerLinkTeam: "टीम KrishiWeb",
 
       // Live Table Rows
       tableCottonSub: "विदर्भ में उच्च व्यापार मात्रा",
@@ -667,7 +670,7 @@
       fbmHeaderTitle: "सर्वोत्तम बाजार खोजें",
       fbmHeaderSubtitle: "मूल्य, परिवहन खर्च और दूरी के आधार पर अपनी फसल के लिए सबसे अधिक लाभदायक बाजार खोजें।",
       fbmActionCardTitle: "सर्वोत्तम बाजार खोजें",
-      fbmHowTitle: "फसालो आपके लिए सर्वोत्तम बाजार कैसे खोजता है",
+      fbmHowTitle: "KrishiWeb आपके लिए सर्वोत्तम बाजार कैसे खोजता है",
       fbmHowSubtitle: "हमारा एल्गोरिदम परिवहन खर्च के बाद शुद्ध लाभ की गणना करता है ताकि आप अधिक मुनाफा कमा सकें।",
       fbmCard1Title: "मंडी भाव",
       fbmCard1Desc: "महाराष्ट्र और पड़ोसी राज्यों के प्रमुख कृषि बाजारों में वास्तविक समय के थोक भाव।",
@@ -875,7 +878,7 @@
       marketNagpur: "नागपूर",
 
       // Quick Actions
-      quickActionsTitle: "आज फसालो तुम्हाला कशी मदत करू शकतो?", // Restored
+      quickActionsTitle: "आज KrishiWeb तुम्हाला कशी मदत करू शकतो?", // Restored
       quickAction1Title: "सर्वोत्तम बाजार शोधा", // Restored
       quickAction1Desc: "जवळच्या मंडईच्या किमतींची तुलना करा आणि नफा वाढवा.", // Restored
       quickAction2Title: "किमतींची तुलना करा", // Restored
@@ -889,9 +892,9 @@
       weatherTitle: "स्थानिक हवामानाचा अंदाज",
       weatherDesc: "येणाऱ्या हवामानानुसार तुमच्या शेतीचे नियोजन करा.",
 
-      // Why Fasalo
-      whyBetterEyebrow: "फसालो का",
-      whyBetterTitle: "फसालो चांगले परिणाम का देतो",
+      // Why KrishiWeb
+      whyBetterEyebrow: "KrishiWeb का",
+      whyBetterTitle: "KrishiWeb चांगले परिणाम का देतो",
       whyBetterSubtitle: "प्रत्येक शिफारस सत्यापित सरकारी बाजार किमती, बुद्धिमान विश्लेषण आणि वाहतूक अनुकूलनावर आधारित आहे.", // Restored
       whyBetterCard1Title: "सरकारी मंडई डेटा", // Restored
       whyBetterCard1Desc: "अधिकृत मंडई किमती वापरतो.", // Restored
@@ -961,13 +964,13 @@
       footerLinkPrivacy: "गोपनीयता धोरण", // Already correct
       footerLinkTerms: "सेवा अटी", // Already correct
       footerMadeIn: "❤️ भारतात बनवलेले 🇮🇳",
-      footerCopyright: "&copy; 2026 फसालो — अविष्कार प्रकल्प. सर्व हक्क राखीव.",
-      footerCopyrightMobile: "&copy; 2026 फसालो — अविष्कार प्रकल्प. सर्व हक्क राखीव.",
+      footerCopyright: "&copy; 2026 KrishiWeb — अविष्कार प्रकल्प. सर्व हक्क राखीव.",
+      footerCopyrightMobile: "&copy; 2026 KrishiWeb — अविष्कार प्रकल्प. सर्व हक्क राखीव.",
 
       // Team Section
-      teamFasaloTitle: "टीम फसालो",
+      teamFasaloTitle: "टीम KrishiWeb",
       avishkarProjectSubtitle: "अविष्कार प्रकल्प • 2026",
-      teamIntro: "फसालो हा अविष्कार प्रकल्पाचा एक सहयोगी विद्यार्थी प्रकल्प आहे, जो शेतकऱ्यांना पीक विक्री आणि बाजाराचे अधिक स्मार्ट निर्णय घेण्यास मदत करण्यावर लक्ष केंद्रित करतो.",
+      teamIntro: "KrishiWeb हा अविष्कार प्रकल्पाचा एक सहयोगी विद्यार्थी प्रकल्प आहे, जो शेतकऱ्यांना पीक विक्री आणि बाजाराचे अधिक स्मार्ट निर्णय घेण्यास मदत करण्यावर लक्ष केंद्रित करतो.",
       rajkamalName: "राजकमल एस. मंदराई",
       rajkamalRole: "वेबसाइट डिझाइन आणि विकास",
       gargiName: "गार्गी सिंग",
@@ -977,7 +980,7 @@
       prasadName: "प्रसाद देवकाते",
       omName: "ओम नेरकर",
       teamMemberRole: "टीम सदस्य — अविष्कार प्रकल्प",
-      footerLinkTeam: "टीम फसालो",
+      footerLinkTeam: "टीम KrishiWeb",
 
       // Live Table Rows
       tableCottonSub: "विदर्भात उच्च व्यापार प्रमाण",
@@ -994,7 +997,7 @@
       fbmHeaderTitle: "सर्वोत्तम बाजार शोधा",
       fbmHeaderSubtitle: "किंमत, वाहतूक खर्च आणि अंतराच्या आधारे तुमच्या पिकासाठी सर्वाधिक नफा देणारा बाजार शोधा.",
       fbmActionCardTitle: "सर्वोत्तम बाजार शोधा",
-      fbmHowTitle: "फसालो तुमच्यासाठी सर्वोत्तम बाजार कसा शोधतो",
+      fbmHowTitle: "KrishiWeb तुमच्यासाठी सर्वोत्तम बाजार कसा शोधतो",
       fbmHowSubtitle: "आमचा अल्गोरिदम वाहतूक खर्चानंतर निव्वळ नफ्याची गणना करतो जेणेकरून तुम्हाला जास्तीत जास्त फायदा मिळेल.",
       fbmCard1Title: "बाजारभाव",
       fbmCard1Desc: "महाराष्ट्र आणि शेजारील राज्यांमधील प्रमुख कृषी बाजारांमधील ताजे घाऊक भाव.",
@@ -1385,7 +1388,7 @@
   setMotionPreference(motionQuery);
   motionQuery.addEventListener?.("change", setMotionPreference);
 
-  // --- Fasalo Market Intelligence Search Engine ---
+  // --- KrishiWeb Market Intelligence Search Engine ---
   const CITY_COORDINATES = {
     // Mumbai Metropolitan & Coastal
     mumbai: { lat: 19.0760, lon: 72.8777 },
@@ -2585,8 +2588,10 @@
     return "";
   }
 
-  // --- FASALO PRODUCTION CONFIGURATION ---
-  const FASALO_CONFIG = {
+  // --- KRISHIWEB PRODUCTION CONFIGURATION ---
+  const KRISHIWEB_CONFIG = {
+    // Backwards-compatible alias
+
     DEFAULT_NEARBY_RADIUS_KM: 100, // Part 2: Reasonable default nearby-market radius
     EXPANDED_RADIUS_KM: 200,       // Controlled fallback radius 1
     MAX_RADIUS_KM: 350,            // Controlled fallback radius 2
@@ -2596,6 +2601,7 @@
     GOODS_VEHICLE_SPEED_KMH: 42,   // Commercial goods vehicle transit speed
     FRESHNESS_THRESHOLD_DAYS: 3    // Part 10: Days before freshness warning triggers
   };
+  const FASALO_CONFIG = KRISHIWEB_CONFIG;
 
   // --- Official Crop to AGMARKNET Commodity Names Mapping ---
   const CROP_COMMODITY_MAP = {
@@ -3528,78 +3534,10 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
         }
       }
     } catch (backendErr) {
-      console.warn("Fasalo backend /api/mandi-prices unavailable, attempting client direct fetch...", backendErr.message);
+      console.warn("KrishiWeb backend /api/mandi-prices unavailable, attempting client direct fetch...", backendErr.message);
     }
 
-    // 2. Direct data.gov.in fetch with CORS support
-    try {
-      const commList = CROP_COMMODITY_MAP[normCrop] || [normCrop.charAt(0).toUpperCase() + normCrop.slice(1)];
-      const directRecords = [];
-      let latestDate = "";
-
-      for (const commodity of commList) {
-        const directUrl = "https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json&filters[state.keyword]=" + encodeURIComponent(targetState) + "&filters[commodity]=" + encodeURIComponent(commodity) + "&limit=50";
-        const res = await fetch(directUrl, { signal: AbortSignal.timeout(8000) });
-        if (res.ok) {
-          const d = await res.json();
-          for (const raw of (d.records || [])) {
-            const minP = parseFloat(raw.min_price);
-            const maxP = parseFloat(raw.max_price);
-            const modP = parseFloat(raw.modal_price);
-            if (isNaN(minP) || isNaN(maxP) || isNaN(modP) || minP <= 0 || maxP <= 0 || modP <= 0) continue;
-            if (minP > maxP || modP < 100 || modP > 150000) continue;
-            if (!raw.arrival_date) continue;
-
-            const mName = (raw.market || "").trim();
-            const dName = (raw.district || "").trim();
-            const loc = resolveMarketLocation(mName, dName);
-            if (!loc) continue;
-
-            if (!latestDate || raw.arrival_date > latestDate) latestDate = raw.arrival_date;
-
-            directRecords.push({
-              id: "gov-" + normCrop + "-" + mName.toLowerCase().replace(/[^a-z0-9]/g, "_"),
-              name: loc.displayName || mName,
-              market: mName,
-              district: dName,
-              state: targetState,
-              crop: normCrop.charAt(0).toUpperCase() + normCrop.slice(1),
-              commodity: raw.commodity,
-              variety: raw.variety || "Local",
-              grade: raw.grade || "FAQ",
-              pricePerQtl: Math.round(modP),
-              minPrice: Math.round(minP),
-              maxPrice: Math.round(maxP),
-              modalPrice: Math.round(modP),
-              priceUnit: "₹/Quintal",
-              arrivalDate: raw.arrival_date,
-              lat: loc.lat,
-              lon: loc.lon,
-              location: loc.locationStr || (dName + ", Maharashtra"),
-              source: "AGMARKNET / OGD India (Ministry of Agriculture)",
-              isRealData: true
-            });
-          }
-        }
-      }
-
-      if (directRecords.length > 0) {
-        const payload = {
-          status: "success",
-          crop: normCrop,
-          state: targetState,
-          totalRecords: directRecords.length,
-          latestArrivalDate: latestDate || "29/10/2026",
-          source: "AGMARKNET / OGD India (Ministry of Agriculture)",
-          records: directRecords
-        };
-        clientMandiDataCache.set(cacheKey, { timestamp: now, data: payload });
-        return payload;
-      }
-    } catch (directErr) {
-      console.warn("Client data.gov.in fetch failed:", directErr.message);
-    }
-
+    // 2. Direct client fetch removed for security (all requests go through secure backend proxy)
     if (BENCHMARK_MANDI_SNAPSHOT && BENCHMARK_MANDI_SNAPSHOT[normCrop]) {
       const snapRecs = BENCHMARK_MANDI_SNAPSHOT[normCrop];
       const payload = {
@@ -4215,7 +4153,7 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
           modalBody.scrollTop = 0;
         }
       } catch (err) {
-        console.error("Fasalo Search Again error:", err);
+        console.error("KrishiWeb Search Again error:", err);
       } finally {
         searchAgainRunning = false;
         modalSearchAgainBtn.disabled = false;
@@ -4313,7 +4251,7 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
         statusEl.textContent = translations[currentLang]?.recommendationReady || "Recommendation ready: Multiple markets compared.";
       }
     } catch (err) {
-      console.error("Fasalo market search error:", err);
+      console.error("KrishiWeb market search error:", err);
       if (statusEl) {
         statusEl.textContent = translations[currentLang]?.searchErrorMsg || "Error calculating recommendations. Please try again.";
       }
@@ -5217,7 +5155,7 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
    * Shared field helpers for future forms. They keep visual state and ARIA
    * state aligned without duplicating validation code across pages.
    */
-  window.FasaloUI = {
+  window.KrishiWebUI = window.FasaloUI = {
     setFieldError(field, message = "Please review this field.") {
       const fieldElement =
         typeof field === "string" ? document.querySelector(field) : field;

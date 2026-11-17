@@ -1,4 +1,4 @@
-# Fasalo SEO — Phase 3: Page-Level SEO, Technical SEO, Schema & Image SEO
+# KrishiWeb (formerly Fasalo) SEO — Phase 3: Page-Level SEO, Technical SEO, Schema & Image SEO
 
 **Builds on:** Phase 1 (keyword map) + Phase 2 (content architecture, confirmed URL structure)
 **Confirmed:** /crop/[name] URLs | About/Contact/Privacy/Terms = real standalone pages | Domain = PENDING | Price data = demo/static
