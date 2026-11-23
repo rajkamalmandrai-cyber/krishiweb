@@ -305,19 +305,17 @@
                   <label class="form-step__label" data-translate-key="cardDateLabel">When do you want to sell?</label>
                 </div>
                 <div class="date-quick-options" role="radiogroup" aria-label="Selling Date">
-                  <button type="button" class="date-option-btn is-selected" data-date-type="today" role="radio" aria-checked="true">
-                    <span data-translate-key="dateToday">Today</span>
+                  <button type="button" class="date-option-btn is-selected" data-date-type="today" role="radio" aria-checked="true" title="Actual latest reported mandi auction rate">
+                    <span data-translate-key="dateToday">Today (Actual)</span>
                   </button>
-                  <button type="button" class="date-option-btn" data-date-type="tomorrow" role="radio" aria-checked="false">
-                    <span data-translate-key="dateTomorrow">Tomorrow</span>
+                  <button type="button" class="date-option-btn" data-date-type="tomorrow" role="radio" aria-checked="false" title="Predicted rate for tomorrow (+1 Day)">
+                    <span data-translate-key="dateTomorrow">Tomorrow (Forecast)</span>
                   </button>
-                  <button type="button" class="date-option-btn" data-date-type="custom" role="radio" aria-checked="false">
-                    <span data-translate-key="dateCustom">Choose Date</span>
+                  <button type="button" class="date-option-btn" data-date-type="day_after" role="radio" aria-checked="false" title="Predicted rate for day after tomorrow (+2 Days)">
+                    <span data-translate-key="dateDayAfter">Day After (+2D)</span>
                   </button>
                 </div>
-                <div class="date-custom-container" id="date-custom-wrap" hidden>
-                  <input class="input date-picker-input" type="date" name="sellingDate" id="selling-date-input" />
-                </div>
+                <input type="hidden" name="sellingDateType" value="today" />
               </div>
 
               <button class="button button--primary button--arrow form-submit-btn" type="submit">

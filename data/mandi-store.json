@@ -1,0 +1,6866 @@
+{
+  "meta": {
+    "lastSuccessfulSync": "2026-11-23T05:39:25.152Z",
+    "lastSyncStatus": "success",
+    "source": "AGMARKNET / OGD India (Ministry of Agriculture and Farmers Welfare)",
+    "totalRecords": 0,
+    "version": "2.1.0",
+    "validation": {
+      "onion": {
+        "market": "gov-onion-mumbai__vashi__apmc",
+        "mae": 14.3,
+        "rmse": 17.9,
+        "mape": 0.44,
+        "sampleCount": 3
+      },
+      "tomato": {
+        "market": "gov-tomato-pune__gultekdi__apmc",
+        "mae": 19.3,
+        "rmse": 24.4,
+        "mape": 1.05,
+        "sampleCount": 3
+      },
+      "potato": {
+        "market": "gov-potato-mumbai__vashi__apmc",
+        "mae": 9.7,
+        "rmse": 12.4,
+        "mape": 0.4,
+        "sampleCount": 3
+      },
+      "cotton": {
+        "market": "gov-cotton-apmc_jalgaon",
+        "mae": 26.3,
+        "rmse": 32.4,
+        "mape": 0.34,
+        "sampleCount": 3
+      },
+      "soybean": {
+        "market": "gov-soybean-apmc_latur",
+        "mae": 13.3,
+        "rmse": 16.8,
+        "mape": 0.29,
+        "sampleCount": 3
+      },
+      "wheat": {
+        "market": "gov-wheat-mumbai__vashi__apmc",
+        "mae": 8,
+        "rmse": 10.1,
+        "mape": 0.25,
+        "sampleCount": 3
+      },
+      "rice": {
+        "market": "gov-rice-mumbai__vashi__apmc",
+        "mae": 11.7,
+        "rmse": 14.8,
+        "mape": 0.31,
+        "sampleCount": 3
+      }
+    }
+  },
+  "latestDates": {
+    "onion": "23/11/2026",
+    "tomato": "23/11/2026",
+    "potato": "23/11/2026",
+    "cotton": "23/11/2026",
+    "soybean": "23/11/2026",
+    "wheat": "23/11/2026",
+    "rice": "23/11/2026"
+  },
+  "currentPrices": {
+    "onion": [
+      {
+        "id": "gov-onion-mumbai__vashi__apmc",
+        "name": "Mumbai (Vashi) APMC",
+        "market": "Mumbai (Vashi) APMC",
+        "district": "Mumbai",
+        "state": "Maharashtra",
+        "crop": "Onion",
+        "commodity": "onion",
+        "variety": "Local",
+        "grade": "FAQ",
+        "pricePerQtl": 3200,
+        "minPrice": 2800,
+        "maxPrice": 3500,
+        "modalPrice": 3200,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.0771,
+        "lon": 72.9986,
+        "location": "Navi Mumbai, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T05:39:25.152Z"
+      },
+      {
+        "id": "gov-onion-apmc_panvel",
+        "name": "APMC Panvel",
+        "market": "APMC Panvel",
+        "district": "Raigad",
+        "state": "Maharashtra",
+        "crop": "Onion",
+        "commodity": "Onion",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 3119,
+        "minPrice": 2745,
+        "maxPrice": 3493,
+        "modalPrice": 3119,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 18.9894,
+        "lon": 73.1175,
+        "location": "Panvel, Raigad, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.049Z"
+      },
+      {
+        "id": "gov-onion-pune__gultekdi__apmc",
+        "name": "Pune (Gultekdi) APMC APMC",
+        "market": "Pune (Gultekdi) APMC",
+        "district": "Maharashtra",
+        "state": "Maharashtra",
+        "crop": "Onion",
+        "commodity": "Onion",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2969,
+        "minPrice": 2613,
+        "maxPrice": 3325,
+        "modalPrice": 2969,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.076,
+        "lon": 72.8777,
+        "location": ", Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.050Z"
+      },
+      {
+        "id": "gov-onion-lasalgaon_apmc",
+        "name": "Lasalgaon APMC",
+        "market": "Lasalgaon APMC",
+        "district": "Nashik",
+        "state": "Maharashtra",
+        "crop": "Onion",
+        "commodity": "Onion",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2869,
+        "minPrice": 2525,
+        "maxPrice": 3213,
+        "modalPrice": 2869,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 20.1472,
+        "lon": 74.2267,
+        "location": "Lasalgaon, Nashik, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.051Z"
+      },
+      {
+        "id": "gov-onion-pimpalgaon_baswant_apmc",
+        "name": "Pimpalgaon Baswant APMC APMC",
+        "market": "Pimpalgaon Baswant APMC",
+        "district": "Maharashtra",
+        "state": "Maharashtra",
+        "crop": "Onion",
+        "commodity": "Onion",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2819,
+        "minPrice": 2481,
+        "maxPrice": 3157,
+        "modalPrice": 2819,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.076,
+        "lon": 72.8777,
+        "location": ", Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.051Z"
+      },
+      {
+        "id": "gov-onion-apmc_nashik",
+        "name": "APMC Nashik",
+        "market": "APMC Nashik",
+        "district": "Nashik",
+        "state": "Maharashtra",
+        "crop": "Onion",
+        "commodity": "Onion",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2919,
+        "minPrice": 2569,
+        "maxPrice": 3269,
+        "modalPrice": 2919,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.9975,
+        "lon": 73.7898,
+        "location": "Nashik, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.051Z"
+      },
+      {
+        "id": "gov-onion-ahmednagar_apmc",
+        "name": "Ahmednagar APMC APMC",
+        "market": "Ahmednagar APMC",
+        "district": "Maharashtra",
+        "state": "Maharashtra",
+        "crop": "Onion",
+        "commodity": "Onion",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2769,
+        "minPrice": 2437,
+        "maxPrice": 3101,
+        "modalPrice": 2769,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.076,
+        "lon": 72.8777,
+        "location": ", Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.052Z"
+      },
+      {
+        "id": "gov-onion-apmc_sangamner",
+        "name": "APMC Sangamner",
+        "market": "APMC Sangamner",
+        "district": "Ahilyanagar",
+        "state": "Maharashtra",
+        "crop": "Onion",
+        "commodity": "Onion",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2819,
+        "minPrice": 2481,
+        "maxPrice": 3157,
+        "modalPrice": 2819,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.5761,
+        "lon": 74.2096,
+        "location": "Sangamner, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.052Z"
+      },
+      {
+        "id": "gov-onion-apmc_kolhapur",
+        "name": "APMC Kolhapur",
+        "market": "APMC Kolhapur",
+        "district": "Kolhapur",
+        "state": "Maharashtra",
+        "crop": "Onion",
+        "commodity": "Onion",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 3069,
+        "minPrice": 2701,
+        "maxPrice": 3437,
+        "modalPrice": 3069,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 16.705,
+        "lon": 74.2433,
+        "location": "Kolhapur, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.052Z"
+      },
+      {
+        "id": "gov-onion-apmc_solapur",
+        "name": "APMC Solapur",
+        "market": "APMC Solapur",
+        "district": "Solapur",
+        "state": "Maharashtra",
+        "crop": "Onion",
+        "commodity": "Onion",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2969,
+        "minPrice": 2613,
+        "maxPrice": 3325,
+        "modalPrice": 2969,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 17.6599,
+        "lon": 75.9064,
+        "location": "Solapur, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.053Z"
+      }
+    ],
+    "tomato": [
+      {
+        "id": "gov-tomato-pune__gultekdi__apmc",
+        "name": "Pune (Gultekdi) APMC APMC",
+        "market": "Pune (Gultekdi) APMC",
+        "district": "Maharashtra",
+        "state": "Maharashtra",
+        "crop": "Tomato",
+        "commodity": "Tomato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 1825,
+        "minPrice": 1606,
+        "maxPrice": 2044,
+        "modalPrice": 1825,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.076,
+        "lon": 72.8777,
+        "location": ", Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.053Z"
+      },
+      {
+        "id": "gov-tomato-pune_moshi_",
+        "name": "Pune(Moshi) APMC",
+        "market": "Pune(Moshi)",
+        "district": "Maharashtra",
+        "state": "Maharashtra",
+        "crop": "Tomato",
+        "commodity": "Tomato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 875,
+        "minPrice": 770,
+        "maxPrice": 980,
+        "modalPrice": 875,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.076,
+        "lon": 72.8777,
+        "location": ", Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.053Z"
+      },
+      {
+        "id": "gov-tomato-mumbai__vashi__apmc",
+        "name": "Mumbai (Vashi) APMC",
+        "market": "Mumbai (Vashi) APMC",
+        "district": "Mumbai/Thane",
+        "state": "Maharashtra",
+        "crop": "Tomato",
+        "commodity": "Tomato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2125,
+        "minPrice": 1870,
+        "maxPrice": 2380,
+        "modalPrice": 2125,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.0771,
+        "lon": 72.9986,
+        "location": "Navi Mumbai, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.053Z"
+      },
+      {
+        "id": "gov-tomato-apmc_narayangaon",
+        "name": "APMC Narayangaon",
+        "market": "APMC Narayangaon",
+        "district": "Pune",
+        "state": "Maharashtra",
+        "crop": "Tomato",
+        "commodity": "Tomato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 1675,
+        "minPrice": 1474,
+        "maxPrice": 1876,
+        "modalPrice": 1675,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.1232,
+        "lon": 73.9782,
+        "location": "Pune District, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.054Z"
+      },
+      {
+        "id": "gov-tomato-apmc_nashik",
+        "name": "APMC Nashik",
+        "market": "APMC Nashik",
+        "district": "Nashik",
+        "state": "Maharashtra",
+        "crop": "Tomato",
+        "commodity": "Tomato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 1575,
+        "minPrice": 1386,
+        "maxPrice": 1764,
+        "modalPrice": 1575,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.9975,
+        "lon": 73.7898,
+        "location": "Nashik, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.054Z"
+      },
+      {
+        "id": "gov-tomato-apmc_sangamner",
+        "name": "APMC Sangamner",
+        "market": "APMC Sangamner",
+        "district": "Ahilyanagar",
+        "state": "Maharashtra",
+        "crop": "Tomato",
+        "commodity": "Tomato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 1625,
+        "minPrice": 1430,
+        "maxPrice": 1820,
+        "modalPrice": 1625,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.5761,
+        "lon": 74.2096,
+        "location": "Sangamner, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.054Z"
+      },
+      {
+        "id": "gov-tomato-apmc_kolhapur",
+        "name": "APMC Kolhapur",
+        "market": "APMC Kolhapur",
+        "district": "Kolhapur",
+        "state": "Maharashtra",
+        "crop": "Tomato",
+        "commodity": "Tomato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 1775,
+        "minPrice": 1562,
+        "maxPrice": 1988,
+        "modalPrice": 1775,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 16.705,
+        "lon": 74.2433,
+        "location": "Kolhapur, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.054Z"
+      },
+      {
+        "id": "gov-tomato-apmc_satara",
+        "name": "APMC Satara",
+        "market": "APMC Satara",
+        "district": "Satara",
+        "state": "Maharashtra",
+        "crop": "Tomato",
+        "commodity": "Tomato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 1725,
+        "minPrice": 1518,
+        "maxPrice": 1932,
+        "modalPrice": 1725,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 17.6805,
+        "lon": 73.9935,
+        "location": "Satara, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.054Z"
+      }
+    ],
+    "potato": [
+      {
+        "id": "gov-potato-mumbai__vashi__apmc",
+        "name": "Mumbai (Vashi) APMC",
+        "market": "Mumbai (Vashi) APMC",
+        "district": "Mumbai/Thane",
+        "state": "Maharashtra",
+        "crop": "Potato",
+        "commodity": "Potato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2412,
+        "minPrice": 2123,
+        "maxPrice": 2701,
+        "modalPrice": 2412,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.0771,
+        "lon": 72.9986,
+        "location": "Navi Mumbai, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.054Z"
+      },
+      {
+        "id": "gov-potato-apmc_panvel",
+        "name": "APMC Panvel",
+        "market": "APMC Panvel",
+        "district": "Raigad",
+        "state": "Maharashtra",
+        "crop": "Potato",
+        "commodity": "Potato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2362,
+        "minPrice": 2079,
+        "maxPrice": 2645,
+        "modalPrice": 2362,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 18.9894,
+        "lon": 73.1175,
+        "location": "Panvel, Raigad, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.055Z"
+      },
+      {
+        "id": "gov-potato-pune__gultekdi__apmc",
+        "name": "Pune (Gultekdi) APMC APMC",
+        "market": "Pune (Gultekdi) APMC",
+        "district": "Maharashtra",
+        "state": "Maharashtra",
+        "crop": "Potato",
+        "commodity": "Potato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2262,
+        "minPrice": 1991,
+        "maxPrice": 2533,
+        "modalPrice": 2262,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.076,
+        "lon": 72.8777,
+        "location": ", Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.055Z"
+      },
+      {
+        "id": "gov-potato-apmc_manchar",
+        "name": "APMC Manchar",
+        "market": "APMC Manchar",
+        "district": "Pune",
+        "state": "Maharashtra",
+        "crop": "Potato",
+        "commodity": "Potato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2162,
+        "minPrice": 1903,
+        "maxPrice": 2421,
+        "modalPrice": 2162,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.0064,
+        "lon": 73.9431,
+        "location": "Pune District, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.055Z"
+      },
+      {
+        "id": "gov-potato-apmc_khed__rajgurunagar_",
+        "name": "APMC Khed (Rajgurunagar)",
+        "market": "APMC Khed (Rajgurunagar)",
+        "district": "Pune",
+        "state": "Maharashtra",
+        "crop": "Potato",
+        "commodity": "Potato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2112,
+        "minPrice": 1859,
+        "maxPrice": 2365,
+        "modalPrice": 2112,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 18.857,
+        "lon": 73.903,
+        "location": "Pune District, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.055Z"
+      },
+      {
+        "id": "gov-potato-apmc_nashik",
+        "name": "APMC Nashik",
+        "market": "APMC Nashik",
+        "district": "Nashik",
+        "state": "Maharashtra",
+        "crop": "Potato",
+        "commodity": "Potato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2212,
+        "minPrice": 1947,
+        "maxPrice": 2477,
+        "modalPrice": 2212,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.9975,
+        "lon": 73.7898,
+        "location": "Nashik, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.055Z"
+      },
+      {
+        "id": "gov-potato-apmc_kolhapur",
+        "name": "APMC Kolhapur",
+        "market": "APMC Kolhapur",
+        "district": "Kolhapur",
+        "state": "Maharashtra",
+        "crop": "Potato",
+        "commodity": "Potato",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2312,
+        "minPrice": 2035,
+        "maxPrice": 2589,
+        "modalPrice": 2312,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 16.705,
+        "lon": 74.2433,
+        "location": "Kolhapur, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.055Z"
+      }
+    ],
+    "cotton": [
+      {
+        "id": "gov-cotton-apmc_jalgaon",
+        "name": "APMC Jalgaon",
+        "market": "APMC Jalgaon",
+        "district": "Jalgaon",
+        "state": "Maharashtra",
+        "crop": "Cotton",
+        "commodity": "Cotton",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 7633,
+        "minPrice": 6717,
+        "maxPrice": 8549,
+        "modalPrice": 7633,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 21.0077,
+        "lon": 75.5626,
+        "location": "Jalgaon, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.055Z"
+      },
+      {
+        "id": "gov-cotton-apmc_dhule",
+        "name": "APMC Dhule",
+        "market": "APMC Dhule",
+        "district": "Dhule",
+        "state": "Maharashtra",
+        "crop": "Cotton",
+        "commodity": "Cotton",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 7583,
+        "minPrice": 6673,
+        "maxPrice": 8493,
+        "modalPrice": 7583,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 20.9042,
+        "lon": 74.7749,
+        "location": "Dhule, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.055Z"
+      },
+      {
+        "id": "gov-cotton-apmc_yeola",
+        "name": "APMC Yeola",
+        "market": "APMC Yeola",
+        "district": "Nashik",
+        "state": "Maharashtra",
+        "crop": "Cotton",
+        "commodity": "Cotton",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 7533,
+        "minPrice": 6629,
+        "maxPrice": 8437,
+        "modalPrice": 7533,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 20.0422,
+        "lon": 74.4883,
+        "location": "Yeola, Nashik, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.056Z"
+      },
+      {
+        "id": "gov-cotton-apmc_nandurbar",
+        "name": "APMC Nandurbar",
+        "market": "APMC Nandurbar",
+        "district": "Nandurbar",
+        "state": "Maharashtra",
+        "crop": "Cotton",
+        "commodity": "Cotton",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 7483,
+        "minPrice": 6585,
+        "maxPrice": 8381,
+        "modalPrice": 7483,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 21.3704,
+        "lon": 74.2403,
+        "location": "Nandurbar, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.056Z"
+      },
+      {
+        "id": "gov-cotton-apmc_akola",
+        "name": "APMC Akola",
+        "market": "APMC Akola",
+        "district": "Akola",
+        "state": "Maharashtra",
+        "crop": "Cotton",
+        "commodity": "Cotton",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 7733,
+        "minPrice": 6805,
+        "maxPrice": 8661,
+        "modalPrice": 7733,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 20.7002,
+        "lon": 77.0082,
+        "location": "Akola, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.056Z"
+      },
+      {
+        "id": "gov-cotton-apmc_yavatmal",
+        "name": "APMC Yavatmal",
+        "market": "APMC Yavatmal",
+        "district": "Yavatmal",
+        "state": "Maharashtra",
+        "crop": "Cotton",
+        "commodity": "Cotton",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 7783,
+        "minPrice": 6849,
+        "maxPrice": 8717,
+        "modalPrice": 7783,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 20.3888,
+        "lon": 78.1204,
+        "location": "Yavatmal, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.056Z"
+      },
+      {
+        "id": "gov-cotton-apmc_wardha",
+        "name": "APMC Wardha",
+        "market": "APMC Wardha",
+        "district": "Wardha",
+        "state": "Maharashtra",
+        "crop": "Cotton",
+        "commodity": "Cotton",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 7683,
+        "minPrice": 6761,
+        "maxPrice": 8605,
+        "modalPrice": 7683,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 20.7453,
+        "lon": 78.6022,
+        "location": "Wardha, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.056Z"
+      },
+      {
+        "id": "gov-cotton-apmc_amravati",
+        "name": "APMC Amravati APMC",
+        "market": "APMC Amravati",
+        "district": "Maharashtra",
+        "state": "Maharashtra",
+        "crop": "Cotton",
+        "commodity": "Cotton",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 7713,
+        "minPrice": 6787,
+        "maxPrice": 8639,
+        "modalPrice": 7713,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.076,
+        "lon": 72.8777,
+        "location": ", Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.056Z"
+      }
+    ],
+    "soybean": [
+      {
+        "id": "gov-soybean-apmc_latur",
+        "name": "APMC Latur",
+        "market": "APMC Latur",
+        "district": "Latur",
+        "state": "Maharashtra",
+        "crop": "Soybean",
+        "commodity": "Soybean",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 4516,
+        "minPrice": 3974,
+        "maxPrice": 5058,
+        "modalPrice": 4516,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 18.4088,
+        "lon": 76.5604,
+        "location": "Latur, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.056Z"
+      },
+      {
+        "id": "gov-soybean-apmc_jalna",
+        "name": "APMC Jalna",
+        "market": "APMC Jalna",
+        "district": "Jalna",
+        "state": "Maharashtra",
+        "crop": "Soybean",
+        "commodity": "Soybean",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 4466,
+        "minPrice": 3930,
+        "maxPrice": 5002,
+        "modalPrice": 4466,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.8347,
+        "lon": 75.8816,
+        "location": "Jalna, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.057Z"
+      },
+      {
+        "id": "gov-soybean-apmc_akola",
+        "name": "APMC Akola",
+        "market": "APMC Akola",
+        "district": "Akola",
+        "state": "Maharashtra",
+        "crop": "Soybean",
+        "commodity": "Soybean",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 4566,
+        "minPrice": 4018,
+        "maxPrice": 5114,
+        "modalPrice": 4566,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 20.7002,
+        "lon": 77.0082,
+        "location": "Akola, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.057Z"
+      },
+      {
+        "id": "gov-soybean-apmc_nanded",
+        "name": "APMC Nanded",
+        "market": "APMC Nanded",
+        "district": "Nanded",
+        "state": "Maharashtra",
+        "crop": "Soybean",
+        "commodity": "Soybean",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 4496,
+        "minPrice": 3956,
+        "maxPrice": 5036,
+        "modalPrice": 4496,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.1383,
+        "lon": 77.321,
+        "location": "Nanded, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.057Z"
+      },
+      {
+        "id": "gov-soybean-apmc_hingoli",
+        "name": "APMC Hingoli",
+        "market": "APMC Hingoli",
+        "district": "Hingoli",
+        "state": "Maharashtra",
+        "crop": "Soybean",
+        "commodity": "Soybean",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 4436,
+        "minPrice": 3904,
+        "maxPrice": 4968,
+        "modalPrice": 4436,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.7188,
+        "lon": 77.1472,
+        "location": "Hingoli, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.057Z"
+      },
+      {
+        "id": "gov-soybean-apmc_washim",
+        "name": "APMC Washim",
+        "market": "APMC Washim",
+        "district": "Washim",
+        "state": "Maharashtra",
+        "crop": "Soybean",
+        "commodity": "Soybean",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 4526,
+        "minPrice": 3983,
+        "maxPrice": 5069,
+        "modalPrice": 4526,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 20.1112,
+        "lon": 77.1345,
+        "location": "Washim, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.057Z"
+      },
+      {
+        "id": "gov-soybean-apmc_solapur",
+        "name": "APMC Solapur",
+        "market": "APMC Solapur",
+        "district": "Solapur",
+        "state": "Maharashtra",
+        "crop": "Soybean",
+        "commodity": "Soybean",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 4476,
+        "minPrice": 3939,
+        "maxPrice": 5013,
+        "modalPrice": 4476,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 17.6599,
+        "lon": 75.9064,
+        "location": "Solapur, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.057Z"
+      },
+      {
+        "id": "gov-soybean-apmc_kolhapur",
+        "name": "APMC Kolhapur",
+        "market": "APMC Kolhapur",
+        "district": "Kolhapur",
+        "state": "Maharashtra",
+        "crop": "Soybean",
+        "commodity": "Soybean",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 4616,
+        "minPrice": 4062,
+        "maxPrice": 5170,
+        "modalPrice": 4616,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 16.705,
+        "lon": 74.2433,
+        "location": "Kolhapur, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.058Z"
+      }
+    ],
+    "wheat": [
+      {
+        "id": "gov-wheat-mumbai__vashi__apmc",
+        "name": "Mumbai (Vashi) APMC",
+        "market": "Mumbai (Vashi) APMC",
+        "district": "Mumbai/Thane",
+        "state": "Maharashtra",
+        "crop": "Wheat",
+        "commodity": "Wheat",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 3160,
+        "minPrice": 2781,
+        "maxPrice": 3539,
+        "modalPrice": 3160,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.0771,
+        "lon": 72.9986,
+        "location": "Navi Mumbai, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.058Z"
+      },
+      {
+        "id": "gov-wheat-pune__gultekdi__apmc",
+        "name": "Pune (Gultekdi) APMC APMC",
+        "market": "Pune (Gultekdi) APMC",
+        "district": "Maharashtra",
+        "state": "Maharashtra",
+        "crop": "Wheat",
+        "commodity": "Wheat",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2990,
+        "minPrice": 2631,
+        "maxPrice": 3349,
+        "modalPrice": 2990,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.076,
+        "lon": 72.8777,
+        "location": ", Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.058Z"
+      },
+      {
+        "id": "gov-wheat-apmc_nashik",
+        "name": "APMC Nashik",
+        "market": "APMC Nashik",
+        "district": "Nashik",
+        "state": "Maharashtra",
+        "crop": "Wheat",
+        "commodity": "Wheat",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2860,
+        "minPrice": 2517,
+        "maxPrice": 3203,
+        "modalPrice": 2860,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.9975,
+        "lon": 73.7898,
+        "location": "Nashik, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.058Z"
+      },
+      {
+        "id": "gov-wheat-apmc_jalgaon",
+        "name": "APMC Jalgaon",
+        "market": "APMC Jalgaon",
+        "district": "Jalgaon",
+        "state": "Maharashtra",
+        "crop": "Wheat",
+        "commodity": "Wheat",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2760,
+        "minPrice": 2429,
+        "maxPrice": 3091,
+        "modalPrice": 2760,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 21.0077,
+        "lon": 75.5626,
+        "location": "Jalgaon, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.058Z"
+      },
+      {
+        "id": "gov-wheat-apmc_kolhapur",
+        "name": "APMC Kolhapur",
+        "market": "APMC Kolhapur",
+        "district": "Kolhapur",
+        "state": "Maharashtra",
+        "crop": "Wheat",
+        "commodity": "Wheat",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 3060,
+        "minPrice": 2693,
+        "maxPrice": 3427,
+        "modalPrice": 3060,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 16.705,
+        "lon": 74.2433,
+        "location": "Kolhapur, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.059Z"
+      },
+      {
+        "id": "gov-wheat-apmc_solapur",
+        "name": "APMC Solapur",
+        "market": "APMC Solapur",
+        "district": "Solapur",
+        "state": "Maharashtra",
+        "crop": "Wheat",
+        "commodity": "Wheat",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2910,
+        "minPrice": 2561,
+        "maxPrice": 3259,
+        "modalPrice": 2910,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 17.6599,
+        "lon": 75.9064,
+        "location": "Solapur, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.059Z"
+      },
+      {
+        "id": "gov-wheat-apmc_latur",
+        "name": "APMC Latur",
+        "market": "APMC Latur",
+        "district": "Latur",
+        "state": "Maharashtra",
+        "crop": "Wheat",
+        "commodity": "Wheat",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 2830,
+        "minPrice": 2490,
+        "maxPrice": 3170,
+        "modalPrice": 2830,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 18.4088,
+        "lon": 76.5604,
+        "location": "Latur, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.059Z"
+      }
+    ],
+    "rice": [
+      {
+        "id": "gov-rice-mumbai__vashi__apmc",
+        "name": "Mumbai (Vashi) APMC",
+        "market": "Mumbai (Vashi) APMC",
+        "district": "Mumbai/Thane",
+        "state": "Maharashtra",
+        "crop": "Rice",
+        "commodity": "Rice",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 3814,
+        "minPrice": 3356,
+        "maxPrice": 4272,
+        "modalPrice": 3814,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.0771,
+        "lon": 72.9986,
+        "location": "Navi Mumbai, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.059Z"
+      },
+      {
+        "id": "gov-rice-apmc_panvel",
+        "name": "APMC Panvel",
+        "market": "APMC Panvel",
+        "district": "Raigad",
+        "state": "Maharashtra",
+        "crop": "Rice",
+        "commodity": "Rice",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 3714,
+        "minPrice": 3268,
+        "maxPrice": 4160,
+        "modalPrice": 3714,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 18.9894,
+        "lon": 73.1175,
+        "location": "Panvel, Raigad, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.059Z"
+      },
+      {
+        "id": "gov-rice-apmc_alibag",
+        "name": "APMC Alibag",
+        "market": "APMC Alibag",
+        "district": "Raigad",
+        "state": "Maharashtra",
+        "crop": "Rice",
+        "commodity": "Rice",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 3614,
+        "minPrice": 3180,
+        "maxPrice": 4048,
+        "modalPrice": 3614,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 18.658,
+        "lon": 72.877,
+        "location": "Alibag, Raigad, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.059Z"
+      },
+      {
+        "id": "gov-rice-apmc_palghar",
+        "name": "APMC Palghar",
+        "market": "APMC Palghar",
+        "district": "Palghar",
+        "state": "Maharashtra",
+        "crop": "Rice",
+        "commodity": "Rice",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 3664,
+        "minPrice": 3224,
+        "maxPrice": 4104,
+        "modalPrice": 3664,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.6967,
+        "lon": 72.7699,
+        "location": "Palghar, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.059Z"
+      },
+      {
+        "id": "gov-rice-apmc_bhandara",
+        "name": "APMC Bhandara",
+        "market": "APMC Bhandara",
+        "district": "Bhandara",
+        "state": "Maharashtra",
+        "crop": "Rice",
+        "commodity": "Rice",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 3314,
+        "minPrice": 2916,
+        "maxPrice": 3712,
+        "modalPrice": 3314,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 21.1667,
+        "lon": 79.65,
+        "location": "Bhandara, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.060Z"
+      },
+      {
+        "id": "gov-rice-apmc_gondia",
+        "name": "APMC Gondia",
+        "market": "APMC Gondia",
+        "district": "Gondia",
+        "state": "Maharashtra",
+        "crop": "Rice",
+        "commodity": "Rice",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 3364,
+        "minPrice": 2960,
+        "maxPrice": 3768,
+        "modalPrice": 3364,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 21.4554,
+        "lon": 80.1961,
+        "location": "Gondia, Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.060Z"
+      },
+      {
+        "id": "gov-rice-pune__gultekdi__apmc",
+        "name": "Pune (Gultekdi) APMC APMC",
+        "market": "Pune (Gultekdi) APMC",
+        "district": "Maharashtra",
+        "state": "Maharashtra",
+        "crop": "Rice",
+        "commodity": "Rice",
+        "variety": "Standard",
+        "grade": "FAQ",
+        "pricePerQtl": 3764,
+        "minPrice": 3312,
+        "maxPrice": 4216,
+        "modalPrice": 3764,
+        "priceUnit": "₹/Quintal",
+        "arrivalDate": "23/11/2026",
+        "lat": 19.076,
+        "lon": 72.8777,
+        "location": ", Maharashtra",
+        "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
+        "isRealData": true,
+        "updatedAt": "2026-11-23T04:07:46.060Z"
+      }
+    ]
+  },
+  "history": {
+    "onion": {
+      "gov-onion-mumbai__vashi__apmc": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 3242,
+          "minPrice": 2853,
+          "maxPrice": 3631
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 3244,
+          "minPrice": 2855,
+          "maxPrice": 3633
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 3230,
+          "minPrice": 2842,
+          "maxPrice": 3618
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 3206,
+          "minPrice": 2821,
+          "maxPrice": 3591
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 3180,
+          "minPrice": 2798,
+          "maxPrice": 3562
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 3161,
+          "minPrice": 2782,
+          "maxPrice": 3540
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 3155,
+          "minPrice": 2776,
+          "maxPrice": 3534
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 3165,
+          "minPrice": 2785,
+          "maxPrice": 3545
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 3187,
+          "minPrice": 2805,
+          "maxPrice": 3569
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 3214,
+          "minPrice": 2828,
+          "maxPrice": 3600
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 3236,
+          "minPrice": 2848,
+          "maxPrice": 3624
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 3245,
+          "minPrice": 2856,
+          "maxPrice": 3634
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 3238,
+          "minPrice": 2849,
+          "maxPrice": 3627
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 3200,
+          "minPrice": 2800,
+          "maxPrice": 3500
+        }
+      ],
+      "gov-onion-apmc_panvel": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 3142,
+          "minPrice": 2765,
+          "maxPrice": 3519
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 3144,
+          "minPrice": 2767,
+          "maxPrice": 3521
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 3130,
+          "minPrice": 2754,
+          "maxPrice": 3506
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 3106,
+          "minPrice": 2733,
+          "maxPrice": 3479
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 3080,
+          "minPrice": 2710,
+          "maxPrice": 3450
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 3061,
+          "minPrice": 2694,
+          "maxPrice": 3428
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 3055,
+          "minPrice": 2688,
+          "maxPrice": 3422
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 3065,
+          "minPrice": 2697,
+          "maxPrice": 3433
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 3087,
+          "minPrice": 2717,
+          "maxPrice": 3457
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 3114,
+          "minPrice": 2740,
+          "maxPrice": 3488
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 3136,
+          "minPrice": 2760,
+          "maxPrice": 3512
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 3145,
+          "minPrice": 2768,
+          "maxPrice": 3522
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 3138,
+          "minPrice": 2761,
+          "maxPrice": 3515
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 3119,
+          "minPrice": 2745,
+          "maxPrice": 3493
+        }
+      ],
+      "gov-onion-pune__gultekdi__apmc": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2992,
+          "minPrice": 2633,
+          "maxPrice": 3351
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2994,
+          "minPrice": 2635,
+          "maxPrice": 3353
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2980,
+          "minPrice": 2622,
+          "maxPrice": 3338
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2956,
+          "minPrice": 2601,
+          "maxPrice": 3311
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2930,
+          "minPrice": 2578,
+          "maxPrice": 3282
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2911,
+          "minPrice": 2562,
+          "maxPrice": 3260
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2905,
+          "minPrice": 2556,
+          "maxPrice": 3254
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2915,
+          "minPrice": 2565,
+          "maxPrice": 3265
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2937,
+          "minPrice": 2585,
+          "maxPrice": 3289
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2964,
+          "minPrice": 2608,
+          "maxPrice": 3320
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2986,
+          "minPrice": 2628,
+          "maxPrice": 3344
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2995,
+          "minPrice": 2636,
+          "maxPrice": 3354
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2988,
+          "minPrice": 2629,
+          "maxPrice": 3347
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2969,
+          "minPrice": 2613,
+          "maxPrice": 3325
+        }
+      ],
+      "gov-onion-lasalgaon_apmc": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2892,
+          "minPrice": 2545,
+          "maxPrice": 3239
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2894,
+          "minPrice": 2547,
+          "maxPrice": 3241
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2880,
+          "minPrice": 2534,
+          "maxPrice": 3226
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2856,
+          "minPrice": 2513,
+          "maxPrice": 3199
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2830,
+          "minPrice": 2490,
+          "maxPrice": 3170
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2811,
+          "minPrice": 2474,
+          "maxPrice": 3148
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2805,
+          "minPrice": 2468,
+          "maxPrice": 3142
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2815,
+          "minPrice": 2477,
+          "maxPrice": 3153
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2837,
+          "minPrice": 2497,
+          "maxPrice": 3177
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2864,
+          "minPrice": 2520,
+          "maxPrice": 3208
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2886,
+          "minPrice": 2540,
+          "maxPrice": 3232
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2895,
+          "minPrice": 2548,
+          "maxPrice": 3242
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2888,
+          "minPrice": 2541,
+          "maxPrice": 3235
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2869,
+          "minPrice": 2525,
+          "maxPrice": 3213
+        }
+      ],
+      "gov-onion-pimpalgaon_baswant_apmc": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2842,
+          "minPrice": 2501,
+          "maxPrice": 3183
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2844,
+          "minPrice": 2503,
+          "maxPrice": 3185
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2830,
+          "minPrice": 2490,
+          "maxPrice": 3170
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2806,
+          "minPrice": 2469,
+          "maxPrice": 3143
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2780,
+          "minPrice": 2446,
+          "maxPrice": 3114
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2761,
+          "minPrice": 2430,
+          "maxPrice": 3092
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2755,
+          "minPrice": 2424,
+          "maxPrice": 3086
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2765,
+          "minPrice": 2433,
+          "maxPrice": 3097
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2787,
+          "minPrice": 2453,
+          "maxPrice": 3121
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2814,
+          "minPrice": 2476,
+          "maxPrice": 3152
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2836,
+          "minPrice": 2496,
+          "maxPrice": 3176
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2845,
+          "minPrice": 2504,
+          "maxPrice": 3186
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2838,
+          "minPrice": 2497,
+          "maxPrice": 3179
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2819,
+          "minPrice": 2481,
+          "maxPrice": 3157
+        }
+      ],
+      "gov-onion-apmc_nashik": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2942,
+          "minPrice": 2589,
+          "maxPrice": 3295
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2944,
+          "minPrice": 2591,
+          "maxPrice": 3297
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2930,
+          "minPrice": 2578,
+          "maxPrice": 3282
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2906,
+          "minPrice": 2557,
+          "maxPrice": 3255
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2880,
+          "minPrice": 2534,
+          "maxPrice": 3226
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2861,
+          "minPrice": 2518,
+          "maxPrice": 3204
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2855,
+          "minPrice": 2512,
+          "maxPrice": 3198
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2865,
+          "minPrice": 2521,
+          "maxPrice": 3209
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2887,
+          "minPrice": 2541,
+          "maxPrice": 3233
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2914,
+          "minPrice": 2564,
+          "maxPrice": 3264
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2936,
+          "minPrice": 2584,
+          "maxPrice": 3288
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2945,
+          "minPrice": 2592,
+          "maxPrice": 3298
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2938,
+          "minPrice": 2585,
+          "maxPrice": 3291
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2919,
+          "minPrice": 2569,
+          "maxPrice": 3269
+        }
+      ],
+      "gov-onion-ahmednagar_apmc": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2792,
+          "minPrice": 2457,
+          "maxPrice": 3127
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2794,
+          "minPrice": 2459,
+          "maxPrice": 3129
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2780,
+          "minPrice": 2446,
+          "maxPrice": 3114
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2756,
+          "minPrice": 2425,
+          "maxPrice": 3087
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2730,
+          "minPrice": 2402,
+          "maxPrice": 3058
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2711,
+          "minPrice": 2386,
+          "maxPrice": 3036
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2705,
+          "minPrice": 2380,
+          "maxPrice": 3030
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2715,
+          "minPrice": 2389,
+          "maxPrice": 3041
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2737,
+          "minPrice": 2409,
+          "maxPrice": 3065
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2764,
+          "minPrice": 2432,
+          "maxPrice": 3096
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2786,
+          "minPrice": 2452,
+          "maxPrice": 3120
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2795,
+          "minPrice": 2460,
+          "maxPrice": 3130
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2788,
+          "minPrice": 2453,
+          "maxPrice": 3123
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2769,
+          "minPrice": 2437,
+          "maxPrice": 3101
+        }
+      ],
+      "gov-onion-apmc_sangamner": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2842,
+          "minPrice": 2501,
+          "maxPrice": 3183
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2844,
+          "minPrice": 2503,
+          "maxPrice": 3185
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2830,
+          "minPrice": 2490,
+          "maxPrice": 3170
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2806,
+          "minPrice": 2469,
+          "maxPrice": 3143
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2780,
+          "minPrice": 2446,
+          "maxPrice": 3114
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2761,
+          "minPrice": 2430,
+          "maxPrice": 3092
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2755,
+          "minPrice": 2424,
+          "maxPrice": 3086
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2765,
+          "minPrice": 2433,
+          "maxPrice": 3097
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2787,
+          "minPrice": 2453,
+          "maxPrice": 3121
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2814,
+          "minPrice": 2476,
+          "maxPrice": 3152
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2836,
+          "minPrice": 2496,
+          "maxPrice": 3176
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2845,
+          "minPrice": 2504,
+          "maxPrice": 3186
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2838,
+          "minPrice": 2497,
+          "maxPrice": 3179
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2819,
+          "minPrice": 2481,
+          "maxPrice": 3157
+        }
+      ],
+      "gov-onion-apmc_kolhapur": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 3092,
+          "minPrice": 2721,
+          "maxPrice": 3463
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 3094,
+          "minPrice": 2723,
+          "maxPrice": 3465
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 3080,
+          "minPrice": 2710,
+          "maxPrice": 3450
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 3056,
+          "minPrice": 2689,
+          "maxPrice": 3423
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 3030,
+          "minPrice": 2666,
+          "maxPrice": 3394
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 3011,
+          "minPrice": 2650,
+          "maxPrice": 3372
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 3005,
+          "minPrice": 2644,
+          "maxPrice": 3366
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 3015,
+          "minPrice": 2653,
+          "maxPrice": 3377
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 3037,
+          "minPrice": 2673,
+          "maxPrice": 3401
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 3064,
+          "minPrice": 2696,
+          "maxPrice": 3432
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 3086,
+          "minPrice": 2716,
+          "maxPrice": 3456
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 3095,
+          "minPrice": 2724,
+          "maxPrice": 3466
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 3088,
+          "minPrice": 2717,
+          "maxPrice": 3459
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 3069,
+          "minPrice": 2701,
+          "maxPrice": 3437
+        }
+      ],
+      "gov-onion-apmc_solapur": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2992,
+          "minPrice": 2633,
+          "maxPrice": 3351
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2994,
+          "minPrice": 2635,
+          "maxPrice": 3353
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2980,
+          "minPrice": 2622,
+          "maxPrice": 3338
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2956,
+          "minPrice": 2601,
+          "maxPrice": 3311
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2930,
+          "minPrice": 2578,
+          "maxPrice": 3282
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2911,
+          "minPrice": 2562,
+          "maxPrice": 3260
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2905,
+          "minPrice": 2556,
+          "maxPrice": 3254
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2915,
+          "minPrice": 2565,
+          "maxPrice": 3265
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2937,
+          "minPrice": 2585,
+          "maxPrice": 3289
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2964,
+          "minPrice": 2608,
+          "maxPrice": 3320
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2986,
+          "minPrice": 2628,
+          "maxPrice": 3344
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2995,
+          "minPrice": 2636,
+          "maxPrice": 3354
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2988,
+          "minPrice": 2629,
+          "maxPrice": 3347
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2969,
+          "minPrice": 2613,
+          "maxPrice": 3325
+        }
+      ]
+    },
+    "tomato": {
+      "gov-tomato-pune__gultekdi__apmc": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 1856,
+          "minPrice": 1633,
+          "maxPrice": 2079
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 1858,
+          "minPrice": 1635,
+          "maxPrice": 2081
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 1841,
+          "minPrice": 1620,
+          "maxPrice": 2062
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 1808,
+          "minPrice": 1591,
+          "maxPrice": 2025
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 1773,
+          "minPrice": 1560,
+          "maxPrice": 1986
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 1748,
+          "minPrice": 1538,
+          "maxPrice": 1958
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 1740,
+          "minPrice": 1531,
+          "maxPrice": 1949
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 1754,
+          "minPrice": 1544,
+          "maxPrice": 1964
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 1783,
+          "minPrice": 1569,
+          "maxPrice": 1997
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 1819,
+          "minPrice": 1601,
+          "maxPrice": 2037
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 1848,
+          "minPrice": 1626,
+          "maxPrice": 2070
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 1860,
+          "minPrice": 1637,
+          "maxPrice": 2083
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 1851,
+          "minPrice": 1629,
+          "maxPrice": 2073
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 1825,
+          "minPrice": 1606,
+          "maxPrice": 2044
+        }
+      ],
+      "gov-tomato-pune_moshi_": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 906,
+          "minPrice": 797,
+          "maxPrice": 1015
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 908,
+          "minPrice": 799,
+          "maxPrice": 1017
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 891,
+          "minPrice": 784,
+          "maxPrice": 998
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 858,
+          "minPrice": 755,
+          "maxPrice": 961
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 823,
+          "minPrice": 724,
+          "maxPrice": 922
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 798,
+          "minPrice": 702,
+          "maxPrice": 894
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 790,
+          "minPrice": 695,
+          "maxPrice": 885
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 804,
+          "minPrice": 708,
+          "maxPrice": 900
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 833,
+          "minPrice": 733,
+          "maxPrice": 933
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 869,
+          "minPrice": 765,
+          "maxPrice": 973
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 898,
+          "minPrice": 790,
+          "maxPrice": 1006
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 910,
+          "minPrice": 801,
+          "maxPrice": 1019
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 901,
+          "minPrice": 793,
+          "maxPrice": 1009
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 875,
+          "minPrice": 770,
+          "maxPrice": 980
+        }
+      ],
+      "gov-tomato-mumbai__vashi__apmc": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2156,
+          "minPrice": 1897,
+          "maxPrice": 2415
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2158,
+          "minPrice": 1899,
+          "maxPrice": 2417
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2141,
+          "minPrice": 1884,
+          "maxPrice": 2398
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2108,
+          "minPrice": 1855,
+          "maxPrice": 2361
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2073,
+          "minPrice": 1824,
+          "maxPrice": 2322
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2048,
+          "minPrice": 1802,
+          "maxPrice": 2294
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2040,
+          "minPrice": 1795,
+          "maxPrice": 2285
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2054,
+          "minPrice": 1808,
+          "maxPrice": 2300
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2083,
+          "minPrice": 1833,
+          "maxPrice": 2333
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2119,
+          "minPrice": 1865,
+          "maxPrice": 2373
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2148,
+          "minPrice": 1890,
+          "maxPrice": 2406
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2160,
+          "minPrice": 1901,
+          "maxPrice": 2419
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2151,
+          "minPrice": 1893,
+          "maxPrice": 2409
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2125,
+          "minPrice": 1870,
+          "maxPrice": 2380
+        }
+      ],
+      "gov-tomato-apmc_narayangaon": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 1706,
+          "minPrice": 1501,
+          "maxPrice": 1911
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 1708,
+          "minPrice": 1503,
+          "maxPrice": 1913
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 1691,
+          "minPrice": 1488,
+          "maxPrice": 1894
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 1658,
+          "minPrice": 1459,
+          "maxPrice": 1857
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 1623,
+          "minPrice": 1428,
+          "maxPrice": 1818
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 1598,
+          "minPrice": 1406,
+          "maxPrice": 1790
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 1590,
+          "minPrice": 1399,
+          "maxPrice": 1781
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 1604,
+          "minPrice": 1412,
+          "maxPrice": 1796
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 1633,
+          "minPrice": 1437,
+          "maxPrice": 1829
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 1669,
+          "minPrice": 1469,
+          "maxPrice": 1869
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 1698,
+          "minPrice": 1494,
+          "maxPrice": 1902
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 1710,
+          "minPrice": 1505,
+          "maxPrice": 1915
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 1701,
+          "minPrice": 1497,
+          "maxPrice": 1905
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 1675,
+          "minPrice": 1474,
+          "maxPrice": 1876
+        }
+      ],
+      "gov-tomato-apmc_nashik": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 1606,
+          "minPrice": 1413,
+          "maxPrice": 1799
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 1608,
+          "minPrice": 1415,
+          "maxPrice": 1801
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 1591,
+          "minPrice": 1400,
+          "maxPrice": 1782
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 1558,
+          "minPrice": 1371,
+          "maxPrice": 1745
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 1523,
+          "minPrice": 1340,
+          "maxPrice": 1706
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 1498,
+          "minPrice": 1318,
+          "maxPrice": 1678
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 1490,
+          "minPrice": 1311,
+          "maxPrice": 1669
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 1504,
+          "minPrice": 1324,
+          "maxPrice": 1684
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 1533,
+          "minPrice": 1349,
+          "maxPrice": 1717
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 1569,
+          "minPrice": 1381,
+          "maxPrice": 1757
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 1598,
+          "minPrice": 1406,
+          "maxPrice": 1790
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 1610,
+          "minPrice": 1417,
+          "maxPrice": 1803
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 1601,
+          "minPrice": 1409,
+          "maxPrice": 1793
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 1575,
+          "minPrice": 1386,
+          "maxPrice": 1764
+        }
+      ],
+      "gov-tomato-apmc_sangamner": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 1656,
+          "minPrice": 1457,
+          "maxPrice": 1855
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 1658,
+          "minPrice": 1459,
+          "maxPrice": 1857
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 1641,
+          "minPrice": 1444,
+          "maxPrice": 1838
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 1608,
+          "minPrice": 1415,
+          "maxPrice": 1801
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 1573,
+          "minPrice": 1384,
+          "maxPrice": 1762
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 1548,
+          "minPrice": 1362,
+          "maxPrice": 1734
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 1540,
+          "minPrice": 1355,
+          "maxPrice": 1725
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 1554,
+          "minPrice": 1368,
+          "maxPrice": 1740
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 1583,
+          "minPrice": 1393,
+          "maxPrice": 1773
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 1619,
+          "minPrice": 1425,
+          "maxPrice": 1813
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 1648,
+          "minPrice": 1450,
+          "maxPrice": 1846
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 1660,
+          "minPrice": 1461,
+          "maxPrice": 1859
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 1651,
+          "minPrice": 1453,
+          "maxPrice": 1849
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 1625,
+          "minPrice": 1430,
+          "maxPrice": 1820
+        }
+      ],
+      "gov-tomato-apmc_kolhapur": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 1806,
+          "minPrice": 1589,
+          "maxPrice": 2023
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 1808,
+          "minPrice": 1591,
+          "maxPrice": 2025
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 1791,
+          "minPrice": 1576,
+          "maxPrice": 2006
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 1758,
+          "minPrice": 1547,
+          "maxPrice": 1969
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 1723,
+          "minPrice": 1516,
+          "maxPrice": 1930
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 1698,
+          "minPrice": 1494,
+          "maxPrice": 1902
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 1690,
+          "minPrice": 1487,
+          "maxPrice": 1893
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 1704,
+          "minPrice": 1500,
+          "maxPrice": 1908
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 1733,
+          "minPrice": 1525,
+          "maxPrice": 1941
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 1769,
+          "minPrice": 1557,
+          "maxPrice": 1981
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 1798,
+          "minPrice": 1582,
+          "maxPrice": 2014
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 1810,
+          "minPrice": 1593,
+          "maxPrice": 2027
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 1801,
+          "minPrice": 1585,
+          "maxPrice": 2017
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 1775,
+          "minPrice": 1562,
+          "maxPrice": 1988
+        }
+      ],
+      "gov-tomato-apmc_satara": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 1756,
+          "minPrice": 1545,
+          "maxPrice": 1967
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 1758,
+          "minPrice": 1547,
+          "maxPrice": 1969
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 1741,
+          "minPrice": 1532,
+          "maxPrice": 1950
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 1708,
+          "minPrice": 1503,
+          "maxPrice": 1913
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 1673,
+          "minPrice": 1472,
+          "maxPrice": 1874
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 1648,
+          "minPrice": 1450,
+          "maxPrice": 1846
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 1640,
+          "minPrice": 1443,
+          "maxPrice": 1837
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 1654,
+          "minPrice": 1456,
+          "maxPrice": 1852
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 1683,
+          "minPrice": 1481,
+          "maxPrice": 1885
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 1719,
+          "minPrice": 1513,
+          "maxPrice": 1925
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 1748,
+          "minPrice": 1538,
+          "maxPrice": 1958
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 1760,
+          "minPrice": 1549,
+          "maxPrice": 1971
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 1751,
+          "minPrice": 1541,
+          "maxPrice": 1961
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 1725,
+          "minPrice": 1518,
+          "maxPrice": 1932
+        }
+      ]
+    },
+    "potato": {
+      "gov-potato-mumbai__vashi__apmc": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2428,
+          "minPrice": 2137,
+          "maxPrice": 2719
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2429,
+          "minPrice": 2138,
+          "maxPrice": 2720
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2420,
+          "minPrice": 2130,
+          "maxPrice": 2710
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2404,
+          "minPrice": 2116,
+          "maxPrice": 2692
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2387,
+          "minPrice": 2101,
+          "maxPrice": 2673
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2374,
+          "minPrice": 2089,
+          "maxPrice": 2659
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2370,
+          "minPrice": 2086,
+          "maxPrice": 2654
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2377,
+          "minPrice": 2092,
+          "maxPrice": 2662
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2392,
+          "minPrice": 2105,
+          "maxPrice": 2679
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2409,
+          "minPrice": 2120,
+          "maxPrice": 2698
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2424,
+          "minPrice": 2133,
+          "maxPrice": 2715
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2430,
+          "minPrice": 2138,
+          "maxPrice": 2722
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2426,
+          "minPrice": 2135,
+          "maxPrice": 2717
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2412,
+          "minPrice": 2123,
+          "maxPrice": 2701
+        }
+      ],
+      "gov-potato-apmc_panvel": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2378,
+          "minPrice": 2093,
+          "maxPrice": 2663
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2379,
+          "minPrice": 2094,
+          "maxPrice": 2664
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2370,
+          "minPrice": 2086,
+          "maxPrice": 2654
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2354,
+          "minPrice": 2072,
+          "maxPrice": 2636
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2337,
+          "minPrice": 2057,
+          "maxPrice": 2617
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2324,
+          "minPrice": 2045,
+          "maxPrice": 2603
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2320,
+          "minPrice": 2042,
+          "maxPrice": 2598
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2327,
+          "minPrice": 2048,
+          "maxPrice": 2606
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2342,
+          "minPrice": 2061,
+          "maxPrice": 2623
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2359,
+          "minPrice": 2076,
+          "maxPrice": 2642
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2374,
+          "minPrice": 2089,
+          "maxPrice": 2659
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2380,
+          "minPrice": 2094,
+          "maxPrice": 2666
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2376,
+          "minPrice": 2091,
+          "maxPrice": 2661
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2362,
+          "minPrice": 2079,
+          "maxPrice": 2645
+        }
+      ],
+      "gov-potato-pune__gultekdi__apmc": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2278,
+          "minPrice": 2005,
+          "maxPrice": 2551
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2279,
+          "minPrice": 2006,
+          "maxPrice": 2552
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2270,
+          "minPrice": 1998,
+          "maxPrice": 2542
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2254,
+          "minPrice": 1984,
+          "maxPrice": 2524
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2237,
+          "minPrice": 1969,
+          "maxPrice": 2505
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2224,
+          "minPrice": 1957,
+          "maxPrice": 2491
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2220,
+          "minPrice": 1954,
+          "maxPrice": 2486
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2227,
+          "minPrice": 1960,
+          "maxPrice": 2494
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2242,
+          "minPrice": 1973,
+          "maxPrice": 2511
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2259,
+          "minPrice": 1988,
+          "maxPrice": 2530
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2274,
+          "minPrice": 2001,
+          "maxPrice": 2547
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2280,
+          "minPrice": 2006,
+          "maxPrice": 2554
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2276,
+          "minPrice": 2003,
+          "maxPrice": 2549
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2262,
+          "minPrice": 1991,
+          "maxPrice": 2533
+        }
+      ],
+      "gov-potato-apmc_manchar": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2178,
+          "minPrice": 1917,
+          "maxPrice": 2439
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2179,
+          "minPrice": 1918,
+          "maxPrice": 2440
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2170,
+          "minPrice": 1910,
+          "maxPrice": 2430
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2154,
+          "minPrice": 1896,
+          "maxPrice": 2412
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2137,
+          "minPrice": 1881,
+          "maxPrice": 2393
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2124,
+          "minPrice": 1869,
+          "maxPrice": 2379
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2120,
+          "minPrice": 1866,
+          "maxPrice": 2374
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2127,
+          "minPrice": 1872,
+          "maxPrice": 2382
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2142,
+          "minPrice": 1885,
+          "maxPrice": 2399
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2159,
+          "minPrice": 1900,
+          "maxPrice": 2418
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2174,
+          "minPrice": 1913,
+          "maxPrice": 2435
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2180,
+          "minPrice": 1918,
+          "maxPrice": 2442
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2176,
+          "minPrice": 1915,
+          "maxPrice": 2437
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2162,
+          "minPrice": 1903,
+          "maxPrice": 2421
+        }
+      ],
+      "gov-potato-apmc_khed__rajgurunagar_": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2128,
+          "minPrice": 1873,
+          "maxPrice": 2383
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2129,
+          "minPrice": 1874,
+          "maxPrice": 2384
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2120,
+          "minPrice": 1866,
+          "maxPrice": 2374
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2104,
+          "minPrice": 1852,
+          "maxPrice": 2356
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2087,
+          "minPrice": 1837,
+          "maxPrice": 2337
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2074,
+          "minPrice": 1825,
+          "maxPrice": 2323
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2070,
+          "minPrice": 1822,
+          "maxPrice": 2318
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2077,
+          "minPrice": 1828,
+          "maxPrice": 2326
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2092,
+          "minPrice": 1841,
+          "maxPrice": 2343
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2109,
+          "minPrice": 1856,
+          "maxPrice": 2362
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2124,
+          "minPrice": 1869,
+          "maxPrice": 2379
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2130,
+          "minPrice": 1874,
+          "maxPrice": 2386
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2126,
+          "minPrice": 1871,
+          "maxPrice": 2381
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2112,
+          "minPrice": 1859,
+          "maxPrice": 2365
+        }
+      ],
+      "gov-potato-apmc_nashik": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2228,
+          "minPrice": 1961,
+          "maxPrice": 2495
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2229,
+          "minPrice": 1962,
+          "maxPrice": 2496
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2220,
+          "minPrice": 1954,
+          "maxPrice": 2486
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2204,
+          "minPrice": 1940,
+          "maxPrice": 2468
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2187,
+          "minPrice": 1925,
+          "maxPrice": 2449
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2174,
+          "minPrice": 1913,
+          "maxPrice": 2435
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2170,
+          "minPrice": 1910,
+          "maxPrice": 2430
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2177,
+          "minPrice": 1916,
+          "maxPrice": 2438
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2192,
+          "minPrice": 1929,
+          "maxPrice": 2455
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2209,
+          "minPrice": 1944,
+          "maxPrice": 2474
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2224,
+          "minPrice": 1957,
+          "maxPrice": 2491
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2230,
+          "minPrice": 1962,
+          "maxPrice": 2498
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2226,
+          "minPrice": 1959,
+          "maxPrice": 2493
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2212,
+          "minPrice": 1947,
+          "maxPrice": 2477
+        }
+      ],
+      "gov-potato-apmc_kolhapur": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2328,
+          "minPrice": 2049,
+          "maxPrice": 2607
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2329,
+          "minPrice": 2050,
+          "maxPrice": 2608
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2320,
+          "minPrice": 2042,
+          "maxPrice": 2598
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2304,
+          "minPrice": 2028,
+          "maxPrice": 2580
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2287,
+          "minPrice": 2013,
+          "maxPrice": 2561
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2274,
+          "minPrice": 2001,
+          "maxPrice": 2547
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2270,
+          "minPrice": 1998,
+          "maxPrice": 2542
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2277,
+          "minPrice": 2004,
+          "maxPrice": 2550
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2292,
+          "minPrice": 2017,
+          "maxPrice": 2567
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2309,
+          "minPrice": 2032,
+          "maxPrice": 2586
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2324,
+          "minPrice": 2045,
+          "maxPrice": 2603
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2330,
+          "minPrice": 2050,
+          "maxPrice": 2610
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2326,
+          "minPrice": 2047,
+          "maxPrice": 2605
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2312,
+          "minPrice": 2035,
+          "maxPrice": 2589
+        }
+      ]
+    },
+    "cotton": {
+      "gov-cotton-apmc_jalgaon": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 7675,
+          "minPrice": 6754,
+          "maxPrice": 8596
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 7678,
+          "minPrice": 6757,
+          "maxPrice": 8599
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 7654,
+          "minPrice": 6736,
+          "maxPrice": 8572
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 7611,
+          "minPrice": 6698,
+          "maxPrice": 8524
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 7565,
+          "minPrice": 6657,
+          "maxPrice": 8473
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 7530,
+          "minPrice": 6626,
+          "maxPrice": 8434
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 7520,
+          "minPrice": 6618,
+          "maxPrice": 8422
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 7538,
+          "minPrice": 6633,
+          "maxPrice": 8443
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 7578,
+          "minPrice": 6669,
+          "maxPrice": 8487
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 7625,
+          "minPrice": 6710,
+          "maxPrice": 8540
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 7663,
+          "minPrice": 6743,
+          "maxPrice": 8583
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 7680,
+          "minPrice": 6758,
+          "maxPrice": 8602
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 7668,
+          "minPrice": 6748,
+          "maxPrice": 8588
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 7633,
+          "minPrice": 6717,
+          "maxPrice": 8549
+        }
+      ],
+      "gov-cotton-apmc_dhule": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 7625,
+          "minPrice": 6710,
+          "maxPrice": 8540
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 7628,
+          "minPrice": 6713,
+          "maxPrice": 8543
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 7604,
+          "minPrice": 6692,
+          "maxPrice": 8516
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 7561,
+          "minPrice": 6654,
+          "maxPrice": 8468
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 7515,
+          "minPrice": 6613,
+          "maxPrice": 8417
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 7480,
+          "minPrice": 6582,
+          "maxPrice": 8378
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 7470,
+          "minPrice": 6574,
+          "maxPrice": 8366
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 7488,
+          "minPrice": 6589,
+          "maxPrice": 8387
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 7528,
+          "minPrice": 6625,
+          "maxPrice": 8431
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 7575,
+          "minPrice": 6666,
+          "maxPrice": 8484
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 7613,
+          "minPrice": 6699,
+          "maxPrice": 8527
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 7630,
+          "minPrice": 6714,
+          "maxPrice": 8546
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 7618,
+          "minPrice": 6704,
+          "maxPrice": 8532
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 7583,
+          "minPrice": 6673,
+          "maxPrice": 8493
+        }
+      ],
+      "gov-cotton-apmc_yeola": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 7575,
+          "minPrice": 6666,
+          "maxPrice": 8484
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 7578,
+          "minPrice": 6669,
+          "maxPrice": 8487
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 7554,
+          "minPrice": 6648,
+          "maxPrice": 8460
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 7511,
+          "minPrice": 6610,
+          "maxPrice": 8412
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 7465,
+          "minPrice": 6569,
+          "maxPrice": 8361
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 7430,
+          "minPrice": 6538,
+          "maxPrice": 8322
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 7420,
+          "minPrice": 6530,
+          "maxPrice": 8310
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 7438,
+          "minPrice": 6545,
+          "maxPrice": 8331
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 7478,
+          "minPrice": 6581,
+          "maxPrice": 8375
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 7525,
+          "minPrice": 6622,
+          "maxPrice": 8428
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 7563,
+          "minPrice": 6655,
+          "maxPrice": 8471
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 7580,
+          "minPrice": 6670,
+          "maxPrice": 8490
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 7568,
+          "minPrice": 6660,
+          "maxPrice": 8476
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 7533,
+          "minPrice": 6629,
+          "maxPrice": 8437
+        }
+      ],
+      "gov-cotton-apmc_nandurbar": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 7525,
+          "minPrice": 6622,
+          "maxPrice": 8428
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 7528,
+          "minPrice": 6625,
+          "maxPrice": 8431
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 7504,
+          "minPrice": 6604,
+          "maxPrice": 8404
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 7461,
+          "minPrice": 6566,
+          "maxPrice": 8356
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 7415,
+          "minPrice": 6525,
+          "maxPrice": 8305
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 7380,
+          "minPrice": 6494,
+          "maxPrice": 8266
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 7370,
+          "minPrice": 6486,
+          "maxPrice": 8254
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 7388,
+          "minPrice": 6501,
+          "maxPrice": 8275
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 7428,
+          "minPrice": 6537,
+          "maxPrice": 8319
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 7475,
+          "minPrice": 6578,
+          "maxPrice": 8372
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 7513,
+          "minPrice": 6611,
+          "maxPrice": 8415
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 7530,
+          "minPrice": 6626,
+          "maxPrice": 8434
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 7518,
+          "minPrice": 6616,
+          "maxPrice": 8420
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 7483,
+          "minPrice": 6585,
+          "maxPrice": 8381
+        }
+      ],
+      "gov-cotton-apmc_akola": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 7775,
+          "minPrice": 6842,
+          "maxPrice": 8708
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 7778,
+          "minPrice": 6845,
+          "maxPrice": 8711
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 7754,
+          "minPrice": 6824,
+          "maxPrice": 8684
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 7711,
+          "minPrice": 6786,
+          "maxPrice": 8636
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 7665,
+          "minPrice": 6745,
+          "maxPrice": 8585
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 7630,
+          "minPrice": 6714,
+          "maxPrice": 8546
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 7620,
+          "minPrice": 6706,
+          "maxPrice": 8534
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 7638,
+          "minPrice": 6721,
+          "maxPrice": 8555
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 7678,
+          "minPrice": 6757,
+          "maxPrice": 8599
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 7725,
+          "minPrice": 6798,
+          "maxPrice": 8652
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 7763,
+          "minPrice": 6831,
+          "maxPrice": 8695
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 7780,
+          "minPrice": 6846,
+          "maxPrice": 8714
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 7768,
+          "minPrice": 6836,
+          "maxPrice": 8700
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 7733,
+          "minPrice": 6805,
+          "maxPrice": 8661
+        }
+      ],
+      "gov-cotton-apmc_yavatmal": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 7825,
+          "minPrice": 6886,
+          "maxPrice": 8764
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 7828,
+          "minPrice": 6889,
+          "maxPrice": 8767
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 7804,
+          "minPrice": 6868,
+          "maxPrice": 8740
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 7761,
+          "minPrice": 6830,
+          "maxPrice": 8692
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 7715,
+          "minPrice": 6789,
+          "maxPrice": 8641
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 7680,
+          "minPrice": 6758,
+          "maxPrice": 8602
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 7670,
+          "minPrice": 6750,
+          "maxPrice": 8590
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 7688,
+          "minPrice": 6765,
+          "maxPrice": 8611
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 7728,
+          "minPrice": 6801,
+          "maxPrice": 8655
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 7775,
+          "minPrice": 6842,
+          "maxPrice": 8708
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 7813,
+          "minPrice": 6875,
+          "maxPrice": 8751
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 7830,
+          "minPrice": 6890,
+          "maxPrice": 8770
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 7818,
+          "minPrice": 6880,
+          "maxPrice": 8756
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 7783,
+          "minPrice": 6849,
+          "maxPrice": 8717
+        }
+      ],
+      "gov-cotton-apmc_wardha": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 7725,
+          "minPrice": 6798,
+          "maxPrice": 8652
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 7728,
+          "minPrice": 6801,
+          "maxPrice": 8655
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 7704,
+          "minPrice": 6780,
+          "maxPrice": 8628
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 7661,
+          "minPrice": 6742,
+          "maxPrice": 8580
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 7615,
+          "minPrice": 6701,
+          "maxPrice": 8529
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 7580,
+          "minPrice": 6670,
+          "maxPrice": 8490
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 7570,
+          "minPrice": 6662,
+          "maxPrice": 8478
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 7588,
+          "minPrice": 6677,
+          "maxPrice": 8499
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 7628,
+          "minPrice": 6713,
+          "maxPrice": 8543
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 7675,
+          "minPrice": 6754,
+          "maxPrice": 8596
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 7713,
+          "minPrice": 6787,
+          "maxPrice": 8639
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 7730,
+          "minPrice": 6802,
+          "maxPrice": 8658
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 7718,
+          "minPrice": 6792,
+          "maxPrice": 8644
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 7683,
+          "minPrice": 6761,
+          "maxPrice": 8605
+        }
+      ],
+      "gov-cotton-apmc_amravati": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 7755,
+          "minPrice": 6824,
+          "maxPrice": 8686
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 7758,
+          "minPrice": 6827,
+          "maxPrice": 8689
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 7734,
+          "minPrice": 6806,
+          "maxPrice": 8662
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 7691,
+          "minPrice": 6768,
+          "maxPrice": 8614
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 7645,
+          "minPrice": 6728,
+          "maxPrice": 8562
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 7610,
+          "minPrice": 6697,
+          "maxPrice": 8523
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 7600,
+          "minPrice": 6688,
+          "maxPrice": 8512
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 7618,
+          "minPrice": 6704,
+          "maxPrice": 8532
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 7658,
+          "minPrice": 6739,
+          "maxPrice": 8577
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 7705,
+          "minPrice": 6780,
+          "maxPrice": 8630
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 7743,
+          "minPrice": 6814,
+          "maxPrice": 8672
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 7760,
+          "minPrice": 6829,
+          "maxPrice": 8691
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 7748,
+          "minPrice": 6818,
+          "maxPrice": 8678
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 7713,
+          "minPrice": 6787,
+          "maxPrice": 8639
+        }
+      ]
+    },
+    "soybean": {
+      "gov-soybean-apmc_latur": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 4537,
+          "minPrice": 3993,
+          "maxPrice": 5081
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 4539,
+          "minPrice": 3994,
+          "maxPrice": 5084
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 4527,
+          "minPrice": 3984,
+          "maxPrice": 5070
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 4506,
+          "minPrice": 3965,
+          "maxPrice": 5047
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 4482,
+          "minPrice": 3944,
+          "maxPrice": 5020
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 4465,
+          "minPrice": 3929,
+          "maxPrice": 5001
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 4460,
+          "minPrice": 3925,
+          "maxPrice": 4995
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 4469,
+          "minPrice": 3933,
+          "maxPrice": 5005
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 4489,
+          "minPrice": 3950,
+          "maxPrice": 5028
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 4512,
+          "minPrice": 3971,
+          "maxPrice": 5053
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 4532,
+          "minPrice": 3988,
+          "maxPrice": 5076
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 4540,
+          "minPrice": 3995,
+          "maxPrice": 5085
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 4534,
+          "minPrice": 3990,
+          "maxPrice": 5078
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 4516,
+          "minPrice": 3974,
+          "maxPrice": 5058
+        }
+      ],
+      "gov-soybean-apmc_jalna": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 4487,
+          "minPrice": 3949,
+          "maxPrice": 5025
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 4489,
+          "minPrice": 3950,
+          "maxPrice": 5028
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 4477,
+          "minPrice": 3940,
+          "maxPrice": 5014
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 4456,
+          "minPrice": 3921,
+          "maxPrice": 4991
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 4432,
+          "minPrice": 3900,
+          "maxPrice": 4964
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 4415,
+          "minPrice": 3885,
+          "maxPrice": 4945
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 4410,
+          "minPrice": 3881,
+          "maxPrice": 4939
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 4419,
+          "minPrice": 3889,
+          "maxPrice": 4949
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 4439,
+          "minPrice": 3906,
+          "maxPrice": 4972
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 4462,
+          "minPrice": 3927,
+          "maxPrice": 4997
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 4482,
+          "minPrice": 3944,
+          "maxPrice": 5020
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 4490,
+          "minPrice": 3951,
+          "maxPrice": 5029
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 4484,
+          "minPrice": 3946,
+          "maxPrice": 5022
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 4466,
+          "minPrice": 3930,
+          "maxPrice": 5002
+        }
+      ],
+      "gov-soybean-apmc_akola": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 4587,
+          "minPrice": 4037,
+          "maxPrice": 5137
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 4589,
+          "minPrice": 4038,
+          "maxPrice": 5140
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 4577,
+          "minPrice": 4028,
+          "maxPrice": 5126
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 4556,
+          "minPrice": 4009,
+          "maxPrice": 5103
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 4532,
+          "minPrice": 3988,
+          "maxPrice": 5076
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 4515,
+          "minPrice": 3973,
+          "maxPrice": 5057
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 4510,
+          "minPrice": 3969,
+          "maxPrice": 5051
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 4519,
+          "minPrice": 3977,
+          "maxPrice": 5061
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 4539,
+          "minPrice": 3994,
+          "maxPrice": 5084
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 4562,
+          "minPrice": 4015,
+          "maxPrice": 5109
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 4582,
+          "minPrice": 4032,
+          "maxPrice": 5132
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 4590,
+          "minPrice": 4039,
+          "maxPrice": 5141
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 4584,
+          "minPrice": 4034,
+          "maxPrice": 5134
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 4566,
+          "minPrice": 4018,
+          "maxPrice": 5114
+        }
+      ],
+      "gov-soybean-apmc_nanded": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 4517,
+          "minPrice": 3975,
+          "maxPrice": 5059
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 4519,
+          "minPrice": 3977,
+          "maxPrice": 5061
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 4507,
+          "minPrice": 3966,
+          "maxPrice": 5048
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 4486,
+          "minPrice": 3948,
+          "maxPrice": 5024
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 4462,
+          "minPrice": 3927,
+          "maxPrice": 4997
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 4445,
+          "minPrice": 3912,
+          "maxPrice": 4978
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 4440,
+          "minPrice": 3907,
+          "maxPrice": 4973
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 4449,
+          "minPrice": 3915,
+          "maxPrice": 4983
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 4469,
+          "minPrice": 3933,
+          "maxPrice": 5005
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 4492,
+          "minPrice": 3953,
+          "maxPrice": 5031
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 4512,
+          "minPrice": 3971,
+          "maxPrice": 5053
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 4520,
+          "minPrice": 3978,
+          "maxPrice": 5062
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 4514,
+          "minPrice": 3972,
+          "maxPrice": 5056
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 4496,
+          "minPrice": 3956,
+          "maxPrice": 5036
+        }
+      ],
+      "gov-soybean-apmc_hingoli": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 4457,
+          "minPrice": 3922,
+          "maxPrice": 4992
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 4459,
+          "minPrice": 3924,
+          "maxPrice": 4994
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 4447,
+          "minPrice": 3913,
+          "maxPrice": 4981
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 4426,
+          "minPrice": 3895,
+          "maxPrice": 4957
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 4402,
+          "minPrice": 3874,
+          "maxPrice": 4930
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 4385,
+          "minPrice": 3859,
+          "maxPrice": 4911
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 4380,
+          "minPrice": 3854,
+          "maxPrice": 4906
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 4389,
+          "minPrice": 3862,
+          "maxPrice": 4916
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 4409,
+          "minPrice": 3880,
+          "maxPrice": 4938
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 4432,
+          "minPrice": 3900,
+          "maxPrice": 4964
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 4452,
+          "minPrice": 3918,
+          "maxPrice": 4986
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 4460,
+          "minPrice": 3925,
+          "maxPrice": 4995
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 4454,
+          "minPrice": 3920,
+          "maxPrice": 4988
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 4436,
+          "minPrice": 3904,
+          "maxPrice": 4968
+        }
+      ],
+      "gov-soybean-apmc_washim": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 4547,
+          "minPrice": 4001,
+          "maxPrice": 5093
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 4549,
+          "minPrice": 4003,
+          "maxPrice": 5095
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 4537,
+          "minPrice": 3993,
+          "maxPrice": 5081
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 4516,
+          "minPrice": 3974,
+          "maxPrice": 5058
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 4492,
+          "minPrice": 3953,
+          "maxPrice": 5031
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 4475,
+          "minPrice": 3938,
+          "maxPrice": 5012
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 4470,
+          "minPrice": 3934,
+          "maxPrice": 5006
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 4479,
+          "minPrice": 3942,
+          "maxPrice": 5016
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 4499,
+          "minPrice": 3959,
+          "maxPrice": 5039
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 4522,
+          "minPrice": 3979,
+          "maxPrice": 5065
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 4542,
+          "minPrice": 3997,
+          "maxPrice": 5087
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 4550,
+          "minPrice": 4004,
+          "maxPrice": 5096
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 4544,
+          "minPrice": 3999,
+          "maxPrice": 5089
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 4526,
+          "minPrice": 3983,
+          "maxPrice": 5069
+        }
+      ],
+      "gov-soybean-apmc_solapur": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 4497,
+          "minPrice": 3957,
+          "maxPrice": 5037
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 4499,
+          "minPrice": 3959,
+          "maxPrice": 5039
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 4487,
+          "minPrice": 3949,
+          "maxPrice": 5025
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 4466,
+          "minPrice": 3930,
+          "maxPrice": 5002
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 4442,
+          "minPrice": 3909,
+          "maxPrice": 4975
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 4425,
+          "minPrice": 3894,
+          "maxPrice": 4956
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 4420,
+          "minPrice": 3890,
+          "maxPrice": 4950
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 4429,
+          "minPrice": 3898,
+          "maxPrice": 4960
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 4449,
+          "minPrice": 3915,
+          "maxPrice": 4983
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 4472,
+          "minPrice": 3935,
+          "maxPrice": 5009
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 4492,
+          "minPrice": 3953,
+          "maxPrice": 5031
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 4500,
+          "minPrice": 3960,
+          "maxPrice": 5040
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 4494,
+          "minPrice": 3955,
+          "maxPrice": 5033
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 4476,
+          "minPrice": 3939,
+          "maxPrice": 5013
+        }
+      ],
+      "gov-soybean-apmc_kolhapur": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 4637,
+          "minPrice": 4081,
+          "maxPrice": 5193
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 4639,
+          "minPrice": 4082,
+          "maxPrice": 5196
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 4627,
+          "minPrice": 4072,
+          "maxPrice": 5182
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 4606,
+          "minPrice": 4053,
+          "maxPrice": 5159
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 4582,
+          "minPrice": 4032,
+          "maxPrice": 5132
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 4565,
+          "minPrice": 4017,
+          "maxPrice": 5113
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 4560,
+          "minPrice": 4013,
+          "maxPrice": 5107
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 4569,
+          "minPrice": 4021,
+          "maxPrice": 5117
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 4589,
+          "minPrice": 4038,
+          "maxPrice": 5140
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 4612,
+          "minPrice": 4059,
+          "maxPrice": 5165
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 4632,
+          "minPrice": 4076,
+          "maxPrice": 5188
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 4640,
+          "minPrice": 4083,
+          "maxPrice": 5197
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 4634,
+          "minPrice": 4078,
+          "maxPrice": 5190
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 4616,
+          "minPrice": 4062,
+          "maxPrice": 5170
+        }
+      ]
+    },
+    "wheat": {
+      "gov-wheat-mumbai__vashi__apmc": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 3173,
+          "minPrice": 2792,
+          "maxPrice": 3554
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 3174,
+          "minPrice": 2793,
+          "maxPrice": 3555
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 3167,
+          "minPrice": 2787,
+          "maxPrice": 3547
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 3154,
+          "minPrice": 2776,
+          "maxPrice": 3532
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 3139,
+          "minPrice": 2762,
+          "maxPrice": 3516
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 3128,
+          "minPrice": 2753,
+          "maxPrice": 3503
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 3125,
+          "minPrice": 2750,
+          "maxPrice": 3500
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 3131,
+          "minPrice": 2755,
+          "maxPrice": 3507
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 3143,
+          "minPrice": 2766,
+          "maxPrice": 3520
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 3158,
+          "minPrice": 2779,
+          "maxPrice": 3537
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 3170,
+          "minPrice": 2790,
+          "maxPrice": 3550
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 3175,
+          "minPrice": 2794,
+          "maxPrice": 3556
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 3171,
+          "minPrice": 2790,
+          "maxPrice": 3552
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 3160,
+          "minPrice": 2781,
+          "maxPrice": 3539
+        }
+      ],
+      "gov-wheat-pune__gultekdi__apmc": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 3003,
+          "minPrice": 2643,
+          "maxPrice": 3363
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 3004,
+          "minPrice": 2644,
+          "maxPrice": 3364
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2997,
+          "minPrice": 2637,
+          "maxPrice": 3357
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2984,
+          "minPrice": 2626,
+          "maxPrice": 3342
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2969,
+          "minPrice": 2613,
+          "maxPrice": 3325
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2958,
+          "minPrice": 2603,
+          "maxPrice": 3313
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2955,
+          "minPrice": 2600,
+          "maxPrice": 3310
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2961,
+          "minPrice": 2606,
+          "maxPrice": 3316
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2973,
+          "minPrice": 2616,
+          "maxPrice": 3330
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2988,
+          "minPrice": 2629,
+          "maxPrice": 3347
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 3000,
+          "minPrice": 2640,
+          "maxPrice": 3360
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 3005,
+          "minPrice": 2644,
+          "maxPrice": 3366
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 3001,
+          "minPrice": 2641,
+          "maxPrice": 3361
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2990,
+          "minPrice": 2631,
+          "maxPrice": 3349
+        }
+      ],
+      "gov-wheat-apmc_nashik": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2873,
+          "minPrice": 2528,
+          "maxPrice": 3218
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2874,
+          "minPrice": 2529,
+          "maxPrice": 3219
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2867,
+          "minPrice": 2523,
+          "maxPrice": 3211
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2854,
+          "minPrice": 2512,
+          "maxPrice": 3196
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2839,
+          "minPrice": 2498,
+          "maxPrice": 3180
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2828,
+          "minPrice": 2489,
+          "maxPrice": 3167
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2825,
+          "minPrice": 2486,
+          "maxPrice": 3164
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2831,
+          "minPrice": 2491,
+          "maxPrice": 3171
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2843,
+          "minPrice": 2502,
+          "maxPrice": 3184
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2858,
+          "minPrice": 2515,
+          "maxPrice": 3201
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2870,
+          "minPrice": 2526,
+          "maxPrice": 3214
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2875,
+          "minPrice": 2530,
+          "maxPrice": 3220
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2871,
+          "minPrice": 2526,
+          "maxPrice": 3216
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2860,
+          "minPrice": 2517,
+          "maxPrice": 3203
+        }
+      ],
+      "gov-wheat-apmc_jalgaon": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2773,
+          "minPrice": 2440,
+          "maxPrice": 3106
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2774,
+          "minPrice": 2441,
+          "maxPrice": 3107
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2767,
+          "minPrice": 2435,
+          "maxPrice": 3099
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2754,
+          "minPrice": 2424,
+          "maxPrice": 3084
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2739,
+          "minPrice": 2410,
+          "maxPrice": 3068
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2728,
+          "minPrice": 2401,
+          "maxPrice": 3055
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2725,
+          "minPrice": 2398,
+          "maxPrice": 3052
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2731,
+          "minPrice": 2403,
+          "maxPrice": 3059
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2743,
+          "minPrice": 2414,
+          "maxPrice": 3072
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2758,
+          "minPrice": 2427,
+          "maxPrice": 3089
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2770,
+          "minPrice": 2438,
+          "maxPrice": 3102
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2775,
+          "minPrice": 2442,
+          "maxPrice": 3108
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2771,
+          "minPrice": 2438,
+          "maxPrice": 3104
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2760,
+          "minPrice": 2429,
+          "maxPrice": 3091
+        }
+      ],
+      "gov-wheat-apmc_kolhapur": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 3073,
+          "minPrice": 2704,
+          "maxPrice": 3442
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 3074,
+          "minPrice": 2705,
+          "maxPrice": 3443
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 3067,
+          "minPrice": 2699,
+          "maxPrice": 3435
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 3054,
+          "minPrice": 2688,
+          "maxPrice": 3420
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 3039,
+          "minPrice": 2674,
+          "maxPrice": 3404
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 3028,
+          "minPrice": 2665,
+          "maxPrice": 3391
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 3025,
+          "minPrice": 2662,
+          "maxPrice": 3388
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 3031,
+          "minPrice": 2667,
+          "maxPrice": 3395
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 3043,
+          "minPrice": 2678,
+          "maxPrice": 3408
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 3058,
+          "minPrice": 2691,
+          "maxPrice": 3425
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 3070,
+          "minPrice": 2702,
+          "maxPrice": 3438
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 3075,
+          "minPrice": 2706,
+          "maxPrice": 3444
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 3071,
+          "minPrice": 2702,
+          "maxPrice": 3440
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 3060,
+          "minPrice": 2693,
+          "maxPrice": 3427
+        }
+      ],
+      "gov-wheat-apmc_solapur": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2923,
+          "minPrice": 2572,
+          "maxPrice": 3274
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2924,
+          "minPrice": 2573,
+          "maxPrice": 3275
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2917,
+          "minPrice": 2567,
+          "maxPrice": 3267
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2904,
+          "minPrice": 2556,
+          "maxPrice": 3252
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2889,
+          "minPrice": 2542,
+          "maxPrice": 3236
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2878,
+          "minPrice": 2533,
+          "maxPrice": 3223
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2875,
+          "minPrice": 2530,
+          "maxPrice": 3220
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2881,
+          "minPrice": 2535,
+          "maxPrice": 3227
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2893,
+          "minPrice": 2546,
+          "maxPrice": 3240
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2908,
+          "minPrice": 2559,
+          "maxPrice": 3257
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2920,
+          "minPrice": 2570,
+          "maxPrice": 3270
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2925,
+          "minPrice": 2574,
+          "maxPrice": 3276
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2921,
+          "minPrice": 2570,
+          "maxPrice": 3272
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2910,
+          "minPrice": 2561,
+          "maxPrice": 3259
+        }
+      ],
+      "gov-wheat-apmc_latur": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 2843,
+          "minPrice": 2502,
+          "maxPrice": 3184
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 2844,
+          "minPrice": 2503,
+          "maxPrice": 3185
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 2837,
+          "minPrice": 2497,
+          "maxPrice": 3177
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 2824,
+          "minPrice": 2485,
+          "maxPrice": 3163
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 2809,
+          "minPrice": 2472,
+          "maxPrice": 3146
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 2798,
+          "minPrice": 2462,
+          "maxPrice": 3134
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 2795,
+          "minPrice": 2460,
+          "maxPrice": 3130
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 2801,
+          "minPrice": 2465,
+          "maxPrice": 3137
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 2813,
+          "minPrice": 2475,
+          "maxPrice": 3151
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 2828,
+          "minPrice": 2489,
+          "maxPrice": 3167
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 2840,
+          "minPrice": 2499,
+          "maxPrice": 3181
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 2845,
+          "minPrice": 2504,
+          "maxPrice": 3186
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 2841,
+          "minPrice": 2500,
+          "maxPrice": 3182
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 2830,
+          "minPrice": 2490,
+          "maxPrice": 3170
+        }
+      ]
+    },
+    "rice": {
+      "gov-rice-mumbai__vashi__apmc": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 3833,
+          "minPrice": 3373,
+          "maxPrice": 4293
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 3834,
+          "minPrice": 3374,
+          "maxPrice": 4294
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 3824,
+          "minPrice": 3365,
+          "maxPrice": 4283
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 3805,
+          "minPrice": 3348,
+          "maxPrice": 4262
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 3785,
+          "minPrice": 3331,
+          "maxPrice": 4239
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 3769,
+          "minPrice": 3317,
+          "maxPrice": 4221
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 3765,
+          "minPrice": 3313,
+          "maxPrice": 4217
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 3773,
+          "minPrice": 3320,
+          "maxPrice": 4226
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 3790,
+          "minPrice": 3335,
+          "maxPrice": 4245
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 3811,
+          "minPrice": 3354,
+          "maxPrice": 4268
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 3828,
+          "minPrice": 3369,
+          "maxPrice": 4287
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 3835,
+          "minPrice": 3375,
+          "maxPrice": 4295
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 3830,
+          "minPrice": 3370,
+          "maxPrice": 4290
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 3814,
+          "minPrice": 3356,
+          "maxPrice": 4272
+        }
+      ],
+      "gov-rice-apmc_panvel": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 3733,
+          "minPrice": 3285,
+          "maxPrice": 4181
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 3734,
+          "minPrice": 3286,
+          "maxPrice": 4182
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 3724,
+          "minPrice": 3277,
+          "maxPrice": 4171
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 3705,
+          "minPrice": 3260,
+          "maxPrice": 4150
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 3685,
+          "minPrice": 3243,
+          "maxPrice": 4127
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 3669,
+          "minPrice": 3229,
+          "maxPrice": 4109
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 3665,
+          "minPrice": 3225,
+          "maxPrice": 4105
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 3673,
+          "minPrice": 3232,
+          "maxPrice": 4114
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 3690,
+          "minPrice": 3247,
+          "maxPrice": 4133
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 3711,
+          "minPrice": 3266,
+          "maxPrice": 4156
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 3728,
+          "minPrice": 3281,
+          "maxPrice": 4175
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 3735,
+          "minPrice": 3287,
+          "maxPrice": 4183
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 3730,
+          "minPrice": 3282,
+          "maxPrice": 4178
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 3714,
+          "minPrice": 3268,
+          "maxPrice": 4160
+        }
+      ],
+      "gov-rice-apmc_alibag": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 3633,
+          "minPrice": 3197,
+          "maxPrice": 4069
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 3634,
+          "minPrice": 3198,
+          "maxPrice": 4070
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 3624,
+          "minPrice": 3189,
+          "maxPrice": 4059
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 3605,
+          "minPrice": 3172,
+          "maxPrice": 4038
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 3585,
+          "minPrice": 3155,
+          "maxPrice": 4015
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 3569,
+          "minPrice": 3141,
+          "maxPrice": 3997
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 3565,
+          "minPrice": 3137,
+          "maxPrice": 3993
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 3573,
+          "minPrice": 3144,
+          "maxPrice": 4002
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 3590,
+          "minPrice": 3159,
+          "maxPrice": 4021
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 3611,
+          "minPrice": 3178,
+          "maxPrice": 4044
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 3628,
+          "minPrice": 3193,
+          "maxPrice": 4063
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 3635,
+          "minPrice": 3199,
+          "maxPrice": 4071
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 3630,
+          "minPrice": 3194,
+          "maxPrice": 4066
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 3614,
+          "minPrice": 3180,
+          "maxPrice": 4048
+        }
+      ],
+      "gov-rice-apmc_palghar": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 3683,
+          "minPrice": 3241,
+          "maxPrice": 4125
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 3684,
+          "minPrice": 3242,
+          "maxPrice": 4126
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 3674,
+          "minPrice": 3233,
+          "maxPrice": 4115
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 3655,
+          "minPrice": 3216,
+          "maxPrice": 4094
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 3635,
+          "minPrice": 3199,
+          "maxPrice": 4071
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 3619,
+          "minPrice": 3185,
+          "maxPrice": 4053
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 3615,
+          "minPrice": 3181,
+          "maxPrice": 4049
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 3623,
+          "minPrice": 3188,
+          "maxPrice": 4058
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 3640,
+          "minPrice": 3203,
+          "maxPrice": 4077
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 3661,
+          "minPrice": 3222,
+          "maxPrice": 4100
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 3678,
+          "minPrice": 3237,
+          "maxPrice": 4119
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 3685,
+          "minPrice": 3243,
+          "maxPrice": 4127
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 3680,
+          "minPrice": 3238,
+          "maxPrice": 4122
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 3664,
+          "minPrice": 3224,
+          "maxPrice": 4104
+        }
+      ],
+      "gov-rice-apmc_bhandara": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 3333,
+          "minPrice": 2933,
+          "maxPrice": 3733
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 3334,
+          "minPrice": 2934,
+          "maxPrice": 3734
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 3324,
+          "minPrice": 2925,
+          "maxPrice": 3723
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 3305,
+          "minPrice": 2908,
+          "maxPrice": 3702
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 3285,
+          "minPrice": 2891,
+          "maxPrice": 3679
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 3269,
+          "minPrice": 2877,
+          "maxPrice": 3661
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 3265,
+          "minPrice": 2873,
+          "maxPrice": 3657
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 3273,
+          "minPrice": 2880,
+          "maxPrice": 3666
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 3290,
+          "minPrice": 2895,
+          "maxPrice": 3685
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 3311,
+          "minPrice": 2914,
+          "maxPrice": 3708
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 3328,
+          "minPrice": 2929,
+          "maxPrice": 3727
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 3335,
+          "minPrice": 2935,
+          "maxPrice": 3735
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 3330,
+          "minPrice": 2930,
+          "maxPrice": 3730
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 3314,
+          "minPrice": 2916,
+          "maxPrice": 3712
+        }
+      ],
+      "gov-rice-apmc_gondia": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 3383,
+          "minPrice": 2977,
+          "maxPrice": 3789
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 3384,
+          "minPrice": 2978,
+          "maxPrice": 3790
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 3374,
+          "minPrice": 2969,
+          "maxPrice": 3779
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 3355,
+          "minPrice": 2952,
+          "maxPrice": 3758
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 3335,
+          "minPrice": 2935,
+          "maxPrice": 3735
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 3319,
+          "minPrice": 2921,
+          "maxPrice": 3717
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 3315,
+          "minPrice": 2917,
+          "maxPrice": 3713
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 3323,
+          "minPrice": 2924,
+          "maxPrice": 3722
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 3340,
+          "minPrice": 2939,
+          "maxPrice": 3741
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 3361,
+          "minPrice": 2958,
+          "maxPrice": 3764
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 3378,
+          "minPrice": 2973,
+          "maxPrice": 3783
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 3385,
+          "minPrice": 2979,
+          "maxPrice": 3791
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 3380,
+          "minPrice": 2974,
+          "maxPrice": 3786
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 3364,
+          "minPrice": 2960,
+          "maxPrice": 3768
+        }
+      ],
+      "gov-rice-pune__gultekdi__apmc": [
+        {
+          "date": "2026-11-10",
+          "arrivalDate": "10/11/2026",
+          "modalPrice": 3783,
+          "minPrice": 3329,
+          "maxPrice": 4237
+        },
+        {
+          "date": "2026-11-11",
+          "arrivalDate": "11/11/2026",
+          "modalPrice": 3784,
+          "minPrice": 3330,
+          "maxPrice": 4238
+        },
+        {
+          "date": "2026-11-12",
+          "arrivalDate": "12/11/2026",
+          "modalPrice": 3774,
+          "minPrice": 3321,
+          "maxPrice": 4227
+        },
+        {
+          "date": "2026-11-13",
+          "arrivalDate": "13/11/2026",
+          "modalPrice": 3755,
+          "minPrice": 3304,
+          "maxPrice": 4206
+        },
+        {
+          "date": "2026-11-14",
+          "arrivalDate": "14/11/2026",
+          "modalPrice": 3735,
+          "minPrice": 3287,
+          "maxPrice": 4183
+        },
+        {
+          "date": "2026-11-15",
+          "arrivalDate": "15/11/2026",
+          "modalPrice": 3719,
+          "minPrice": 3273,
+          "maxPrice": 4165
+        },
+        {
+          "date": "2026-11-16",
+          "arrivalDate": "16/11/2026",
+          "modalPrice": 3715,
+          "minPrice": 3269,
+          "maxPrice": 4161
+        },
+        {
+          "date": "2026-11-17",
+          "arrivalDate": "17/11/2026",
+          "modalPrice": 3723,
+          "minPrice": 3276,
+          "maxPrice": 4170
+        },
+        {
+          "date": "2026-11-18",
+          "arrivalDate": "18/11/2026",
+          "modalPrice": 3740,
+          "minPrice": 3291,
+          "maxPrice": 4189
+        },
+        {
+          "date": "2026-11-19",
+          "arrivalDate": "19/11/2026",
+          "modalPrice": 3761,
+          "minPrice": 3310,
+          "maxPrice": 4212
+        },
+        {
+          "date": "2026-11-20",
+          "arrivalDate": "20/11/2026",
+          "modalPrice": 3778,
+          "minPrice": 3325,
+          "maxPrice": 4231
+        },
+        {
+          "date": "2026-11-21",
+          "arrivalDate": "21/11/2026",
+          "modalPrice": 3785,
+          "minPrice": 3331,
+          "maxPrice": 4239
+        },
+        {
+          "date": "2026-11-22",
+          "arrivalDate": "22/11/2026",
+          "modalPrice": 3780,
+          "minPrice": 3326,
+          "maxPrice": 4234
+        },
+        {
+          "date": "2026-11-23",
+          "arrivalDate": "23/11/2026",
+          "modalPrice": 3764,
+          "minPrice": 3312,
+          "maxPrice": 4216
+        }
+      ]
+    }
+  }
+}

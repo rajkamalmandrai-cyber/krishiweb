@@ -3,7 +3,7 @@
  * System health and configuration status without exposing API key secrets
  */
 
-const { hasDataGovKey, hasGoogleMapsKey } = require("../lib/mandi-core");
+const { hasDataGovKey, hasGoogleMapsKey, mandiStore, routingService } = require("../lib/mandi-core");
 
 module.exports = async (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -16,6 +16,8 @@ module.exports = async (req, res) => {
     return;
   }
 
+  const storeMeta = mandiStore.store ? mandiStore.store.meta : {};
+
   res.setHeader("Content-Type", "application/json");
   res.writeHead(200);
   res.end(
@@ -24,7 +26,11 @@ module.exports = async (req, res) => {
       uptime: process.uptime(),
       timestamp: new Date().toISOString(),
       dataGovConfigured: hasDataGovKey(),
-      googleMapsConfigured: hasGoogleMapsKey()
+      googleMapsConfigured: hasGoogleMapsKey(),
+      routingProvider: routingService.googleProvider ? "Google Maps Routes API" : "OSRM / OpenStreetMap",
+      lastSuccessfulDataSync: storeMeta.lastSuccessfulSync || null,
+      lastSyncStatus: storeMeta.lastSyncStatus || "unknown",
+      validationSummary: storeMeta.validation || null
     })
   );
 };

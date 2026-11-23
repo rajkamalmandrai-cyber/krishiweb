@@ -15,7 +15,9 @@ const {
   fetchMandiDataFromGov,
   computeRoute,
   hasDataGovKey,
-  hasGoogleMapsKey
+  hasGoogleMapsKey,
+  mandiStore,
+  routingService
 } = require("./lib/mandi-core");
 
 const PORT = parseInt(process.env.PORT, 10) || 3000;
@@ -52,6 +54,18 @@ const server = http.createServer(async (req, res) => {
   }
   if (pathname === "/api/routes") {
     return routesHandler(req, res);
+  }
+  if (pathname === "/api/sync") {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    res.setHeader("Content-Type", "application/json");
+    if (req.method === "OPTIONS") {
+      res.writeHead(204);
+      return res.end();
+    }
+    const syncRes = await mandiStore.syncFromDataGov();
+    res.writeHead(200);
+    return res.end(JSON.stringify({ status: "ok", sync: syncRes, meta: mandiStore.store.meta }));
   }
 
   // Static File Serving
@@ -101,9 +115,13 @@ if (require.main === module) {
     console.log(`   URL: http://localhost:${PORT}`);
     console.log(`   Mandi API: http://localhost:${PORT}/api/mandi-prices?crop=Onion`);
     console.log(`   Routes API: http://localhost:${PORT}/api/routes`);
+    console.log(`   Routing Engine: ${routingService.googleProvider ? "Google Maps Routes API" : "OSRM / OpenStreetMap (Free Road Network)"}`);
     console.log(`   data.gov.in key: ${hasDataGovKey() ? "CONFIGURED (present)" : "MISSING"}`);
-    console.log(`   Google Maps API key: ${hasGoogleMapsKey() ? "CONFIGURED (present)" : "FALLBACK ROAD MODEL ACTIVE"}`);
+    console.log(`   Data Store: ${mandiStore.store ? "INITIALIZED (" + mandiStore.store.meta.lastSuccessfulSync + ")" : "PENDING"}`);
     console.log(`=======================================================`);
+
+    // Start Daily Scheduled Data Fetching Process
+    mandiStore.startDailyScheduler();
   });
 }
 

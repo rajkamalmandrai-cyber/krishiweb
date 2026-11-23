@@ -5442,3 +5442,201 @@ body.modal-open {
     font-size: 1.65rem;
   }
 }
+
+/* ==========================================================================
+   KRISHIWEB TRANSPARENT LOCATION PANEL & FORECASTING UI (UPGRADE v2.1)
+   ========================================================================== */
+
+.farmer-location-panel {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 14px 0;
+  font-size: 0.875rem;
+}
+
+.farmer-location-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.farmer-location-panel__title {
+  font-weight: 700;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.farmer-location-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.farmer-location-badge--gps {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
+}
+
+.farmer-location-badge--manual {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #7dd3fc;
+}
+
+.farmer-location-badge--fallback {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}
+
+.farmer-location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.farmer-location-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.farmer-location-label {
+  font-size: 0.725rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.farmer-location-val {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.farmer-location-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed #cbd5e1;
+}
+
+.farmer-loc-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+}
+
+.farmer-loc-btn:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+/* Forecast Price Badges & Confidence */
+.farmer-price-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.farmer-price-badge--actual {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #22c55e;
+}
+
+.farmer-price-badge--predicted {
+  background: #ede9fe;
+  color: #5b21b6;
+  border: 1px solid #8b5cf6;
+}
+
+.farmer-forecast-box {
+  background: #faf5ff;
+  border: 1px solid #d8b4fe;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 10px 0;
+  font-size: 0.825rem;
+}
+
+.farmer-forecast-header {
+  font-weight: 700;
+  color: #6b21a8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.farmer-forecast-stat-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+  color: #4c1d95;
+}
+
+/* Data Freshness Indicator Bar */
+.farmer-freshness-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.farmer-freshness-tag--fresh {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.farmer-freshness-tag--yesterday {
+  background: #fef9c3;
+  color: #854d0e;
+}
+
+.farmer-freshness-tag--stale {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.farmer-route-attribution {
+  font-size: 0.72rem;
+  color: #64748b;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

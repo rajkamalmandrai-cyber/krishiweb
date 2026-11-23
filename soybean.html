@@ -204,7 +204,11 @@
               </label>
               <label class="field">
                 <span class="field__label">Selling Date</span>
-                <input class="date-input" type="date" />
+                <select class="input date-select" name="sellingDateType">
+                  <option value="today" selected>Today (Actual Market Rate)</option>
+                  <option value="tomorrow">Tomorrow (+1 Day Forecast)</option>
+                  <option value="day_after">Day After (+2 Days Forecast)</option>
+                </select>
               </label>
               <button class="button button--primary button--arrow" type="submit">
                 <span class="button__text">Find Best Market for Soybean</span>
