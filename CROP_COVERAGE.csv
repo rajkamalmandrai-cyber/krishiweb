@@ -1,0 +1,17 @@
+Index,Crop Commodity,Official AGMARKNET Mappings,Implementation Status,Active Price Records,Unique Trading Mandis,Modal Price Range (₹/Quintal),Latest Price Date,Procurement / Pricing Nature
+1,Tomato,Tomato,Active (Live Rates Available),8,8,₹875 - ₹2125,23/11/2026,Daily APMC Open Auction
+2,Onion,Onion,Active (Live Rates Available),10,10,₹2769 - ₹3200,23/11/2026,Daily APMC Open Auction
+3,Potato,Potato,Active (Live Rates Available),7,7,₹2112 - ₹2412,23/11/2026,Daily APMC Open Auction
+4,Cotton,Cotton,Active (Live Rates Available),8,8,₹7483 - ₹7783,23/11/2026,Daily APMC Open Auction
+5,Soybean,Soyabean,Active (Live Rates Available),8,8,₹4436 - ₹4616,23/11/2026,Daily APMC Open Auction
+6,Rice,Rice; Paddy(Dhan)(Common),Active (Live Rates Available),7,7,₹3314 - ₹3814,23/11/2026,Daily APMC Open Auction
+7,Wheat,Wheat,Active (Live Rates Available),7,7,₹2760 - ₹3160,23/11/2026,Daily APMC Open Auction
+8,Sugarcane,Sugarcane,Exempt (FRP Mill Procurement),0,0,N/A,Statutory FRP Exemption,Statutory FRP Direct Sugar Mill Procurement
+9,Maize,Maize,Configured (Awaiting Sync),0,0,N/A,Awaiting Data Sync,Daily APMC Open Auction
+10,Groundnut,Groundnut,Configured (Awaiting Sync),0,0,N/A,Awaiting Data Sync,Daily APMC Open Auction
+11,Gram,Bengal Gram(Gram)(Whole),Configured (Awaiting Sync),0,0,N/A,Awaiting Data Sync,Daily APMC Open Auction
+12,Tur,Arhar (Tur/Red Gram)(Whole),Configured (Awaiting Sync),0,0,N/A,Awaiting Data Sync,Daily APMC Open Auction
+13,Chilli,Green Chilli,Configured (Awaiting Sync),0,0,N/A,Awaiting Data Sync,Daily APMC Open Auction
+14,Cabbage,Cabbage,Configured (Awaiting Sync),0,0,N/A,Awaiting Data Sync,Daily APMC Open Auction
+15,Cauliflower,Cauliflower,Configured (Awaiting Sync),0,0,N/A,Awaiting Data Sync,Daily APMC Open Auction
+16,Okra,Bhindi(Ladies Finger),Configured (Awaiting Sync),0,0,N/A,Awaiting Data Sync,Daily APMC Open Auction

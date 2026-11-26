@@ -36,6 +36,26 @@ module.exports = async (req, res) => {
     res.end(JSON.stringify(details));
   } catch (err) {
     console.error("[/api/place-details] Error:", err.message);
+    try {
+      const { resolveMaharashtraPlace } = require("../lib/maharashtra-places");
+      const local = resolveMaharashtraPlace(query || placeId);
+      if (local) {
+        res.setHeader("Content-Type", "application/json");
+        res.writeHead(200);
+        res.end(JSON.stringify({
+          status: "success",
+          name: local.name,
+          lat: local.lat,
+          lon: local.lon,
+          district: local.district,
+          taluka: local.taluka,
+          state: local.state,
+          formattedAddress: `${local.name}, ${local.district}, Maharashtra`,
+          source: "verified_local"
+        }));
+        return;
+      }
+    } catch (e) {}
     res.setHeader("Content-Type", "application/json");
     res.writeHead(404);
     res.end(JSON.stringify({ status: "error", message: err.message }));

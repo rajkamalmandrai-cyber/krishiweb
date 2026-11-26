@@ -37,8 +37,16 @@ module.exports = async (req, res) => {
     res.end(JSON.stringify({ status: "ok", predictions }));
   } catch (err) {
     console.error("[/api/places-autocomplete] Error:", err.message);
-    res.setHeader("Content-Type", "application/json");
-    res.writeHead(500);
-    res.end(JSON.stringify({ status: "error", message: err.message, predictions: [] }));
+    try {
+      const { searchMaharashtraPlaces } = require("../lib/maharashtra-places");
+      const fallbackPredictions = searchMaharashtraPlaces(q, 5);
+      res.setHeader("Content-Type", "application/json");
+      res.writeHead(200);
+      res.end(JSON.stringify({ status: "ok", predictions: fallbackPredictions, fallback: true }));
+    } catch (e) {
+      res.setHeader("Content-Type", "application/json");
+      res.writeHead(200);
+      res.end(JSON.stringify({ status: "ok", predictions: [] }));
+    }
   }
 };

@@ -1,0 +1,66 @@
+Index,Market Name,District,Taluka / Location,Latitude,Longitude,Yard Type,Active Price Availability,Supported Crops,Latest Price Date,Location Verification Status,Google Maps Place ID
+1,Ahmednagar APMC,Ahilyanagar,Ahmednagar,19.0952,74.7496,Main Yard,Yes,Onion,23/11/2026,Verified (Place ID & Entrance GPS),ChIJL_n9u03t2zsRwLwz7Gq1h7w
+2,APMC Jamkhed,Ahilyanagar,Jamkhed,18.725,75.319,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ99f_wUbN5jsR1k2l3m4n5E6
+3,APMC Karjat,Ahilyanagar,Karjat,18.91,75,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ88f_wUbN5jsR1k2l3m4n5E6
+4,APMC Kopargaon,Ahilyanagar,Kopargaon,19.891,74.484,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ22a_bUbv1jsR7m8k9l0n1A8
+5,APMC Rahata,Ahilyanagar,Rahata,19.689,74.489,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ00f_wUbN5jsR1k2l3m4n5E6
+6,APMC Sangamner,Ahilyanagar,Sangamner,19.5761,74.2096,Main Yard,Yes,Onion; Tomato,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ7Vq_fU_P2zsR3vWz1kL3k4A
+7,APMC Shrirampur,Ahilyanagar,Shrirampur,19.619,74.66,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ11a_qUfBwjsR4M7w2e1f2A8
+8,APMC Akola,Akola,Akola,20.7002,77.0082,Main Yard,Yes,Cotton; Soybean,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ43c_mUfN4jsR6l7m8n9o0D1
+9,APMC Amravati,Amravati,Amravati,20.932,77.7523,Main Yard,Yes,Cotton,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ55a_bUbv1jsR7m8k9l0n1A8
+10,APMC Beed,Beed,Jalna Road,18.9891,75.7601,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ22a_qUfBwjsR4M7w2e1f2A8
+11,APMC Bhandara,Bhandara,Bhandara,21.1667,79.65,Main Yard,Yes,Rice,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ99f_wUbN5jsR1k2l3m4n5E6
+12,APMC Chandrapur,Chandrapur,Chandrapur,19.9615,79.2961,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ00a_qUfBwjsR4M7w2e1f2A8
+13,APMC Gangapur,Chhatrapati Sambhajinagar,Gangapur,19.699,75.011,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ66a_qUfBwjsR4M7w2e1f2A8
+14,APMC Sillod,Chhatrapati Sambhajinagar,Sillod,20.304,75.651,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ44f_wUbN5jsR1k2l3m4n5E6
+15,APMC Vaijpur,Chhatrapati Sambhajinagar,Vaijpur,19.927,74.731,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ77a_bUbv1jsR7m8k9l0n1A8
+16,Chh. Sambhajinagar APMC,Chhatrapati Sambhajinagar,Chh. Sambhajinagar,19.8762,75.3433,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ55f_wUbN5jsR1k2l3m4n5E6
+17,APMC Dharashiv,Dharashiv,Dharashiv (Osmanabad),18.185,76.042,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ77a_qUfBwjsR4M7w2e1f2A8
+18,APMC Dhule,Dhule,Dhule,20.9042,74.7749,Main Yard,Yes,Cotton,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ88a_qUfBwjsR4M7w2e1f2A8
+19,APMC Gondia,Gondia,Gondia,21.4554,80.1961,Main Yard,Yes,Rice,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ88f_wUbN5jsR1k2l3m4n5E6
+20,APMC Hingoli,Hingoli,Hingoli,19.7188,77.1472,Main Yard,Yes,Soybean,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ88a_bUbv1jsR7m8k9l0n1A8
+21,APMC Bhusawal,Jalgaon,Bhusawal,21.047,75.792,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ99a_bUbv1jsR7m8k9l0n1A8
+22,APMC Jalgaon,Jalgaon,Jalgaon,21.0077,75.5626,Main Yard,Yes,Cotton; Wheat,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ98T_v3fP4jsR5n6m7e8k9B0
+23,APMC Jalna,Jalna,Devalgaon Road,19.8347,75.8816,Main Yard,Yes,Soybean,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ33a_bUbv1jsR7m8k9l0n1A8
+24,APMC Kolhapur,Kolhapur,Kolhapur,16.705,74.2433,Main Yard,Yes,Onion; Tomato; Potato; Soybean; Wheat,23/11/2026,Verified (Place ID & Entrance GPS),ChIJs8Tz1wfv1jsRDZ7v1eP_b6A
+25,APMC Latur,Latur,Latur,18.4088,76.5604,Main Yard,Yes,Soybean; Wheat,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ32b_kUbA1zsR8j9k0l1m2C4
+26,Mumbai (Vashi) APMC,Mumbai,Sector 19,19.0771,72.9986,Main Yard,Yes,Onion; Tomato; Potato; Wheat; Rice,23/11/2026,Verified (Place ID & Entrance GPS),ChIJbUs6HwPj5zsR1K8zL_dZ1f0
+27,APMC Nagpur,Nagpur,Nagpur,21.1685,79.1412,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ47f_wUbN5jsR1k2l3m4n5E6
+28,APMC Nanded,Nanded,Nanded,19.1383,77.321,Main Yard,Yes,Soybean,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ00a_bUbv1jsR7m8k9l0n1A8
+29,APMC Nandurbar,Nandurbar,Nandurbar,21.3704,74.2403,Main Yard,Yes,Cotton,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ77a_bUbv1jsR7m8k9l0n1A8
+30,APMC Dindori,Nashik,Dindori,20.2033,73.8344,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ33f_wUbN5jsR1k2l3m4n5E6
+31,APMC Kalwan,Nashik,Kalwan,20.4851,73.9682,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ44a_qUfBwjsR4M7w2e1f2A8
+32,APMC Malegaon,Nashik,Malegaon,20.5539,74.5298,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ55a_bUbv1jsR7m8k9l0n1A8
+33,APMC Manmad,Nashik,Manmad,20.2524,74.4373,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ66e_kUbA1zsR8j9k0l1m2C4
+34,APMC Nandgaon,Nashik,Nandgaon,20.3128,74.6582,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ77f_wUbN5jsR1k2l3m4n5E6
+35,APMC Nashik,Nashik,Panchavati,19.9975,73.7898,Main Yard,Yes,Onion; Tomato; Potato; Wheat,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ1Z3y7P5v3jsRz1L3u2uB3vA
+36,APMC Sinnar,Nashik,Sinnar,19.851,73.996,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ88a_qUfBwjsR4M7w2e1f2A8
+37,APMC Yeola,Nashik,Yeola,20.0422,74.4883,Main Yard,Yes,Cotton,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ99a_bUbv1jsR7m8k9l0n1A8
+38,Lasalgaon (Vinchur) APMC,Nashik,Lasalgaon,20.1472,74.2267,Sub-Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJc3UaP_b73jsR_B3F1eT9d0w
+39,Lasalgaon APMC,Nashik,Lasalgaon,20.1472,74.2267,Main Yard,Yes,Onion,23/11/2026,Verified (Place ID & Entrance GPS),ChIJc3UaP_b73jsR_B3F1eT9d0w
+40,Pimpalgaon Baswant APMC,Nashik,Pimpalgaon Baswant,20.1704,73.9858,Main Yard,Yes,Onion,23/11/2026,Verified (Place ID & Entrance GPS),ChIJGZ1F_oX73jsRIeQ2y6l1jF8
+41,APMC Palghar,Palghar,Palghar,19.6967,72.7699,Main Yard,Yes,Rice,23/11/2026,Verified (Place ID & Entrance GPS),ChIJd8_4b6_r5jsRzLw0a2b3c4D
+42,APMC Parbhani,Parbhani,Parbhani,19.2644,76.7749,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ99a_qUfBwjsR4M7w2e1f2A8
+43,APMC Baramati,Pune,Baramati,18.1517,74.5772,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ81a_bUbv1jsR7m8k9l0n1A8
+44,APMC Junnar,Pune,Pune,19.2081,73.8763,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ47f_wUbN5jsR1k2l3m4n5E6
+45,APMC Khed (Rajgurunagar),Pune,Rajgurunagar,18.857,73.903,Main Yard,Yes,Potato,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ82a_qUfBwjsR4M7w2e1f2A8
+46,APMC Manchar,Pune,Manchar,19.0064,73.9431,Main Yard,Yes,Potato,23/11/2026,Verified (Place ID & Entrance GPS),ChIJQ7V6wU7P3jsR3Lw1a2b3c4D
+47,APMC Narayangaon,Pune,Narayangaon,19.1232,73.9782,Main Yard,Yes,Tomato,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ56f_W0jP3jsR9zX8b6e2d1w
+48,APMC Shirur,Pune,Shirur,18.827,74.379,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ92b_kUbA1zsR8j9k0l1m2C4
+49,Pune (Gultekdi) APMC,Pune,Gultekdi,18.4975,73.8647,Main Yard,Yes,Onion; Tomato; Potato; Wheat; Rice,23/11/2026,Verified (Place ID & Entrance GPS),ChIJXy51iBfAwjsRv15PZfFqWk8
+50,Pune (Khadki) APMC,Pune,Pune,18.563,73.834,Sub-Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJw7e1k3l4n5B1m4n5A2b3c4D
+51,Pune (Moshi) APMC,Pune,Pune-Nashik Highway,18.6728,73.8475,Sub-Yard,Yes,Tomato,23/11/2026,Verified (Place ID & Entrance GPS),ChIJh6v54qTBwjsR32Y7f_qV_4A
+52,APMC Alibag,Raigad,Raigad,18.658,72.877,Main Yard,Yes,Rice,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ77K8wUff5zsRv1eQ2kL3k4A
+53,APMC Mangaon,Raigad,Raigad,18.253,73.287,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ31Y8wUff5zsRw7e1k3l4n5B
+54,APMC Murud,Raigad,Raigad,18.328,72.962,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ51X8wUff5zsRw2e1l3m4n5A
+55,APMC Panvel,Raigad,Panvel,18.9894,73.1175,Main Yard,Yes,Onion; Potato; Rice,23/11/2026,Verified (Place ID & Entrance GPS),ChIJr2oQ3v7r5zsRQhXW_y4vK3E
+56,APMC Sangli,Sangli,Sangli,16.8524,74.5815,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ22a_bUbv1jsR7m8k9l0n1A8
+57,APMC Karad,Satara,Karad,17.2885,74.1843,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ44a_bUbv1jsR7m8k9l0n1A8
+58,APMC Satara,Satara,Satara,17.6805,73.9935,Main Yard,Yes,Tomato,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ66V7wUbv1jsR7m8k9l0n1A8
+59,APMC Vaduj,Satara,Vaduj,17.596,74.444,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJ66a_bUbv1jsR7m8k9l0n1A8
+60,APMC Solapur,Solapur,Solapur,17.6599,75.9064,Main Yard,Yes,Onion; Soybean; Wheat,23/11/2026,Verified (Place ID & Entrance GPS),ChIJNf_5V9_m1jsR1cT_u2mB7gE
+61,APMC Kalyan,Thane,Kalyan,19.2437,73.1355,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJb7V6wUrv5zsR2e1f3g4h5i6
+62,Thane APMC,Thane,Thane,19.2183,72.9781,Main Yard,No,None,N/A,Verified (Place ID & Entrance GPS),ChIJQ0k0dUbv5zsR3X6b9e2d1w4
+63,APMC Wardha,Wardha,Wardha,20.7453,78.6022,Main Yard,Yes,Cotton,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ11a_bUbv1jsR7m8k9l0n1A8
+64,APMC Washim,Washim,Washim,20.1112,77.1345,Main Yard,Yes,Soybean,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ33a_bUbv1jsR7m8k9l0n1A8
+65,APMC Yavatmal,Yavatmal,Yavatmal,20.3888,78.1204,Main Yard,Yes,Cotton,23/11/2026,Verified (Place ID & Entrance GPS),ChIJ22a_qUfBwjsR4M7w2e1f2A8

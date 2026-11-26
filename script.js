@@ -84,6 +84,8 @@
       invalidApiResponse: "Invalid API response format.",
       locationPermissionDenied: "Location permission denied. Please enter manually.",
       unableToDetectLocation: "Unable to detect location",
+      locationNameUnresolved: "Location confirmed (Coordinates: {lat}, {lon})",
+      invalidLocationSelection: "Please select a verified location from the suggestions or click 'Use My Location'.",
       locationUncertainWarning: "We could not confirm your exact location. Please check or enter your location.",
       confirmLocationBtn: "Confirm Location",
       locationConfirmed: "Location confirmed",
@@ -438,6 +440,8 @@
       invalidApiResponse: "अमान्य एपीआई प्रतिक्रिया प्रारूप।",
       locationPermissionDenied: "स्थान की अनुमति अस्वीकृत। कृपया मैन्युअल रूप से दर्ज करें।",
       unableToDetectLocation: "स्थान का पता लगाने में असमर्थ",
+      locationNameUnresolved: "स्थान निश्चित किया गया (निर्देशांक: {lat}, {lon})",
+      invalidLocationSelection: "कृपया सुझावों में से कोई मान्य स्थान चुनें या 'मेरी लोकेशन' पर क्लिक करें।",
       locationUncertainWarning: "हम आपके सटीक स्थान की पुष्टि नहीं कर सके। कृपया अपना स्थान जांचें या दर्ज करें।",
       confirmLocationBtn: "स्थान की पुष्टि करें",
       locationConfirmed: "स्थान की पुष्टि हुई",
@@ -784,6 +788,8 @@
       invalidApiResponse: "अवैध एपीआय प्रतिसाद स्वरूप.",
       locationPermissionDenied: "स्थान परवानगी नाकारली. कृपया व्यक्तिचलितपणे प्रविष्ट करा.",
       unableToDetectLocation: "स्थान शोधण्यात अक्षम",
+      locationNameUnresolved: "स्थान निश्चित केले (निर्देशक: {lat}, {lon})",
+      invalidLocationSelection: "कृपया दिलेल्या पर्यायांमधून वैध स्थान निवडा किंवा 'माझे स्थान वापरा' वर क्लिक करा.",
       locationUncertainWarning: "आम्ही तुमच्या अचूक स्थानाची खात्री करू शकलो नाही. कृपया तुमचे स्थान तपासा किंवा प्रविष्ट करा.",
       confirmLocationBtn: "स्थानाची खात्री करा",
       locationConfirmed: "स्थानाची खात्री झाली",
@@ -1389,24 +1395,139 @@
     });
   }
 
-  // --- Authoritative Location State Management (Phase 02) ---
+  // --- Authoritative Location State Management (Unified Location Pipeline) ---
   const authoritativeLocationState = {
+    source: "none", // 'gps' | 'manual' | 'none'
+    displayName: "",
+    locality: "",
+    district: "",
+    state: "Maharashtra",
+    formattedAddress: "",
     latitude: null,
     longitude: null,
     accuracy: null,
     timestamp: null,
-    locality: "",
-    district: "",
-    state: "",
-    formattedAddress: "",
-    source: "none", // 'gps' | 'manual' | 'default_fallback'
     userConfirmed: false,
+    isConfirmed: false,
     isApproximate: false
   };
 
+  // Client-Side 117 Verified Maharashtra Settlements Database (Guarantees 100% offline autocomplete)
+  const VERIFIED_MAHARASHTRA_PLACES = [{"id":"maha-thane","name":"Thane","nameMr":"ठाणे","nameHi":"ठाणे","taluka":"Thane","district":"Thane","lat":19.2183,"lon":72.9781,"disambiguation":"","type":"city"},{"id":"maha-kalyan","name":"Kalyan","nameMr":"कल्याण","nameHi":"कल्याण","taluka":"Kalyan","district":"Thane","lat":19.2437,"lon":73.1355,"disambiguation":"","type":"city"},{"id":"maha-dombivli","name":"Dombivli","nameMr":"डोंबिवली","nameHi":"डोंबिवली","taluka":"Kalyan","district":"Thane","lat":19.2184,"lon":73.0867,"disambiguation":"","type":"city"},{"id":"maha-shahapur","name":"Shahapur","nameMr":"शहापूर","nameHi":"शहापुर","taluka":"Shahapur","district":"Thane","lat":19.4542,"lon":73.3308,"disambiguation":"","type":"town"},{"id":"maha-murbad","name":"Murbad","nameMr":"मुरबाड","nameHi":"मुरबाड","taluka":"Murbad","district":"Thane","lat":19.253,"lon":73.398,"disambiguation":"","type":"town"},{"id":"maha-bhiwandi","name":"Bhiwandi","nameMr":"भिवंडी","nameHi":"भिवंडी","taluka":"Bhiwandi","district":"Thane","lat":19.2967,"lon":73.0631,"disambiguation":"","type":"city"},{"id":"maha-ambernath","name":"Ambernath","nameMr":"अंबरनाथ","nameHi":"अंबरनाथ","taluka":"Ambernath","district":"Thane","lat":19.197,"lon":73.193,"disambiguation":"","type":"city"},{"id":"maha-ulhasnagar","name":"Ulhasnagar","nameMr":"उल्हासनगर","nameHi":"उल्हासनगर","taluka":"Ulhasnagar","district":"Thane","lat":19.2215,"lon":73.1645,"disambiguation":"","type":"city"},{"id":"maha-badlapur","name":"Badlapur","nameMr":"बदलापूर","nameHi":"बदलापुर","taluka":"Ambernath","district":"Thane","lat":19.167,"lon":73.267,"disambiguation":"","type":"town"},{"id":"maha-mumbai-vashi","name":"Navi Mumbai (Vashi)","nameMr":"नवी मुंबई (वाशी)","nameHi":"नवी मुंबई (वाशी)","taluka":"Thane","district":"Thane","lat":19.0771,"lon":72.9986,"disambiguation":"","type":"city"},{"id":"maha-mumbai","name":"Mumbai","nameMr":"मुंबई","nameHi":"मुंबई","taluka":"Mumbai","district":"Mumbai","lat":19.076,"lon":72.8777,"disambiguation":"","type":"city"},{"id":"maha-panvel","name":"Panvel","nameMr":"पनवेल","nameHi":"पनवेल","taluka":"Panvel","district":"Raigad","lat":18.9894,"lon":73.1175,"disambiguation":"","type":"city"},{"id":"maha-alibag","name":"Alibag","nameMr":"अलिबाग","nameHi":"अलीबाग","taluka":"Alibag","district":"Raigad","lat":18.658,"lon":72.877,"disambiguation":"","type":"town"},{"id":"maha-karjat-raigad","name":"Karjat","nameMr":"कर्जत (रायगड)","nameHi":"कर्जत (रायगढ़)","taluka":"Karjat","district":"Raigad","lat":18.91,"lon":73.328,"disambiguation":"Raigad District (Near Mumbai/Pune expressway)","type":"town"},{"id":"maha-pen","name":"Pen","nameMr":"पेण","nameHi":"पेण","taluka":"Pen","district":"Raigad","lat":18.736,"lon":73.097,"disambiguation":"","type":"town"},{"id":"maha-roha","name":"Roha","nameMr":"रोहा","nameHi":"रोहा","taluka":"Roha","district":"Raigad","lat":18.436,"lon":73.119,"disambiguation":"","type":"town"},{"id":"maha-mangaon","name":"Mangaon","nameMr":"माणगाव","nameHi":"माणगांव","taluka":"Mangaon","district":"Raigad","lat":18.253,"lon":73.287,"disambiguation":"","type":"town"},{"id":"maha-mahad","name":"Mahad","nameMr":"महाड","nameHi":"महाड","taluka":"Mahad","district":"Raigad","lat":18.083,"lon":73.417,"disambiguation":"","type":"town"},{"id":"maha-murud","name":"Murud","nameMr":"मुरुड","nameHi":"मुरुड","taluka":"Murud","district":"Raigad","lat":18.328,"lon":72.962,"disambiguation":"","type":"town"},{"id":"maha-palghar","name":"Palghar","nameMr":"पालघर","nameHi":"पालघर","taluka":"Palghar","district":"Palghar","lat":19.6967,"lon":72.7699,"disambiguation":"","type":"city"},{"id":"maha-vasai","name":"Vasai","nameMr":"वसई","nameHi":"वसई","taluka":"Vasai","district":"Palghar","lat":19.3919,"lon":72.8397,"disambiguation":"","type":"city"},{"id":"maha-virar","name":"Virar","nameMr":"विरार","nameHi":"विरार","taluka":"Vasai","district":"Palghar","lat":19.4564,"lon":72.8081,"disambiguation":"","type":"city"},{"id":"maha-dahanu","name":"Dahanu","nameMr":"डहाणू","nameHi":"डहाणू","taluka":"Dahanu","district":"Palghar","lat":19.97,"lon":72.73,"disambiguation":"","type":"town"},{"id":"maha-wada","name":"Wada","nameMr":"वाडा","nameHi":"वाडा","taluka":"Wada","district":"Palghar","lat":19.654,"lon":73.138,"disambiguation":"","type":"town"},{"id":"maha-jawhar","name":"Jawhar","nameMr":"जव्हार","nameHi":"जव्हार","taluka":"Jawhar","district":"Palghar","lat":19.916,"lon":73.232,"disambiguation":"","type":"town"},{"id":"maha-pune","name":"Pune","nameMr":"पुणे","nameHi":"पुणे","taluka":"Haveli","district":"Pune","lat":18.5204,"lon":73.8567,"disambiguation":"","type":"city"},{"id":"maha-baramati","name":"Baramati","nameMr":"बारामती","nameHi":"बारामती","taluka":"Baramati","district":"Pune","lat":18.1517,"lon":74.5772,"disambiguation":"","type":"city"},{"id":"maha-shirur-pune","name":"Shirur","nameMr":"शिरूर (पुणे)","nameHi":"शिरूर (पुणे)","taluka":"Shirur","district":"Pune","lat":18.827,"lon":74.379,"disambiguation":"Pune District (Near Ghod River)","type":"town"},{"id":"maha-junnar","name":"Junnar","nameMr":"जुन्नर","nameHi":"जुन्नर","taluka":"Junnar","district":"Pune","lat":19.2081,"lon":73.8763,"disambiguation":"","type":"town"},{"id":"maha-narayangaon","name":"Narayangaon","nameMr":"नारायणगाव","nameHi":"नारायणगांव","taluka":"Junnar","district":"Pune","lat":19.1232,"lon":73.9782,"disambiguation":"","type":"town"},{"id":"maha-manchar","name":"Manchar","nameMr":"मंचर","nameHi":"मंचर","taluka":"Ambegaon","district":"Pune","lat":19.0064,"lon":73.9431,"disambiguation":"","type":"town"},{"id":"maha-khed-pune","name":"Khed (Rajgurunagar)","nameMr":"खेड / राजगुरूनगर (पुणे)","nameHi":"खेड / राजगुरुनगर (पुणे)","taluka":"Khed","district":"Pune","lat":18.857,"lon":73.903,"disambiguation":"Pune District (Rajgurunagar)","type":"town"},{"id":"maha-otur","name":"Otur","nameMr":"ओतूर","nameHi":"ओतूर","taluka":"Junnar","district":"Pune","lat":19.261,"lon":73.985,"disambiguation":"","type":"village"},{"id":"maha-alephata","name":"Alephata","nameMr":"आळेफाटा","nameHi":"आलेफाटा","taluka":"Junnar","district":"Pune","lat":19.183,"lon":74.117,"disambiguation":"","type":"village"},{"id":"maha-daund","name":"Daund","nameMr":"दौंड","nameHi":"दौंड","taluka":"Daund","district":"Pune","lat":18.463,"lon":74.582,"disambiguation":"","type":"town"},{"id":"maha-indapur","name":"Indapur","nameMr":"इंदापूर","nameHi":"इंदापुर","taluka":"Indapur","district":"Pune","lat":18.118,"lon":75.032,"disambiguation":"","type":"town"},{"id":"maha-saswad","name":"Saswad","nameMr":"सासवड","nameHi":"सासवड","taluka":"Purandar","district":"Pune","lat":18.343,"lon":74.029,"disambiguation":"","type":"town"},{"id":"maha-bhor","name":"Bhor","nameMr":"भोर","nameHi":"भोर","taluka":"Bhor","district":"Pune","lat":18.148,"lon":73.844,"disambiguation":"","type":"town"},{"id":"maha-nashik","name":"Nashik","nameMr":"नाशिक","nameHi":"नासिक","taluka":"Nashik","district":"Nashik","lat":19.9975,"lon":73.7898,"disambiguation":"","type":"city"},{"id":"maha-igatpuri","name":"Igatpuri","nameMr":"इगतपुरी","nameHi":"इगतपुरी","taluka":"Igatpuri","district":"Nashik","lat":19.697,"lon":73.563,"disambiguation":"","type":"town"},{"id":"maha-sinnar","name":"Sinnar","nameMr":"सिन्नर","nameHi":"सिन्नर","taluka":"Sinnar","district":"Nashik","lat":19.851,"lon":73.996,"disambiguation":"","type":"town"},{"id":"maha-lasalgaon","name":"Lasalgaon","nameMr":"लासलगाव","nameHi":"लासलगांव","taluka":"Niphad","district":"Nashik","lat":20.1472,"lon":74.2267,"disambiguation":"","type":"town"},{"id":"maha-pimpalgaon-baswant","name":"Pimpalgaon Baswant","nameMr":"पिंपळगाव बसवंत","nameHi":"पिंपलगांव बसवंत","taluka":"Niphad","district":"Nashik","lat":20.1704,"lon":73.9858,"disambiguation":"","type":"town"},{"id":"maha-ozar","name":"Ozar","nameMr":"ओझर","nameHi":"ओझर","taluka":"Niphad","district":"Nashik","lat":20.096,"lon":73.931,"disambiguation":"","type":"town"},{"id":"maha-yeola","name":"Yeola","nameMr":"येवला","nameHi":"येवला","taluka":"Yeola","district":"Nashik","lat":20.0422,"lon":74.4883,"disambiguation":"","type":"town"},{"id":"maha-malegaon-nashik","name":"Malegaon","nameMr":"मालेगाव (नाशिक)","nameHi":"मालेगांव (नासिक)","taluka":"Malegaon","district":"Nashik","lat":20.5539,"lon":74.5298,"disambiguation":"Nashik District (Textile & Onion Hub)","type":"city"},{"id":"maha-manmad","name":"Manmad","nameMr":"मनमाड","nameHi":"मनमाड","taluka":"Nandgaon","district":"Nashik","lat":20.2524,"lon":74.4373,"disambiguation":"","type":"town"},{"id":"maha-nandgaon","name":"Nandgaon","nameMr":"नांदगाव","nameHi":"नांदगांव","taluka":"Nandgaon","district":"Nashik","lat":20.3128,"lon":74.6582,"disambiguation":"","type":"town"},{"id":"maha-kalwan","name":"Kalwan","nameMr":"कळवण","nameHi":"कलवण","taluka":"Kalwan","district":"Nashik","lat":20.4851,"lon":73.9682,"disambiguation":"","type":"town"},{"id":"maha-dindori","name":"Dindori","nameMr":"दिंडोरी","nameHi":"दिंडोरी","taluka":"Dindori","district":"Nashik","lat":20.2033,"lon":73.8344,"disambiguation":"","type":"town"},{"id":"maha-satana","name":"Satana (Baglan)","nameMr":"सटाणा (बागलाण)","nameHi":"सटाणा (बागलाण)","taluka":"Baglan","district":"Nashik","lat":20.59,"lon":74.2,"disambiguation":"","type":"town"},{"id":"maha-ahilyanagar","name":"Ahilyanagar (Ahmednagar)","nameMr":"अहिल्यानगर (अहमदनगर)","nameHi":"अहिल्यानगर (अहमदनगर)","taluka":"Nagar","district":"Ahilyanagar","lat":19.0952,"lon":74.7496,"disambiguation":"","type":"city"},{"id":"maha-sangamner","name":"Sangamner","nameMr":"संगमनेर","nameHi":"संगमनेर","taluka":"Sangamner","district":"Ahilyanagar","lat":19.5761,"lon":74.2096,"disambiguation":"","type":"city"},{"id":"maha-kopargaon","name":"Kopargaon","nameMr":"कोपरगाव","nameHi":"कोपरगांव","taluka":"Kopargaon","district":"Ahilyanagar","lat":19.891,"lon":74.484,"disambiguation":"","type":"town"},{"id":"maha-shrirampur","name":"Shrirampur","nameMr":"श्रीरामपूर","nameHi":"श्रीरामपुर","taluka":"Shrirampur","district":"Ahilyanagar","lat":19.619,"lon":74.66,"disambiguation":"","type":"city"},{"id":"maha-rahata","name":"Rahata","nameMr":"राहाता","nameHi":"राहाता","taluka":"Rahata","district":"Ahilyanagar","lat":19.689,"lon":74.489,"disambiguation":"","type":"town"},{"id":"maha-shirdi","name":"Shirdi","nameMr":"शिर्डी","nameHi":"शिर्डी","taluka":"Rahata","district":"Ahilyanagar","lat":19.7645,"lon":74.4762,"disambiguation":"","type":"town"},{"id":"maha-jamkhed","name":"Jamkhed","nameMr":"जामखेड","nameHi":"जामखेड","taluka":"Jamkhed","district":"Ahilyanagar","lat":18.725,"lon":75.319,"disambiguation":"","type":"town"},{"id":"maha-karjat-ahilyanagar","name":"Karjat","nameMr":"कर्जत (अहिल्यानगर)","nameHi":"कर्जत (अहिल्यानगर)","taluka":"Karjat","district":"Ahilyanagar","lat":18.91,"lon":75,"disambiguation":"Ahilyanagar District (Ahmednagar region)","type":"town"},{"id":"maha-rahuri","name":"Rahuri","nameMr":"राहुरी","nameHi":"राहुरी","taluka":"Rahuri","district":"Ahilyanagar","lat":19.39,"lon":74.65,"disambiguation":"","type":"town"},{"id":"maha-newasa","name":"Newasa","nameMr":"नेवासा","nameHi":"नेवासा","taluka":"Newasa","district":"Ahilyanagar","lat":19.55,"lon":74.92,"disambiguation":"","type":"town"},{"id":"maha-nandurbar","name":"Nandurbar","nameMr":"नंदुरबार","nameHi":"नंदुरबार","taluka":"Nandurbar","district":"Nandurbar","lat":21.3704,"lon":74.2403,"disambiguation":"","type":"city"},{"id":"maha-shahada","name":"Shahada","nameMr":"शहादा","nameHi":"शहादा","taluka":"Shahada","district":"Nandurbar","lat":21.543,"lon":74.475,"disambiguation":"","type":"town"},{"id":"maha-navapur","name":"Navapur","nameMr":"नवापूर","nameHi":"नवापुर","taluka":"Navapur","district":"Nandurbar","lat":21.167,"lon":73.8,"disambiguation":"","type":"town"},{"id":"maha-dhule","name":"Dhule","nameMr":"धुळे","nameHi":"धुले","taluka":"Dhule","district":"Dhule","lat":20.9042,"lon":74.7749,"disambiguation":"","type":"city"},{"id":"maha-shirpur","name":"Shirpur","nameMr":"शिरपूर","nameHi":"शिरपुर","taluka":"Shirpur","district":"Dhule","lat":21.35,"lon":74.88,"disambiguation":"","type":"town"},{"id":"maha-sakri","name":"Sakri","nameMr":"साक्री","nameHi":"साक्री","taluka":"Sakri","district":"Dhule","lat":20.93,"lon":74.31,"disambiguation":"","type":"town"},{"id":"maha-jalgaon","name":"Jalgaon","nameMr":"जळगाव","nameHi":"जलगांव","taluka":"Jalgaon","district":"Jalgaon","lat":21.0077,"lon":75.5626,"disambiguation":"","type":"city"},{"id":"maha-bhusawal","name":"Bhusawal","nameMr":"भुसावळ","nameHi":"भुसावल","taluka":"Bhusawal","district":"Jalgaon","lat":21.047,"lon":75.792,"disambiguation":"","type":"city"},{"id":"maha-chalisgaon","name":"Chalisgaon","nameMr":"चाळीसगाव","nameHi":"चालीसगांव","taluka":"Chalisgaon","district":"Jalgaon","lat":20.46,"lon":75.01,"disambiguation":"","type":"city"},{"id":"maha-solapur","name":"Solapur","nameMr":"सोलापूर","nameHi":"सोलापुर","taluka":"Solapur North","district":"Solapur","lat":17.6599,"lon":75.9064,"disambiguation":"","type":"city"},{"id":"maha-pandharpur","name":"Pandharpur","nameMr":"पंढरपूर","nameHi":"पंढरपुर","taluka":"Pandharpur","district":"Solapur","lat":17.6775,"lon":75.3275,"disambiguation":"","type":"city"},{"id":"maha-akluj","name":"Akluj","nameMr":"अकलूज","nameHi":"अकलूज","taluka":"Malshiras","district":"Solapur","lat":17.892,"lon":75.021,"disambiguation":"","type":"town"},{"id":"maha-satara","name":"Satara","nameMr":"सातारा","nameHi":"सतारा","taluka":"Satara","district":"Satara","lat":17.6805,"lon":73.9935,"disambiguation":"","type":"city"},{"id":"maha-karad","name":"Karad","nameMr":"कराड","nameHi":"कराड","taluka":"Karad","district":"Satara","lat":17.2885,"lon":74.1843,"disambiguation":"","type":"city"},{"id":"maha-wai","name":"Wai","nameMr":"वाई","nameHi":"वाई","taluka":"Wai","district":"Satara","lat":17.948,"lon":73.892,"disambiguation":"","type":"town"},{"id":"maha-vaduj","name":"Vaduj","nameMr":"वडूज","nameHi":"वडूज","taluka":"Khatav","district":"Satara","lat":17.596,"lon":74.444,"disambiguation":"","type":"town"},{"id":"maha-sangli","name":"Sangli","nameMr":"सांगली","nameHi":"सांगली","taluka":"Miraj","district":"Sangli","lat":16.8524,"lon":74.5815,"disambiguation":"","type":"city"},{"id":"maha-miraj","name":"Miraj","nameMr":"मिरज","nameHi":"मिरज","taluka":"Miraj","district":"Sangli","lat":16.83,"lon":74.64,"disambiguation":"","type":"city"},{"id":"maha-vita","name":"Vita","nameMr":"विटा","nameHi":"विटा","taluka":"Khanapur","district":"Sangli","lat":17.276,"lon":74.538,"disambiguation":"","type":"town"},{"id":"maha-kolhapur","name":"Kolhapur","nameMr":"कोल्हापूर","nameHi":"कोल्हापुर","taluka":"Karveer","district":"Kolhapur","lat":16.705,"lon":74.2433,"disambiguation":"","type":"city"},{"id":"maha-ichalkaranji","name":"Ichalkaranji","nameMr":"इचलकरंजी","nameHi":"इचलकरंजी","taluka":"Hatkanangle","district":"Kolhapur","lat":16.7,"lon":74.46,"disambiguation":"","type":"city"},{"id":"maha-sambhajinagar","name":"Chhatrapati Sambhajinagar (Aurangabad)","nameMr":"छत्रपती संभाजीनगर (औरंगाबाद)","nameHi":"छत्रपति संभाजीनगर (औरंगाबाद)","taluka":"Chhatrapati Sambhajinagar","district":"Chhatrapati Sambhajinagar","lat":19.8762,"lon":75.3433,"disambiguation":"","type":"city"},{"id":"maha-vaijpur","name":"Vaijpur","nameMr":"वैजापूर","nameHi":"वैजापुर","taluka":"Vaijpur","district":"Chhatrapati Sambhajinagar","lat":19.927,"lon":74.731,"disambiguation":"","type":"town"},{"id":"maha-gangapur","name":"Gangapur","nameMr":"गंगापूर","nameHi":"गंगापुर","taluka":"Gangapur","district":"Chhatrapati Sambhajinagar","lat":19.699,"lon":75.011,"disambiguation":"","type":"town"},{"id":"maha-jalna","name":"Jalna","nameMr":"जालना","nameHi":"जालना","taluka":"Jalna","district":"Jalna","lat":19.8347,"lon":75.8816,"disambiguation":"","type":"city"},{"id":"maha-beed","name":"Beed","nameMr":"बीड","nameHi":"बीड","taluka":"Beed","district":"Beed","lat":18.9891,"lon":75.7601,"disambiguation":"","type":"city"},{"id":"maha-georai","name":"Georai","nameMr":"गेवराई","nameHi":"गेवराई","taluka":"Georai","district":"Beed","lat":19.262,"lon":75.753,"disambiguation":"","type":"town"},{"id":"maha-shirur-beed","name":"Shirur Kasar","nameMr":"शिरूर कासार (बीड)","nameHi":"शिरूर कासार (बीड)","taluka":"Shirur Kasar","district":"Beed","lat":19.043,"lon":75.312,"disambiguation":"Beed District (Marathwada region)","type":"town"},{"id":"maha-ashti-beed","name":"Ashti","nameMr":"आष्टी (बीड)","nameHi":"आष्टी (बीड)","taluka":"Ashti","district":"Beed","lat":18.805,"lon":75.175,"disambiguation":"Beed District","type":"town"},{"id":"maha-latur","name":"Latur","nameMr":"लातूर","nameHi":"लातूर","taluka":"Latur","district":"Latur","lat":18.4088,"lon":76.5604,"disambiguation":"","type":"city"},{"id":"maha-shirur-latur","name":"Shirur Anantpal","nameMr":"शिरूर अनंतपाळ (लातूर)","nameHi":"शिरूर अनंतपाल (लातूर)","taluka":"Shirur Anantpal","district":"Latur","lat":18.315,"lon":76.882,"disambiguation":"Latur District","type":"town"},{"id":"maha-dharashiv","name":"Dharashiv (Osmanabad)","nameMr":"धाराशिव (उस्मानाबाद)","nameHi":"धाराशिव (उस्मानाबाद)","taluka":"Dharashiv","district":"Dharashiv","lat":18.185,"lon":76.042,"disambiguation":"","type":"city"},{"id":"maha-nanded","name":"Nanded","nameMr":"नांदेड","nameHi":"नांदेड़","taluka":"Nanded","district":"Nanded","lat":19.1383,"lon":77.321,"disambiguation":"","type":"city"},{"id":"maha-parbhani","name":"Parbhani","nameMr":"परभणी","nameHi":"परभणी","taluka":"Parbhani","district":"Parbhani","lat":19.2644,"lon":76.7749,"disambiguation":"","type":"city"},{"id":"maha-selu-parbhani","name":"Selu","nameMr":"सेलू (परभणी)","nameHi":"सेलू (परभणी)","taluka":"Selu","district":"Parbhani","lat":19.51,"lon":76.45,"disambiguation":"Parbhani District","type":"town"},{"id":"maha-hingoli","name":"Hingoli","nameMr":"हिंगोली","nameHi":"हिंगोली","taluka":"Hingoli","district":"Hingoli","lat":19.7188,"lon":77.1472,"disambiguation":"","type":"city"},{"id":"maha-nagpur","name":"Nagpur","nameMr":"नागपूर","nameHi":"नागपुर","taluka":"Nagpur Urban","district":"Nagpur","lat":21.1458,"lon":79.0882,"disambiguation":"","type":"city"},{"id":"maha-katol","name":"Katol","nameMr":"काटोल","nameHi":"काटोल","taluka":"Katol","district":"Nagpur","lat":21.272,"lon":78.587,"disambiguation":"","type":"town"},{"id":"maha-amravati","name":"Amravati","nameMr":"अमरावती","nameHi":"अमरावती","taluka":"Amravati","district":"Amravati","lat":20.932,"lon":77.7523,"disambiguation":"","type":"city"},{"id":"maha-morshi","name":"Morshi","nameMr":"मोर्शी","nameHi":"मोर्शी","taluka":"Morshi","district":"Amravati","lat":21.321,"lon":78.012,"disambiguation":"","type":"town"},{"id":"maha-akola","name":"Akola","nameMr":"अकोला","nameHi":"अकोला","taluka":"Akola","district":"Akola","lat":20.7002,"lon":77.0082,"disambiguation":"","type":"city"},{"id":"maha-washim","name":"Washim","nameMr":"वाशीम","nameHi":"वाशिम","taluka":"Washim","district":"Washim","lat":20.1112,"lon":77.1345,"disambiguation":"","type":"city"},{"id":"maha-karanja-washim","name":"Karanja (Lad)","nameMr":"कारंजा लाड (वाशीम)","nameHi":"कारंजा लाड (वाशिम)","taluka":"Karanja","district":"Washim","lat":20.483,"lon":77.487,"disambiguation":"Washim District (Karanja Lad)","type":"town"},{"id":"maha-yavatmal","name":"Yavatmal","nameMr":"यवतमाळ","nameHi":"यवतमाल","taluka":"Yavatmal","district":"Yavatmal","lat":20.3888,"lon":78.1204,"disambiguation":"","type":"city"},{"id":"maha-pusad","name":"Pusad","nameMr":"पुसद","nameHi":"पुसद","taluka":"Pusad","district":"Yavatmal","lat":19.907,"lon":77.575,"disambiguation":"","type":"town"},{"id":"maha-wardha","name":"Wardha","nameMr":"वर्धा","nameHi":"वर्धा","taluka":"Wardha","district":"Wardha","lat":20.7453,"lon":78.6022,"disambiguation":"","type":"city"},{"id":"maha-hinganghat","name":"Hinganghat","nameMr":"हिंगणघाट","nameHi":"हिंगणघाट","taluka":"Hinganghat","district":"Wardha","lat":20.55,"lon":78.8333,"disambiguation":"","type":"town"},{"id":"maha-arvi","name":"Arvi","nameMr":"आर्वी","nameHi":"आर्वी","taluka":"Arvi","district":"Wardha","lat":20.985,"lon":78.232,"disambiguation":"","type":"town"},{"id":"maha-seloo-wardha","name":"Seloo","nameMr":"सेलू (वर्धा)","nameHi":"सेलू (वर्धा)","taluka":"Seloo","district":"Wardha","lat":20.835,"lon":78.705,"disambiguation":"Wardha District","type":"town"},{"id":"maha-karanja-wardha","name":"Karanja (Ghadge)","nameMr":"कारंजा घाडगे (वर्धा)","nameHi":"कारंजा घाडगे (वर्धा)","taluka":"Karanja","district":"Wardha","lat":21.183,"lon":78.417,"disambiguation":"Wardha District (Karanja Ghadge)","type":"town"},{"id":"maha-chandrapur","name":"Chandrapur","nameMr":"चंद्रपूर","nameHi":"चंद्रपुर","taluka":"Chandrapur","district":"Chandrapur","lat":19.9615,"lon":79.2961,"disambiguation":"","type":"city"},{"id":"maha-bhandara","name":"Bhandara","nameMr":"भंडारा","nameHi":"भंडारा","taluka":"Bhandara","district":"Bhandara","lat":21.1667,"lon":79.65,"disambiguation":"","type":"city"},{"id":"maha-gondia","name":"Gondia","nameMr":"गोंदिया","nameHi":"गोंदिया","taluka":"Gondia","district":"Gondia","lat":21.4554,"lon":80.1961,"disambiguation":"","type":"city"},{"id":"maha-gadchiroli","name":"Gadchiroli","nameMr":"गडचिरोली","nameHi":"गडचिरोली","taluka":"Gadchiroli","district":"Gadchiroli","lat":20.1849,"lon":79.9948,"disambiguation":"","type":"city"},{"id":"maha-buldhana","name":"Buldhana","nameMr":"बुलढाणा","nameHi":"बुलढाणा","taluka":"Buldhana","district":"Buldhana","lat":20.53,"lon":76.18,"disambiguation":"","type":"city"},{"id":"maha-lonar","name":"Lonar","nameMr":"लोणार","nameHi":"लोणार","taluka":"Lonar","district":"Buldhana","lat":19.985,"lon":76.52,"disambiguation":"","type":"town"}];
+
+  /**
+   * Calculates Haversine distance in km between two coordinate points
+   */
+  function clientHaversineKm(lat1, lon1, lat2, lon2) {
+    const R = 6371;
+    const dLat = ((lat2 - lat1) * Math.PI) / 180;
+    const dLon = ((lon2 - lon1) * Math.PI) / 180;
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos((lat1 * Math.PI) / 180) * Math.cos((lat2 * Math.PI) / 180) *
+      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  }
+
+  /**
+   * Finds the nearest verified settlement in Maharashtra within maxRadiusKm
+   */
+  function findNearestLocalSettlement(lat, lon, maxRadiusKm = 40) {
+    let nearest = null;
+    let minDist = Infinity;
+    for (const p of VERIFIED_MAHARASHTRA_PLACES) {
+      const d = clientHaversineKm(lat, lon, p.lat, p.lon);
+      if (d < minDist) {
+        minDist = d;
+        nearest = { place: p, distanceKm: Math.round(d * 10) / 10 };
+      }
+    }
+    if (nearest && nearest.distanceKm <= maxRadiusKm) {
+      return nearest;
+    }
+    return null;
+  }
+
+  /**
+   * Fast, zero-dependency client-side autocomplete matching
+   */
+  function searchLocalSettlements(query, limit = 5) {
+    if (!query || typeof query !== "string") return [];
+    const q = query.toLowerCase().trim();
+    if (q.length < 3) return [];
+
+    const matches = [];
+    for (const p of VERIFIED_MAHARASHTRA_PLACES) {
+      const name = (p.name || "").toLowerCase();
+      const nameMr = (p.nameMr || "").toLowerCase();
+      const nameHi = (p.nameHi || "").toLowerCase();
+      const taluka = (p.taluka || "").toLowerCase();
+      const district = (p.district || "").toLowerCase();
+
+      let score = 0;
+      if (name === q || nameMr === q || nameHi === q) score += 100;
+      else if (name.startsWith(q) || nameMr.startsWith(q) || nameHi.startsWith(q)) score += 80;
+      else if (name.includes(q) || nameMr.includes(q) || nameHi.includes(q)) score += 50;
+      else if (taluka.startsWith(q) || district.startsWith(q)) score += 40;
+      else if (taluka.includes(q) || district.includes(q)) score += 20;
+
+      if (score > 0) {
+        if (p.type === "city") score += 3;
+        if (p.type === "town") score += 1;
+        matches.push({ p, score });
+      }
+    }
+
+    matches.sort((a, b) => b.score - a.score);
+    return matches.slice(0, limit).map(m => {
+      const p = m.p;
+      const secondary = p.disambiguation 
+        ? `${p.disambiguation}, Taluka ${p.taluka}, Maharashtra`
+        : `Taluka ${p.taluka}, District ${p.district}, Maharashtra`;
+      return {
+        placeId: p.id,
+        description: `${p.name}, ${p.district}, Maharashtra`,
+        mainText: p.name,
+        mainTextMr: p.nameMr,
+        mainTextHi: p.nameHi,
+        secondaryText: secondary,
+        taluka: p.taluka,
+        district: p.district,
+        state: "Maharashtra",
+        lat: p.lat,
+        lon: p.lon,
+        source: "verified_local"
+      };
+    });
+  }
+
+  /**
+   * Resolves a query string or place name against verified local database
+   */
+  function resolveLocalSettlement(query) {
+    if (!query || typeof query !== "string") return null;
+    const clean = query.toLowerCase().trim();
+
+    // Exact name match
+    const exact = VERIFIED_MAHARASHTRA_PLACES.find(p => 
+      p.name.toLowerCase() === clean || 
+      (p.nameMr && p.nameMr.toLowerCase() === clean) ||
+      (p.nameHi && p.nameHi.toLowerCase() === clean) ||
+      p.id === clean
+    );
+    if (exact) return exact;
+
+    // Fuzzy search
+    const results = searchLocalSettlements(query, 1);
+    return results.length > 0 ? results[0] : null;
+  }
+
+  // Request counter to cancel stale GPS fixes and delayed responses
+  let activeLocationSessionId = 0;
+  let isAcquiringLocation = false;
+
   /**
    * Invalidate previously detected GPS coordinates when user edits location input.
-   * Prevents stale coordinates from silently overriding user-entered text.
+   * Completely clears GPS state and restores normal manual controls.
    */
   function invalidateFormLocation(form) {
     if (!form) return;
@@ -1419,12 +1540,16 @@
     delete form.dataset.originState;
     form.dataset.originSource = "manual";
 
+    // Invalidate session to drop any pending GPS callbacks
+    activeLocationSessionId++;
+
     authoritativeLocationState.latitude = null;
     authoritativeLocationState.longitude = null;
     authoritativeLocationState.accuracy = null;
     authoritativeLocationState.source = "manual";
+    authoritativeLocationState.isConfirmed = false;
+    authoritativeLocationState.userConfirmed = false;
     authoritativeLocationState.isApproximate = false;
-    authoritativeLocationState.userConfirmed = true;
 
     hideLocationUncertaintyBanner(form);
 
@@ -1474,6 +1599,7 @@
     if (confirmBtn) {
       confirmBtn.addEventListener("click", () => {
         authoritativeLocationState.userConfirmed = true;
+        authoritativeLocationState.isConfirmed = true;
         hideLocationUncertaintyBanner(form);
       });
     }
@@ -1487,10 +1613,8 @@
     }
   }
 
-  let isAcquiringLocation = false;
-
   /**
-   * Acquire device location with multi-sample settling and server-side reverse geocoding
+   * Acquire device location with high accuracy, multi-sample settling and reliable reverse geocoding
    */
   async function acquireDeviceLocation(form, locBtn, locInput) {
     if (isAcquiringLocation) return;
@@ -1501,9 +1625,25 @@
     }
 
     isAcquiringLocation = true;
+    const currentSession = ++activeLocationSessionId;
+    authoritativeLocationState.source = "gps";
+    authoritativeLocationState.isConfirmed = false;
+    if (form) {
+      form.dataset.originSource = "gps";
+    }
+
     const btnSpan = locBtn ? locBtn.querySelector("span") : null;
-    if (btnSpan) btnSpan.textContent = translations[currentLang]?.detectingLocation || "Detecting...";
-    if (locBtn) locBtn.disabled = true;
+    const detectingMsg = translations[currentLang]?.detectingLocation || "Detecting location...";
+    if (btnSpan) btnSpan.textContent = detectingMsg;
+    if (locBtn) {
+      locBtn.disabled = true;
+      locBtn.classList.remove("is-denied", "is-gps-active");
+    }
+
+    // Set temporary detecting status in input if empty
+    if (locInput && !locInput.value.trim()) {
+      locInput.placeholder = detectingMsg;
+    }
 
     // High accuracy acquisition options (strictly preserves enableHighAccuracy: true, maximumAge: 0, timeout: 20000)
     const geoOptions = {
@@ -1539,8 +1679,8 @@
       settled = true;
       stopTracking();
 
-      // Prevent delayed GPS responses from overriding manual user selections
-      if (authoritativeLocationState.source === "manual" || (form && form.dataset && form.dataset.originSource === "manual")) {
+      // Guard: drop delayed GPS fix if user switched to manual or if session changed
+      if (currentSession !== activeLocationSessionId || authoritativeLocationState.source === "manual") {
         console.log("[Location] User selected manual location; dropping delayed GPS fix.");
         return;
       }
@@ -1559,14 +1699,66 @@
       // Check for approximate location (laptop Wi-Fi ~212m, or coarse cell triangulation > 300m)
       const isApproximate = !accuracy || accuracy > 300;
 
-      // Update authoritative location state
+      // Reverse geocode into meaningful locality & district name (Never use "My Location")
+      let resolvedLocality = "";
+      let resolvedDistrict = "";
+      let displayAddress = "";
+
+      // 1. Try server-side reverse geocode endpoint with 3s timeout
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 3000);
+        const res = await fetch(`/api/geocode?lat=${latitude}&lon=${longitude}`, { signal: controller.signal });
+        clearTimeout(timeoutId);
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.locality) {
+            resolvedLocality = data.locality;
+            resolvedDistrict = data.district || data.locality;
+            displayAddress = data.formattedAddress || `${resolvedLocality}, ${resolvedDistrict}`;
+          }
+        }
+      } catch (e) {
+        console.warn("[Location] Server reverse geocode error:", e.message);
+      }
+
+      // 2. Client-side verified local settlement fallback if server did not resolve
+      if (!resolvedLocality) {
+        const nearest = findNearestLocalSettlement(latitude, longitude, 40);
+        if (nearest) {
+          resolvedLocality = nearest.place.name;
+          resolvedDistrict = nearest.place.district;
+          displayAddress = `${resolvedLocality}, ${resolvedDistrict}`;
+        }
+      }
+
+      // 3. Coordinate fallback (retain valid coordinates, never invent or substitute another city)
+      if (!resolvedLocality) {
+        resolvedLocality = `Lat ${latitude.toFixed(4)}, Lon ${longitude.toFixed(4)}`;
+        resolvedDistrict = "Maharashtra";
+        displayAddress = `Location Confirmed (${latitude.toFixed(4)}, ${longitude.toFixed(4)})`;
+      }
+
+      // Guard again after async reverse geocode
+      if (currentSession !== activeLocationSessionId || authoritativeLocationState.source === "manual") {
+        console.log("[Location] User switched to manual during geocode; dropping GPS result.");
+        return;
+      }
+
+      // Commit to Authoritative Location State
       authoritativeLocationState.latitude = latitude;
       authoritativeLocationState.longitude = longitude;
       authoritativeLocationState.accuracy = accuracy ? Math.round(accuracy) : null;
       authoritativeLocationState.timestamp = posTimestamp;
+      authoritativeLocationState.locality = resolvedLocality;
+      authoritativeLocationState.district = resolvedDistrict;
+      authoritativeLocationState.state = "Maharashtra";
+      authoritativeLocationState.displayName = displayAddress;
+      authoritativeLocationState.formattedAddress = displayAddress;
       authoritativeLocationState.source = "gps";
-      authoritativeLocationState.isApproximate = isApproximate;
+      authoritativeLocationState.isConfirmed = true;
       authoritativeLocationState.userConfirmed = !isApproximate;
+      authoritativeLocationState.isApproximate = isApproximate;
 
       // Update Form Dataset
       if (form) {
@@ -1575,64 +1767,31 @@
         form.dataset.originAccuracy = accuracy ? Math.round(accuracy) : "";
         form.dataset.originTimestamp = posTimestamp;
         form.dataset.originSource = "gps";
+        form.dataset.originLocality = resolvedLocality;
+        form.dataset.originState = "Maharashtra";
         form.dataset.originApproximate = isApproximate ? "true" : "false";
       }
 
-      // Execute server-side reverse geocoding via /api/geocode
-      try {
-        const res = await fetch(`/api/geocode?lat=${latitude}&lon=${longitude}`);
-        if (!res.ok) throw new Error("Server reverse geocoding returned " + res.status);
-        const data = await res.json();
+      // Populate location input with human-readable name
+      if (locInput) {
+        locInput.value = displayAddress;
+      }
 
-        if (data && data.locality) {
-          const locality = data.locality;
-          const state = data.state || "Maharashtra";
-          const displayStr = `${locality}, ${state}`;
+      // Update button state: successful detection indicator
+      if (btnSpan) {
+        btnSpan.textContent = `📍 ${resolvedLocality}`;
+      }
+      if (locBtn) {
+        locBtn.classList.remove("is-denied");
+        locBtn.classList.add("is-gps-active");
+        locBtn.disabled = false;
+      }
 
-          authoritativeLocationState.locality = locality;
-          authoritativeLocationState.district = data.district || locality;
-          authoritativeLocationState.state = state;
-          authoritativeLocationState.formattedAddress = data.formattedAddress || displayStr;
-
-          if (form) {
-            form.dataset.originLocality = locality;
-            form.dataset.originState = state;
-          }
-
-          if (locInput) {
-            locInput.value = displayStr;
-          }
-
-          if (btnSpan) {
-            btnSpan.textContent = `📍 ${locality}`;
-          }
-
-          if (locBtn) {
-            locBtn.classList.remove("is-denied");
-            locBtn.classList.add("is-gps-active");
-          }
-
-          // If location is approximate (such as desktop/Wi-Fi positioning), display farmer-friendly warning
-          if (isApproximate) {
-            showLocationUncertaintyBanner(form, locality);
-          } else {
-            hideLocationUncertaintyBanner(form);
-          }
-        } else {
-          throw new Error("Invalid geocode data");
-        }
-      } catch (geocodeErr) {
-        console.warn("[Location] Reverse geocode fallback:", geocodeErr.message);
-        const fallbackStr = "My Location";
-        if (locInput) locInput.value = fallbackStr;
-        if (btnSpan) btnSpan.textContent = "📍 My Location";
-        if (locBtn) {
-          locBtn.classList.remove("is-denied");
-          locBtn.classList.add("is-gps-active");
-        }
-        if (isApproximate) {
-          showLocationUncertaintyBanner(form, fallbackStr);
-        }
+      // Approximate location handling
+      if (isApproximate) {
+        showLocationUncertaintyBanner(form, resolvedLocality);
+      } else {
+        hideLocationUncertaintyBanner(form);
       }
     };
 
@@ -1648,6 +1807,7 @@
       if (btn) {
         btn.classList.add("is-denied");
         btn.classList.remove("is-gps-active");
+        btn.disabled = false;
       }
       if (f) {
         invalidateFormLocation(f);
@@ -1714,7 +1874,7 @@
         invalidateFormLocation(form);
       });
 
-      // Phase 03: Dynamic Places Autocomplete
+      // Dynamic Places Autocomplete with client-side verified local database
       initPlacesAutocomplete(form, locInput);
     }
   }
@@ -1722,7 +1882,7 @@
   let activeAutocompleteItemIndex = -1;
 
   /**
-   * Initializes Places Autocomplete with debouncing and tap-to-select
+   * Initializes Places Autocomplete with debouncing, instant local fallback, and tap-to-select
    */
   function initPlacesAutocomplete(form, locInput) {
     if (!form || !locInput || locInput._hasPlacesAutocomplete) return;
@@ -1780,10 +1940,10 @@
         </div>
       `).join("");
 
-      // Bind selection listeners
+      // Bind selection listeners (supports touch and click)
       const items = dropdown.querySelectorAll(".places-autocomplete-item");
       items.forEach((item) => {
-        item.addEventListener("click", async (e) => {
+        const handler = async (e) => {
           e.preventDefault();
           e.stopPropagation();
           const placeId = item.getAttribute("data-place-id");
@@ -1793,7 +1953,8 @@
           const district = item.getAttribute("data-district");
 
           await selectLocation(placeId, mainText, preLat, preLon, district);
-        });
+        };
+        item.addEventListener("click", handler);
       });
     };
 
@@ -1808,7 +1969,17 @@
       form.dataset.originSource = "manual";
       form.dataset.originLocality = mainText;
 
-      // If coordinates are pre-provided from verified local place
+      // Reset GPS button to inactive state ("Use My Location")
+      const locBtn = form.querySelector(".location-button, #detect-location-btn");
+      if (locBtn) {
+        locBtn.classList.remove("is-gps-active", "is-denied");
+        const btnSpan = locBtn.querySelector("span");
+        if (btnSpan) {
+          btnSpan.textContent = translations[currentLang]?.useMyLocationBtn || "Use My Location";
+        }
+      }
+
+      // If coordinates are pre-provided from verified local place (Instant 0ms resolution)
       if (preLat && preLon && !isNaN(parseFloat(preLat)) && !isNaN(parseFloat(preLon))) {
         const lat = parseFloat(preLat);
         const lon = parseFloat(preLon);
@@ -1816,34 +1987,57 @@
         form.dataset.originLon = lon;
         authoritativeLocationState.latitude = lat;
         authoritativeLocationState.longitude = lon;
+        authoritativeLocationState.displayName = displayStr;
         authoritativeLocationState.locality = mainText;
         authoritativeLocationState.district = cleanDistrict;
         authoritativeLocationState.state = "Maharashtra";
         authoritativeLocationState.source = "manual";
+        authoritativeLocationState.isConfirmed = true;
         authoritativeLocationState.userConfirmed = true;
         authoritativeLocationState.isApproximate = false;
         return;
       }
 
-      // If coordinates must be resolved via /api/place-details
+      // Fallback: resolve via /api/place-details or local place lookup
       try {
         const res = await fetch(`/api/place-details?placeId=${encodeURIComponent(placeId)}&q=${encodeURIComponent(mainText)}`);
-        if (!res.ok) throw new Error("Could not resolve location coordinates");
-        const data = await res.json();
-        if (data && typeof data.lat === "number" && typeof data.lon === "number") {
-          form.dataset.originLat = data.lat;
-          form.dataset.originLon = data.lon;
-          authoritativeLocationState.latitude = data.lat;
-          authoritativeLocationState.longitude = data.lon;
-          authoritativeLocationState.locality = data.name || mainText;
-          authoritativeLocationState.district = data.district || cleanDistrict;
-          authoritativeLocationState.state = data.state || "Maharashtra";
-          authoritativeLocationState.source = "manual";
-          authoritativeLocationState.userConfirmed = true;
-          authoritativeLocationState.isApproximate = false;
+        if (res.ok) {
+          const data = await res.json();
+          if (data && typeof data.lat === "number" && typeof data.lon === "number") {
+            form.dataset.originLat = data.lat;
+            form.dataset.originLon = data.lon;
+            authoritativeLocationState.latitude = data.lat;
+            authoritativeLocationState.longitude = data.lon;
+            authoritativeLocationState.displayName = displayStr;
+            authoritativeLocationState.locality = data.name || mainText;
+            authoritativeLocationState.district = data.district || cleanDistrict;
+            authoritativeLocationState.state = data.state || "Maharashtra";
+            authoritativeLocationState.source = "manual";
+            authoritativeLocationState.isConfirmed = true;
+            authoritativeLocationState.userConfirmed = true;
+            authoritativeLocationState.isApproximate = false;
+            return;
+          }
         }
       } catch (err) {
-        console.warn("[PlacesAutocomplete] Place details resolution failed:", err.message);
+        console.warn("[PlacesAutocomplete] Place details resolution error:", err.message);
+      }
+
+      // Local fallback lookup
+      const local = resolveLocalSettlement(mainText);
+      if (local) {
+        form.dataset.originLat = local.lat;
+        form.dataset.originLon = local.lon;
+        authoritativeLocationState.latitude = local.lat;
+        authoritativeLocationState.longitude = local.lon;
+        authoritativeLocationState.displayName = displayStr;
+        authoritativeLocationState.locality = local.name;
+        authoritativeLocationState.district = local.district;
+        authoritativeLocationState.state = "Maharashtra";
+        authoritativeLocationState.source = "manual";
+        authoritativeLocationState.isConfirmed = true;
+        authoritativeLocationState.userConfirmed = true;
+        authoritativeLocationState.isApproximate = false;
       }
     };
 
@@ -1855,30 +2049,59 @@
         debounceTimer = null;
       }
 
+      // If less than 3 characters, hide dropdown
       if (q.length < 3) {
         hideDropdown();
         return;
       }
 
-      showLoading();
+      // Step 1: Instantly search verified local settlements (Zero network latency)
+      const localPredictions = searchLocalSettlements(q, 5);
+      if (localPredictions.length > 0) {
+        renderPredictions(localPredictions);
+      } else {
+        showLoading();
+      }
+
       const thisRequestId = ++activeRequestId;
 
+      // Step 2: In parallel, fetch from server endpoint with 2.5s timeout
       debounceTimer = setTimeout(async () => {
         try {
-          const res = await fetch(`/api/places-autocomplete?q=${encodeURIComponent(q)}&lang=${encodeURIComponent(currentLang)}`);
-          if (!res.ok) throw new Error("Autocomplete request failed");
-          const data = await res.json();
-          // Ensure query hasn't changed while request was in-flight
-          if (thisRequestId === activeRequestId && locInput.value.trim() === q) {
-            renderPredictions(data.predictions || []);
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 2500);
+
+          const res = await fetch(`/api/places-autocomplete?q=${encodeURIComponent(q)}&lang=${encodeURIComponent(currentLang)}`, {
+            signal: controller.signal
+          });
+          clearTimeout(timeoutId);
+
+          if (res.ok) {
+            const data = await res.json();
+            if (thisRequestId === activeRequestId && locInput.value.trim() === q) {
+              const predictions = data.predictions || [];
+              if (predictions.length > 0) {
+                renderPredictions(predictions);
+              } else if (localPredictions.length > 0) {
+                renderPredictions(localPredictions);
+              } else {
+                renderPredictions([]);
+              }
+            }
+          } else {
+            throw new Error("HTTP " + res.status);
           }
         } catch (err) {
-          console.warn("[PlacesAutocomplete] Fetch error:", err.message);
-          if (thisRequestId === activeRequestId) {
-            hideDropdown();
+          // If network fetch fails or times out, rely on local settlement results
+          if (thisRequestId === activeRequestId && locInput.value.trim() === q) {
+            if (localPredictions.length > 0) {
+              renderPredictions(localPredictions);
+            } else {
+              renderPredictions([]);
+            }
           }
         }
-      }, 300);
+      }, 250);
     });
 
     // Keyboard navigation
@@ -1923,6 +2146,7 @@
       }
     });
   }
+
 
   // Bind hero form location controller
   const heroLocationForm = document.querySelector(".hero-section form") || document.querySelector("form");
@@ -3283,74 +3507,100 @@
     "apmc gadchiroli": { lat: 20.1849, lon: 79.9948, name: "APMC Gadchiroli", district: "Gadchiroli", location: "Gadchiroli, Maharashtra" }
   };
 
-  // --- Farmer Origin Coordinates Resolver ---
-  // Part 1: Uses actual user-entered or selected origin location, never silently uses IP location
-  function resolveUserOriginCoords(userLocationStr, form) {
-    if (form && form.dataset && form.dataset.originLat && form.dataset.originLon && form.dataset.originSource === "gps") {
-      const currentInputVal = (userLocationStr || extractUserLocation(form) || "").toLowerCase().trim();
-      const detectedLocality = (form.dataset.originLocality || "").toLowerCase().trim();
 
+  // --- Farmer Origin Coordinates Resolver ---
+  // Uses actual user-entered or selected origin location, never silently uses IP location
+  function resolveUserOriginCoords(userLocationStr, form) {
+    // 1. Authoritative location state has top priority
+    if (authoritativeLocationState.isConfirmed &&
+        typeof authoritativeLocationState.latitude === "number" &&
+        typeof authoritativeLocationState.longitude === "number") {
+      
+      const currentInputVal = (userLocationStr || extractUserLocation(form) || "").toLowerCase().trim();
+      const detectedLocality = (form?.dataset?.originLocality || authoritativeLocationState.locality || authoritativeLocationState.displayName || "").toLowerCase().trim();
+      
       // Verification: if user manually edited the input to a different place, do NOT use stale GPS!
       const isStillMatching = !detectedLocality ||
                               currentInputVal.includes(detectedLocality) ||
                               detectedLocality.includes(currentInputVal) ||
                               currentInputVal.includes("gps") ||
-                              currentInputVal === "my location" ||
                               currentInputVal === "";
 
-      if (isStillMatching) {
-        const lat = parseFloat(form.dataset.originLat);
-        const lon = parseFloat(form.dataset.originLon);
-        if (!isNaN(lat) && !isNaN(lon)) {
-          return {
-            lat,
-            lon,
-            name: userLocationStr || form.dataset.originLocality || "Current Device GPS",
-            source: "gps",
-            accuracy: form.dataset.originAccuracy ? parseFloat(form.dataset.originAccuracy) : null,
-            timestamp: form.dataset.originTimestamp || new Date().toISOString(),
-            isFallback: false
-          };
-        }
+      if (isStillMatching || authoritativeLocationState.source === "manual") {
+        return {
+          lat: authoritativeLocationState.latitude,
+          lon: authoritativeLocationState.longitude,
+          name: authoritativeLocationState.displayName || userLocationStr,
+          source: authoritativeLocationState.source,
+          accuracy: authoritativeLocationState.accuracy,
+          timestamp: authoritativeLocationState.timestamp || new Date().toISOString(),
+          isFallback: false
+        };
       } else {
         // User changed location text manually; invalidate dataset coordinates immediately
         invalidateFormLocation(form);
       }
     }
 
-    if (!userLocationStr) {
-      return {
-        lat: 19.2183,
-        lon: 72.9781,
-        name: "Thane (Default Reference)",
-        source: "default_fallback",
-        accuracy: null,
-        timestamp: new Date().toISOString(),
-        isFallback: true
-      };
-    }
-    const clean = userLocationStr.toLowerCase().trim();
+    // 2. Check form dataset if authoritative state was reset but dataset remains
+    if (form && form.dataset && form.dataset.originLat && form.dataset.originLon) {
+      const lat = parseFloat(form.dataset.originLat);
+      const lon = parseFloat(form.dataset.originLon);
+      const currentInputVal = (userLocationStr || extractUserLocation(form) || "").toLowerCase().trim();
+      const detectedLocality = (form.dataset.originLocality || "").toLowerCase().trim();
 
-    // Direct match
-    for (const [key, coords] of Object.entries(CITY_COORDINATES)) {
-      if (clean === key || clean.startsWith(key) || clean.includes(key) || key.includes(clean)) {
+      const isStillMatching = !detectedLocality ||
+                              currentInputVal.includes(detectedLocality) ||
+                              detectedLocality.includes(currentInputVal) ||
+                              currentInputVal.includes("gps") ||
+                              currentInputVal === "";
+
+      if (!isNaN(lat) && !isNaN(lon) && isStillMatching) {
         return {
-          lat: coords.lat,
-          lon: coords.lon,
-          name: userLocationStr,
+          lat,
+          lon,
+          name: userLocationStr || form.dataset.originLocality || (form.dataset.originSource === "gps" ? "Current Device GPS" : "Manual Selection"),
+          source: form.dataset.originSource || "manual",
+          accuracy: form.dataset.originAccuracy ? parseFloat(form.dataset.originAccuracy) : null,
+          timestamp: form.dataset.originTimestamp || new Date().toISOString(),
+          isFallback: false
+        };
+      }
+    }
+
+    // 3. If user entered manual text that was not confirmed via dropdown click,
+    // resolve it against VERIFIED_MAHARASHTRA_PLACES or CITY_COORDINATES
+    if (userLocationStr && userLocationStr.trim()) {
+      const clean = userLocationStr.toLowerCase().trim();
+      
+      // Search in verified Maharashtra places
+      const localMatches = searchLocalSettlements(clean, 1);
+      if (localMatches && localMatches.length > 0) {
+        const p = localMatches[0];
+        authoritativeLocationState.latitude = p.lat;
+        authoritativeLocationState.longitude = p.lon;
+        authoritativeLocationState.displayName = p.mainText + ", " + p.district;
+        authoritativeLocationState.source = "manual";
+        authoritativeLocationState.isConfirmed = true;
+        return {
+          lat: p.lat,
+          lon: p.lon,
+          name: p.mainText + ", " + p.district,
           source: "manual",
           accuracy: null,
           timestamp: new Date().toISOString(),
           isFallback: false
         };
       }
-    }
 
-    // Token match
-    const tokens = clean.replace(/district|dist|city|[(),]/gi, " ").split(/\s+/).filter(w => w.length > 2);
-    for (const token of tokens) {
+      // Check CITY_COORDINATES
       for (const [key, coords] of Object.entries(CITY_COORDINATES)) {
-        if (key.includes(token) || token.includes(key)) {
+        if (clean === key || clean.startsWith(key) || clean.includes(key) || key.includes(clean)) {
+          authoritativeLocationState.latitude = coords.lat;
+          authoritativeLocationState.longitude = coords.lon;
+          authoritativeLocationState.displayName = userLocationStr;
+          authoritativeLocationState.source = "manual";
+          authoritativeLocationState.isConfirmed = true;
           return {
             lat: coords.lat,
             lon: coords.lon,
@@ -3364,15 +3614,21 @@
       }
     }
 
-    return {
-      lat: 19.2183,
-      lon: 72.9781,
-      name: userLocationStr + " (Thane Ref.)",
-      source: "default_fallback",
-      accuracy: null,
-      timestamp: new Date().toISOString(),
-      isFallback: true
-    };
+    // 4. Default fallback strictly when user provided NO location (e.g. initial demo reference)
+    if (!userLocationStr && (!form || !form.dataset || !form.dataset.originLat)) {
+      return {
+        lat: 19.2183,
+        lon: 72.9781,
+        name: "Thane (Default Reference)",
+        source: "default_fallback",
+        accuracy: null,
+        timestamp: new Date().toISOString(),
+        isFallback: true
+      };
+    }
+
+    // If user typed an invalid/unresolvable location, return null to prevent calculation on fake coordinates
+    return null;
   }
 
   // --- Mandi Coordinate Resolver ---
@@ -4966,6 +5222,21 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
 
     if (statusEl) {
       statusEl.textContent = translations[currentLang]?.findingMarkets || "Finding nearby markets...";
+    }
+
+    const testOrigin = resolveUserOriginCoords(userLocationStr, form);
+    if (!testOrigin) {
+      if (statusEl) {
+        statusEl.textContent = translations[currentLang]?.invalidLocationSelection || 
+          "Please select a verified location from the suggestions or click 'Use My Location'.";
+      }
+      const locInput = form.querySelector('input[name="location"], input[placeholder*="Location"], input[placeholder*="स्थान"]');
+      if (locInput) locInput.focus();
+      if (submitButton) {
+        submitButton.classList.remove("is-loading");
+        submitButton.disabled = false;
+      }
+      return;
     }
 
     try {

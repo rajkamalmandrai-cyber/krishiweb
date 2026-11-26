@@ -1861,7 +1861,7 @@ noscript [data-animate] {
   box-shadow:
     0 25px 60px rgba(0, 0, 0, 0.12),
     0 1px 0 rgb(255 255 255 / 0.96) inset;
-  overflow: hidden;
+  overflow: visible;
   transition: transform var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out);
   padding: clamp(var(--space-5), 3vw, var(--space-6));
 }
@@ -2465,10 +2465,11 @@ noscript [data-animate] {
   background-color: var(--white, #ffffff);
   border: 1px solid rgb(23 56 38 / 0.16);
   border-radius: 12px;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.18), 0 8px 12px -6px rgba(0, 0, 0, 0.1);
   max-height: 280px;
   overflow-y: auto;
-  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  z-index: 9999;
   padding: 6px 0;
   animation: fadeInDown 0.18s ease-out;
 }
@@ -2483,6 +2484,11 @@ noscript [data-animate] {
   gap: 8px;
 }
 
+.places-autocomplete-spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
 .places-autocomplete-item {
   display: flex;
   align-items: flex-start;
@@ -2490,8 +2496,10 @@ noscript [data-animate] {
   padding: 10px 14px;
   cursor: pointer;
   border-left: 3px solid transparent;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
-  min-height: 44px; /* Touch friendly standard */
+  transition: background-color 0.15s ease, border-left-color 0.15s ease;
+  min-height: 48px; /* Touch friendly mobile standard */
+  touch-action: manipulation;
+  user-select: none;
 }
 
 .places-autocomplete-item:hover,
