@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastSuccessfulSync": "2026-11-26T16:38:36.191Z",
+    "lastSuccessfulSync": "2026-11-26T17:05:38.812Z",
     "lastSyncStatus": "success",
     "source": "AGMARKNET / OGD India (Ministry of Agriculture and Farmers Welfare)",
     "totalRecords": 0,
@@ -93,7 +93,7 @@
         "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-26T16:38:36.191Z"
+        "updatedAt": "2026-11-26T17:05:38.812Z"
       },
       {
         "id": "gov-onion-apmc_panvel",

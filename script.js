@@ -89,6 +89,8 @@
       locationConfirmed: "Location confirmed",
       gpsDetectedBadge: "📍 Detected Location",
       manualLocationBadge: "✏️ Manually Entered",
+      noLocationFound: "No locations found. Please check spelling or enter nearby town/taluka.",
+      searchingLocations: "Searching locations...",
       findingMarkets: "Finding nearby markets...",
       comparingPrices: "Comparing prices...",
       calculatingTransport: "Calculating transport...",
@@ -441,6 +443,8 @@
       locationConfirmed: "स्थान की पुष्टि हुई",
       gpsDetectedBadge: "📍 पहचाना गया स्थान",
       manualLocationBadge: "✏️ मैन्युअल दर्ज",
+      noLocationFound: "कोई स्थान नहीं मिला। कृपया वर्तनी जांचें या नजदीकी तालुका/शहर दर्ज करें।",
+      searchingLocations: "स्थान खोजे जा रहे हैं...",
       findingMarkets: "आस-पास के बाजार खोजे जा रहे हैं...",
       comparingPrices: "कीमतों की तुलना की जा रही है...",
       calculatingTransport: "परिवहन की गणना की जा रही है...",
@@ -785,6 +789,8 @@
       locationConfirmed: "स्थानाची खात्री झाली",
       gpsDetectedBadge: "📍 ओळखलेले स्थान",
       manualLocationBadge: "✏️ मॅन्युअल प्रविष्ट",
+      noLocationFound: "कोणतेही स्थान आढळले नाही. कृपया शब्दलेखन तपासा किंवा जवळचा तालुका/शहर प्रविष्ट करा.",
+      searchingLocations: "स्थाने शोधत आहे...",
       findingMarkets: "जवळच्या बाजारपेठा शोधत आहे...",
       comparingPrices: "किमतींची तुलना करत आहे...",
       calculatingTransport: "वाहतुकीची गणना करत आहे...",
@@ -1533,6 +1539,12 @@
       settled = true;
       stopTracking();
 
+      // Prevent delayed GPS responses from overriding manual user selections
+      if (authoritativeLocationState.source === "manual" || (form && form.dataset && form.dataset.originSource === "manual")) {
+        console.log("[Location] User selected manual location; dropping delayed GPS fix.");
+        return;
+      }
+
       if (samples.length === 0) {
         handleAcquisitionError({ code: 2, message: "No position samples received" }, form, locBtn);
         return;
@@ -1701,7 +1713,215 @@
       locInput.addEventListener("change", () => {
         invalidateFormLocation(form);
       });
+
+      // Phase 03: Dynamic Places Autocomplete
+      initPlacesAutocomplete(form, locInput);
     }
+  }
+
+  let activeAutocompleteItemIndex = -1;
+
+  /**
+   * Initializes Places Autocomplete with debouncing and tap-to-select
+   */
+  function initPlacesAutocomplete(form, locInput) {
+    if (!form || !locInput || locInput._hasPlacesAutocomplete) return;
+    locInput._hasPlacesAutocomplete = true;
+
+    // Create dropdown container
+    const container = locInput.closest(".input-with-icon") || locInput.parentElement;
+    let dropdown = container.querySelector(".places-autocomplete-dropdown");
+    if (!dropdown) {
+      dropdown = document.createElement("div");
+      dropdown.className = "places-autocomplete-dropdown";
+      dropdown.setAttribute("role", "listbox");
+      dropdown.hidden = true;
+      container.appendChild(dropdown);
+    }
+
+    let debounceTimer = null;
+    let activeRequestId = 0;
+
+    const hideDropdown = () => {
+      dropdown.hidden = true;
+      dropdown.innerHTML = "";
+      activeAutocompleteItemIndex = -1;
+    };
+
+    const showLoading = () => {
+      dropdown.hidden = false;
+      dropdown.innerHTML = `
+        <div class="places-autocomplete-loading">
+          <span class="places-autocomplete-spinner" aria-hidden="true">⏳</span>
+          <span>${translations[currentLang]?.searchingLocations || "Searching locations..."}</span>
+        </div>
+      `;
+    };
+
+    const renderPredictions = (predictions) => {
+      if (!Array.isArray(predictions) || predictions.length === 0) {
+        dropdown.hidden = false;
+        dropdown.innerHTML = `
+          <div class="places-autocomplete-empty">
+            ${translations[currentLang]?.noLocationFound || "No locations found. Please check spelling or enter nearby town/taluka."}
+          </div>
+        `;
+        return;
+      }
+
+      dropdown.hidden = false;
+      dropdown.innerHTML = predictions.map((p, idx) => `
+        <div class="places-autocomplete-item" role="option" id="places-opt-${idx}" data-index="${idx}" data-place-id="${p.placeId || ''}" data-main-text="${p.mainText || ''}" data-lat="${p.lat || ''}" data-lon="${p.lon || ''}" data-district="${p.district || ''}">
+          <span class="places-autocomplete-item__icon" aria-hidden="true">📍</span>
+          <div class="places-autocomplete-item__text">
+            <div class="places-autocomplete-item__main">${p.mainText}</div>
+            <div class="places-autocomplete-item__secondary">${p.secondaryText || ''}</div>
+          </div>
+        </div>
+      `).join("");
+
+      // Bind selection listeners
+      const items = dropdown.querySelectorAll(".places-autocomplete-item");
+      items.forEach((item) => {
+        item.addEventListener("click", async (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const placeId = item.getAttribute("data-place-id");
+          const mainText = item.getAttribute("data-main-text");
+          const preLat = item.getAttribute("data-lat");
+          const preLon = item.getAttribute("data-lon");
+          const district = item.getAttribute("data-district");
+
+          await selectLocation(placeId, mainText, preLat, preLon, district);
+        });
+      });
+    };
+
+    const selectLocation = async (placeId, mainText, preLat, preLon, district) => {
+      hideDropdown();
+      const cleanDistrict = district || "Maharashtra";
+      const displayStr = `${mainText}, ${cleanDistrict}`;
+      locInput.value = displayStr;
+
+      // Invalidate previous GPS data and lock to manual
+      invalidateFormLocation(form);
+      form.dataset.originSource = "manual";
+      form.dataset.originLocality = mainText;
+
+      // If coordinates are pre-provided from verified local place
+      if (preLat && preLon && !isNaN(parseFloat(preLat)) && !isNaN(parseFloat(preLon))) {
+        const lat = parseFloat(preLat);
+        const lon = parseFloat(preLon);
+        form.dataset.originLat = lat;
+        form.dataset.originLon = lon;
+        authoritativeLocationState.latitude = lat;
+        authoritativeLocationState.longitude = lon;
+        authoritativeLocationState.locality = mainText;
+        authoritativeLocationState.district = cleanDistrict;
+        authoritativeLocationState.state = "Maharashtra";
+        authoritativeLocationState.source = "manual";
+        authoritativeLocationState.userConfirmed = true;
+        authoritativeLocationState.isApproximate = false;
+        return;
+      }
+
+      // If coordinates must be resolved via /api/place-details
+      try {
+        const res = await fetch(`/api/place-details?placeId=${encodeURIComponent(placeId)}&q=${encodeURIComponent(mainText)}`);
+        if (!res.ok) throw new Error("Could not resolve location coordinates");
+        const data = await res.json();
+        if (data && typeof data.lat === "number" && typeof data.lon === "number") {
+          form.dataset.originLat = data.lat;
+          form.dataset.originLon = data.lon;
+          authoritativeLocationState.latitude = data.lat;
+          authoritativeLocationState.longitude = data.lon;
+          authoritativeLocationState.locality = data.name || mainText;
+          authoritativeLocationState.district = data.district || cleanDistrict;
+          authoritativeLocationState.state = data.state || "Maharashtra";
+          authoritativeLocationState.source = "manual";
+          authoritativeLocationState.userConfirmed = true;
+          authoritativeLocationState.isApproximate = false;
+        }
+      } catch (err) {
+        console.warn("[PlacesAutocomplete] Place details resolution failed:", err.message);
+      }
+    };
+
+    locInput.addEventListener("input", () => {
+      const q = locInput.value.trim();
+
+      if (debounceTimer) {
+        clearTimeout(debounceTimer);
+        debounceTimer = null;
+      }
+
+      if (q.length < 3) {
+        hideDropdown();
+        return;
+      }
+
+      showLoading();
+      const thisRequestId = ++activeRequestId;
+
+      debounceTimer = setTimeout(async () => {
+        try {
+          const res = await fetch(`/api/places-autocomplete?q=${encodeURIComponent(q)}&lang=${encodeURIComponent(currentLang)}`);
+          if (!res.ok) throw new Error("Autocomplete request failed");
+          const data = await res.json();
+          // Ensure query hasn't changed while request was in-flight
+          if (thisRequestId === activeRequestId && locInput.value.trim() === q) {
+            renderPredictions(data.predictions || []);
+          }
+        } catch (err) {
+          console.warn("[PlacesAutocomplete] Fetch error:", err.message);
+          if (thisRequestId === activeRequestId) {
+            hideDropdown();
+          }
+        }
+      }, 300);
+    });
+
+    // Keyboard navigation
+    locInput.addEventListener("keydown", (e) => {
+      if (dropdown.hidden) return;
+      const items = dropdown.querySelectorAll(".places-autocomplete-item");
+      if (items.length === 0) return;
+
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        activeAutocompleteItemIndex = (activeAutocompleteItemIndex + 1) % items.length;
+        updateActiveItem(items);
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        activeAutocompleteItemIndex = (activeAutocompleteItemIndex - 1 + items.length) % items.length;
+        updateActiveItem(items);
+      } else if (e.key === "Enter") {
+        if (activeAutocompleteItemIndex >= 0 && activeAutocompleteItemIndex < items.length) {
+          e.preventDefault();
+          items[activeAutocompleteItemIndex].click();
+        }
+      } else if (e.key === "Escape") {
+        hideDropdown();
+      }
+    });
+
+    const updateActiveItem = (items) => {
+      items.forEach((item, idx) => {
+        if (idx === activeAutocompleteItemIndex) {
+          item.classList.add("is-active");
+          item.scrollIntoView({ block: "nearest" });
+        } else {
+          item.classList.remove("is-active");
+        }
+      });
+    };
+
+    // Close on click outside
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target) && e.target !== locInput) {
+        hideDropdown();
+      }
+    });
   }
 
   // Bind hero form location controller
@@ -1734,6 +1954,19 @@
     "कल्याण": { lat: 19.2437, lon: 73.1355 },
     dombivli: { lat: 19.2184, lon: 73.0867 },
     "डोंबिवली": { lat: 19.2184, lon: 73.0867 },
+    shahapur: { lat: 19.4542, lon: 73.3308 },
+    "शहापूर": { lat: 19.4542, lon: 73.3308 },
+    "शहापुर": { lat: 19.4542, lon: 73.3308 },
+    murbad: { lat: 19.2530, lon: 73.3980 },
+    "मुरबाड": { lat: 19.2530, lon: 73.3980 },
+    bhiwandi: { lat: 19.2967, lon: 73.0631 },
+    "भिवंडी": { lat: 19.2967, lon: 73.0631 },
+    igatpuri: { lat: 19.6970, lon: 73.5630 },
+    "इगतपुरी": { lat: 19.6970, lon: 73.5630 },
+    otur: { lat: 19.2610, lon: 73.9850 },
+    "ओतूर": { lat: 19.2610, lon: 73.9850 },
+    alephata: { lat: 19.1830, lon: 74.1170 },
+    "आळेफाटा": { lat: 19.1830, lon: 74.1170 },
     panvel: { lat: 18.9894, lon: 73.1175 },
     "पनवेल": { lat: 18.9894, lon: 73.1175 },
     raigad: { lat: 18.5158, lon: 73.1822 },

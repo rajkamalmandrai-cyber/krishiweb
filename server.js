@@ -16,6 +16,8 @@ const mandiPricesHandler = require("./api/mandi-prices");
 const routesHandler = require("./api/routes");
 const healthHandler = require("./api/health");
 const geocodeHandler = require("./api/geocode");
+const placesAutocompleteHandler = require("./api/places-autocomplete");
+const placeDetailsHandler = require("./api/place-details");
 const {
   fetchMandiDataFromGov,
   computeRoute,
@@ -62,6 +64,12 @@ const server = http.createServer(async (req, res) => {
   }
   if (pathname === "/api/geocode") {
     return geocodeHandler(req, res);
+  }
+  if (pathname === "/api/places-autocomplete") {
+    return placesAutocompleteHandler(req, res);
+  }
+  if (pathname === "/api/place-details") {
+    return placeDetailsHandler(req, res);
   }
   if (pathname === "/api/sync") {
     res.setHeader("Access-Control-Allow-Origin", "*");

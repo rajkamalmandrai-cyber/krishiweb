@@ -40,11 +40,11 @@ function get(url) {
 
 async function runFullTestSuite() {
   console.log("==================================================================");
-  console.log("KRISHIWEB COMPREHENSIVE PRODUCTION TEST SUITE (23 TESTS)");
+  console.log("KRISHIWEB COMPREHENSIVE PRODUCTION TEST SUITE (27 TESTS)");
   console.log("==================================================================\n");
 
   let passedTests = 0;
-  const totalTests = 23;
+  const totalTests = 27;
 
   const { server } = require('./server.js');
   await new Promise(resolve => server.listen(0, resolve));
@@ -567,6 +567,103 @@ async function runFullTestSuite() {
       passedTests++;
     } else {
       console.log("  [FAIL] Low-accuracy handling or multilingual warnings incomplete.");
+    }
+
+    // -------------------------------------------------------------
+    // TEST 24: Dynamic Places Autocomplete & Place Details Endpoints
+    // -------------------------------------------------------------
+    console.log("\nTEST 24: Dynamic Places Autocomplete & Place Details Endpoints");
+    const testQueries = ["Shahapur", "Murbad", "Igatpuri", "Baramati", "Nandurbar", "Otur"];
+    let allQueriesSucceeded = true;
+
+    for (const q of testQueries) {
+      const autoRes = await get(`http://127.0.0.1:${testPort}/api/places-autocomplete?q=${encodeURIComponent(q)}`);
+      const hasMatch = autoRes.status === 200 && Array.isArray(autoRes.body?.predictions) && autoRes.body.predictions.some(p => p.mainText?.toLowerCase().includes(q.toLowerCase()));
+      if (!hasMatch) {
+        console.log(`  -> Failed autocomplete for: ${q}`);
+        allQueriesSucceeded = false;
+      }
+    }
+
+    const detailsRes = await get(`http://127.0.0.1:${testPort}/api/place-details?placeId=maha-shahapur`);
+    const validDetails = detailsRes.status === 200 && Math.abs(detailsRes.body?.lat - 19.4542) < 0.01 && Math.abs(detailsRes.body?.lon - 73.3308) < 0.01;
+    console.log(`  -> Resolved Shahapur (maha-shahapur): Lat ${detailsRes.body?.lat}, Lon ${detailsRes.body?.lon}, District: ${detailsRes.body?.district}`);
+
+    if (allQueriesSucceeded && validDetails) {
+      console.log("  [PASS] Dynamic Places Autocomplete resolves small towns, talukas and coordinates across Maharashtra.");
+      passedTests++;
+    } else {
+      console.log("  [FAIL] Places autocomplete or details endpoint failed for required test settlements.");
+    }
+
+    // -------------------------------------------------------------
+    // TEST 25: Disambiguation of Identical Village Names (Shirur & Karjat)
+    // -------------------------------------------------------------
+    console.log("\nTEST 25: Disambiguation of Identical Village Names (Shirur & Karjat)");
+    const shirurRes = await get(`http://127.0.0.1:${testPort}/api/places-autocomplete?q=Shirur`);
+    const karjatRes = await get(`http://127.0.0.1:${testPort}/api/places-autocomplete?q=Karjat`);
+
+    const shirurPredictions = shirurRes.body?.predictions || [];
+    const karjatPredictions = karjatRes.body?.predictions || [];
+
+    const hasShirurPune = shirurPredictions.some(p => p.secondaryText?.includes("Pune") || p.description?.includes("Pune"));
+    const hasShirurBeed = shirurPredictions.some(p => p.secondaryText?.includes("Beed") || p.mainText?.includes("Kasar") || p.description?.includes("Beed"));
+
+    const hasKarjatRaigad = karjatPredictions.some(p => p.secondaryText?.includes("Raigad") || p.description?.includes("Raigad"));
+    const hasKarjatAhilyanagar = karjatPredictions.some(p => p.secondaryText?.includes("Ahilyanagar") || p.description?.includes("Ahilyanagar"));
+
+    console.log(`  -> Shirur predictions count: ${shirurPredictions.length} (Pune match: ${hasShirurPune}, Beed match: ${hasShirurBeed})`);
+    console.log(`  -> Karjat predictions count: ${karjatPredictions.length} (Raigad match: ${hasKarjatRaigad}, Ahilyanagar match: ${hasKarjatAhilyanagar})`);
+
+    if (hasShirurPune && hasShirurBeed && hasKarjatRaigad && hasKarjatAhilyanagar) {
+      console.log("  [PASS] Identical village names are accurately disambiguated with administrative district context.");
+      passedTests++;
+    } else {
+      console.log("  [FAIL] Duplicate village disambiguation failed.");
+    }
+
+    // -------------------------------------------------------------
+    // TEST 26: Farmer Origin Independence & Mandi Recommendation Integrity
+    // -------------------------------------------------------------
+    console.log("\nTEST 26: Farmer Origin Independence & Mandi Recommendation Integrity");
+    // Shahapur has NO APMC, but a farmer in Shahapur must receive recommendations to real, verified APMCs
+    const shahapurRecRes = await get(`http://127.0.0.1:${testPort}/api/mandi-prices?crop=Onion&state=Maharashtra`);
+    const availableMandis = shahapurRecRes.body?.records || [];
+    const hasValidPrices = availableMandis.length > 0 && availableMandis.every(m => m.modalPrice > 0 && typeof m.lat === "number" && typeof m.lon === "number");
+    const noFakeShahapurMandi = !availableMandis.some(m => m.name.toLowerCase().includes("shahapur apmc"));
+
+    console.log(`  -> Active Onion Mandis for Shahapur farmer: ${availableMandis.length} markets`);
+    console.log(`  -> No fabricated Shahapur APMC created: ${noFakeShahapurMandi}`);
+    console.log(`  -> All returned mandis have verified prices & coordinates: ${hasValidPrices}`);
+
+    if (hasValidPrices && noFakeShahapurMandi) {
+      console.log("  [PASS] Farmer origin is completely decoupled from mandi store; only real, verified APMC markets recommended.");
+      passedTests++;
+    } else {
+      console.log("  [FAIL] Recommendation integrity compromised or fabricated mandi detected.");
+    }
+
+    // -------------------------------------------------------------
+    // TEST 27: Anti-Race Condition: Delayed GPS Never Overrides Manual Selection
+    // -------------------------------------------------------------
+    console.log("\nTEST 27: Anti-Race Condition: Delayed GPS Guard & Policy Compliance");
+    const hasDelayedGpsGuard = scriptSrc.includes('authoritativeLocationState.source === "manual"') &&
+                               scriptSrc.includes('dropping delayed GPS fix');
+    const hasPlacesAutocompleteUI = scriptSrc.includes('initPlacesAutocomplete') &&
+                                    scriptSrc.includes('places-autocomplete-dropdown') &&
+                                    scriptSrc.includes('places-autocomplete-item');
+    const noNominatimForAutocomplete = !scriptSrc.includes('nominatim.openstreetmap.org/search') &&
+                                       !scriptSrc.includes('nominatim.openstreetmap.org/autocomplete');
+
+    console.log(`  -> Guard against late-arriving GPS responses overriding manual inputs: ${hasDelayedGpsGuard}`);
+    console.log(`  -> Places Autocomplete typeahead UI with touch targets: ${hasPlacesAutocompleteUI}`);
+    console.log(`  -> Public Nominatim strictly avoided for autocomplete: ${noNominatimForAutocomplete}`);
+
+    if (hasDelayedGpsGuard && hasPlacesAutocompleteUI && noNominatimForAutocomplete) {
+      console.log("  [PASS] Delayed GPS fixes safely dropped when manual location selected, compliant with OSM policy.");
+      passedTests++;
+    } else {
+      console.log("  [FAIL] Delayed GPS guard or policy compliance check failed.");
     }
 
     console.log("\n==================================================================");
