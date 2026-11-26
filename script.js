@@ -84,6 +84,11 @@
       invalidApiResponse: "Invalid API response format.",
       locationPermissionDenied: "Location permission denied. Please enter manually.",
       unableToDetectLocation: "Unable to detect location",
+      locationUncertainWarning: "We could not confirm your exact location. Please check or enter your location.",
+      confirmLocationBtn: "Confirm Location",
+      locationConfirmed: "Location confirmed",
+      gpsDetectedBadge: "📍 Detected Location",
+      manualLocationBadge: "✏️ Manually Entered",
       findingMarkets: "Finding nearby markets...",
       comparingPrices: "Comparing prices...",
       calculatingTransport: "Calculating transport...",
@@ -184,6 +189,24 @@
       unitQuintal: "quintal",
       bestNearbyMarketEyebrow: "BEST NEARBY MARKET",
       otherNearbyMarketsHeading: "Other Nearby Markets",
+      recommendedMarketLabel: "Recommended Market",
+      alternativeMarketLabel: "Alternative Market",
+      roadDistanceLabel: "Road Distance",
+      travelTimeLabel: "Estimated Travel Time",
+      cropAndQuantityLabel: "Crop & Quantity",
+      totalSellingValueLabel: "Total Estimated Selling Amount",
+      transportCostLabel: "Estimated Transport Cost",
+      finalAmountInHandLabel: "Final Estimated Amount (In Hand)",
+      finalLossLabel: "Estimated Loss After Travel",
+      finalAmountSubtext: "Take-home amount after deducting transport cost",
+      viewRouteGoogleMaps: "View Route on Google Maps",
+      verifyOnGoogleMaps: "Verify on Google Maps",
+      roadDistanceUnavailable: "Road distance unavailable",
+      travelTimeUnavailable: "Travel time unavailable",
+      transportCostUnavailable: "Transport cost unavailable",
+      finalAmountUnavailable: "Cannot estimate without distance",
+      routeAttributionFooter: "Route data © OpenStreetMap / OSRM • Market rates: AGMARKNET",
+      lossWarningText: "Travel cost may exceed your crop value",
 
       // Crop options & visual chips
       cropOptionTomato: "Tomato",
@@ -413,6 +436,11 @@
       invalidApiResponse: "अमान्य एपीआई प्रतिक्रिया प्रारूप।",
       locationPermissionDenied: "स्थान की अनुमति अस्वीकृत। कृपया मैन्युअल रूप से दर्ज करें।",
       unableToDetectLocation: "स्थान का पता लगाने में असमर्थ",
+      locationUncertainWarning: "हम आपके सटीक स्थान की पुष्टि नहीं कर सके। कृपया अपना स्थान जांचें या दर्ज करें।",
+      confirmLocationBtn: "स्थान की पुष्टि करें",
+      locationConfirmed: "स्थान की पुष्टि हुई",
+      gpsDetectedBadge: "📍 पहचाना गया स्थान",
+      manualLocationBadge: "✏️ मैन्युअल दर्ज",
       findingMarkets: "आस-पास के बाजार खोजे जा रहे हैं...",
       comparingPrices: "कीमतों की तुलना की जा रही है...",
       calculatingTransport: "परिवहन की गणना की जा रही है...",
@@ -504,6 +532,24 @@
       unitQuintal: "क्विंटल",
       bestNearbyMarketEyebrow: "आपके लिए सबसे अच्छा नजदीकी बाजार",
       otherNearbyMarketsHeading: "अन्य नजदीकी बाजार",
+      recommendedMarketLabel: "सुझाई गई मंडी",
+      alternativeMarketLabel: "अन्य विकल्प मंडी",
+      roadDistanceLabel: "सड़क की दूरी",
+      travelTimeLabel: "पहुंचने का समय",
+      cropAndQuantityLabel: "फसल और मात्रा",
+      totalSellingValueLabel: "फसल की कुल अनुमानित कीमत",
+      transportCostLabel: "गाड़ी का खर्च (भाड़ा)",
+      finalAmountInHandLabel: "हाथ में आने वाली अनुमानित रकम",
+      finalLossLabel: "आने-जाने के बाद अनुमानित घाटा",
+      finalAmountSubtext: "गाड़ी का भाड़ा निकालने के बाद आपकी शुद्ध बचत",
+      viewRouteGoogleMaps: "गूगल मैप्स पर रास्ता देखें",
+      verifyOnGoogleMaps: "गूगल मैप्स पर रास्ता देखें",
+      roadDistanceUnavailable: "सड़क की दूरी उपलब्ध नहीं है",
+      travelTimeUnavailable: "समय उपलब्ध नहीं है",
+      transportCostUnavailable: "भाड़ा उपलब्ध नहीं है",
+      finalAmountUnavailable: "दूरी के बिना बचत नहीं निकाली जा सकती",
+      routeAttributionFooter: "रास्ते का डेटा © OpenStreetMap / OSRM • मंडी भाव: एगमार्कनेट",
+      lossWarningText: "गाड़ी का खर्च फसल की कीमत से अधिक हो सकता है",
 
       // Crop options & visual chips
       cropOptionTomato: "टमाटर",
@@ -734,6 +780,11 @@
       invalidApiResponse: "अवैध एपीआय प्रतिसाद स्वरूप.",
       locationPermissionDenied: "स्थान परवानगी नाकारली. कृपया व्यक्तिचलितपणे प्रविष्ट करा.",
       unableToDetectLocation: "स्थान शोधण्यात अक्षम",
+      locationUncertainWarning: "आम्ही तुमच्या अचूक स्थानाची खात्री करू शकलो नाही. कृपया तुमचे स्थान तपासा किंवा प्रविष्ट करा.",
+      confirmLocationBtn: "स्थानाची खात्री करा",
+      locationConfirmed: "स्थानाची खात्री झाली",
+      gpsDetectedBadge: "📍 ओळखलेले स्थान",
+      manualLocationBadge: "✏️ मॅन्युअल प्रविष्ट",
       findingMarkets: "जवळच्या बाजारपेठा शोधत आहे...",
       comparingPrices: "किमतींची तुलना करत आहे...",
       calculatingTransport: "वाहतुकीची गणना करत आहे...",
@@ -834,6 +885,24 @@
       unitQuintal: "क्विंटल",
       bestNearbyMarketEyebrow: "तुमच्यासाठी सर्वोत्तम जवळचा बाजार",
       otherNearbyMarketsHeading: "इतर जवळचे बाजार",
+      recommendedMarketLabel: "शिफारस केलेली बाजारपेठ",
+      alternativeMarketLabel: "पर्यायी बाजारपेठ",
+      roadDistanceLabel: "रस्त्याचे अंतर",
+      travelTimeLabel: "लागणारा वेळ",
+      cropAndQuantityLabel: "शेतमाल आणि प्रमाण",
+      totalSellingValueLabel: "शेतमालाची एकूण अंदाजे किंमत",
+      transportCostLabel: "वाहतूक खर्च (भाडे)",
+      finalAmountInHandLabel: "हातात मिळणारी अंदाजे रक्कम",
+      finalLossLabel: "वाहतुकीनंतर अंदाजे तोटा",
+      finalAmountSubtext: "वाहतूक खर्च वजा केल्यानंतर हातात उरणारी अंदाजे रक्कम",
+      viewRouteGoogleMaps: "गुगल मॅप्सवर रस्ता पहा",
+      verifyOnGoogleMaps: "गुगल मॅप्सवर रस्ता पहा",
+      roadDistanceUnavailable: "रस्त्याचे अंतर उपलब्ध नाही",
+      travelTimeUnavailable: "वेळ उपलब्ध नाही",
+      transportCostUnavailable: "वाहतूक खर्च उपलब्ध नाही",
+      finalAmountUnavailable: "अंतराशिवाय नफा काढता येत नाही",
+      routeAttributionFooter: "रस्त्याची माहिती © OpenStreetMap / OSRM • बाजारभाव: एगमार्कनेट",
+      lossWarningText: "वाहतूक खर्च शेतमालाच्या किमतीपेक्षा जास्त होऊ शकतो",
 
       // Crop options & visual chips
       cropOptionTomato: "टोमॅटो",
@@ -1314,85 +1383,331 @@
     });
   }
 
-  // --- Hero Section Logic ---
-  const detectLocationBtn = document.getElementById("detect-location-btn");
+  // --- Authoritative Location State Management (Phase 02) ---
+  const authoritativeLocationState = {
+    latitude: null,
+    longitude: null,
+    accuracy: null,
+    timestamp: null,
+    locality: "",
+    district: "",
+    state: "",
+    formattedAddress: "",
+    source: "none", // 'gps' | 'manual' | 'default_fallback'
+    userConfirmed: false,
+    isApproximate: false
+  };
 
-  // This logic is now for the form inside the Hero section
-  if (detectLocationBtn) {
-    detectLocationBtn.addEventListener("click", () => {
-      if (!navigator.geolocation) {
-        detectLocationBtn.querySelector("span").textContent = translations[currentLang]?.geoNotSupported || "Geolocation is not supported by your browser";
+  /**
+   * Invalidate previously detected GPS coordinates when user edits location input.
+   * Prevents stale coordinates from silently overriding user-entered text.
+   */
+  function invalidateFormLocation(form) {
+    if (!form) return;
+    delete form.dataset.originLat;
+    delete form.dataset.originLon;
+    delete form.dataset.originAccuracy;
+    delete form.dataset.originTimestamp;
+    delete form.dataset.originApproximate;
+    delete form.dataset.originLocality;
+    delete form.dataset.originState;
+    form.dataset.originSource = "manual";
+
+    authoritativeLocationState.latitude = null;
+    authoritativeLocationState.longitude = null;
+    authoritativeLocationState.accuracy = null;
+    authoritativeLocationState.source = "manual";
+    authoritativeLocationState.isApproximate = false;
+    authoritativeLocationState.userConfirmed = true;
+
+    hideLocationUncertaintyBanner(form);
+
+    const locBtn = form.querySelector(".location-button, #detect-location-btn");
+    if (locBtn) {
+      locBtn.classList.remove("is-denied", "is-gps-active");
+      const btnSpan = locBtn.querySelector("span");
+      if (btnSpan) {
+        btnSpan.textContent = translations[currentLang]?.useMyLocationBtn || "Use My Location";
+      }
+    }
+  }
+
+  /**
+   * Shows a friendly, readable uncertainty warning when device accuracy is coarse (> 300m or laptop Wi-Fi)
+   */
+  function showLocationUncertaintyBanner(form, locality) {
+    if (!form) return;
+    let banner = form.querySelector(".location-uncertainty-banner");
+    if (!banner) {
+      banner = document.createElement("div");
+      banner.className = "location-uncertainty-banner";
+      banner.setAttribute("role", "alert");
+      const pickerGroup = form.querySelector(".location-picker-group") || form.querySelector(".form-step--location") || form;
+      pickerGroup.appendChild(banner);
+    }
+
+    const warningText = translations[currentLang]?.locationUncertainWarning || 
+      "We could not confirm your exact location. Please check or enter your location.";
+    const confirmBtnText = translations[currentLang]?.confirmLocationBtn || "Confirm Location";
+
+    banner.innerHTML = `
+      <div class="location-uncertainty-banner__content">
+        <span class="location-uncertainty-banner__icon" aria-hidden="true">⚠️</span>
+        <div class="location-uncertainty-banner__body">
+          <p class="location-uncertainty-banner__text">${warningText}</p>
+          <div class="location-uncertainty-banner__actions">
+            <button type="button" class="button button--subtle button--tiny location-confirm-btn">${confirmBtnText}</button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    banner.style.display = "block";
+
+    const confirmBtn = banner.querySelector(".location-confirm-btn");
+    if (confirmBtn) {
+      confirmBtn.addEventListener("click", () => {
+        authoritativeLocationState.userConfirmed = true;
+        hideLocationUncertaintyBanner(form);
+      });
+    }
+  }
+
+  function hideLocationUncertaintyBanner(form) {
+    if (!form) return;
+    const banner = form.querySelector(".location-uncertainty-banner");
+    if (banner) {
+      banner.style.display = "none";
+    }
+  }
+
+  let isAcquiringLocation = false;
+
+  /**
+   * Acquire device location with multi-sample settling and server-side reverse geocoding
+   */
+  async function acquireDeviceLocation(form, locBtn, locInput) {
+    if (isAcquiringLocation) return;
+    if (!navigator.geolocation) {
+      const btnSpan = locBtn ? locBtn.querySelector("span") : null;
+      if (btnSpan) btnSpan.textContent = translations[currentLang]?.geoNotSupported || "Geolocation is not supported by your browser";
+      return;
+    }
+
+    isAcquiringLocation = true;
+    const btnSpan = locBtn ? locBtn.querySelector("span") : null;
+    if (btnSpan) btnSpan.textContent = translations[currentLang]?.detectingLocation || "Detecting...";
+    if (locBtn) locBtn.disabled = true;
+
+    // High accuracy acquisition options (strictly preserves enableHighAccuracy: true, maximumAge: 0, timeout: 20000)
+    const geoOptions = {
+      enableHighAccuracy: true,
+      maximumAge: 0,
+      timeout: 20000
+    };
+
+    const SAMPLES_WINDOW_MS = 3500;
+    const TARGET_HIGH_ACCURACY_M = 35;
+    const samples = [];
+    let watchId = null;
+    let windowTimeoutId = null;
+    let settled = false;
+
+    const stopTracking = () => {
+      if (watchId !== null) {
+        try {
+          navigator.geolocation.clearWatch(watchId);
+        } catch (e) {}
+        watchId = null;
+      }
+      if (windowTimeoutId !== null) {
+        clearTimeout(windowTimeoutId);
+        windowTimeoutId = null;
+      }
+      isAcquiringLocation = false;
+      if (locBtn) locBtn.disabled = false;
+    };
+
+    const processBestSample = async () => {
+      if (settled) return;
+      settled = true;
+      stopTracking();
+
+      if (samples.length === 0) {
+        handleAcquisitionError({ code: 2, message: "No position samples received" }, form, locBtn);
         return;
       }
 
-      const buttonSpan = detectLocationBtn.querySelector("span");
-      buttonSpan.textContent = translations[currentLang]?.detectingLocation || "Detecting...";
-      detectLocationBtn.disabled = true;
+      // Pick sample with lowest accuracy radius (highest confidence)
+      samples.sort((a, b) => a.coords.accuracy - b.coords.accuracy);
+      const best = samples[0];
+      const { latitude, longitude, accuracy } = best.coords;
+      const posTimestamp = new Date(best.timestamp || Date.now()).toISOString();
 
-      const handleSuccess = async (position) => {
-        const { latitude, longitude, accuracy } = position.coords;
-        const nearestForm = detectLocationBtn.closest("form");
-        if (nearestForm) {
-          nearestForm.dataset.originLat = latitude;
-          nearestForm.dataset.originLon = longitude;
-          nearestForm.dataset.originAccuracy = accuracy ? Math.round(accuracy) : "";
-          nearestForm.dataset.originTimestamp = new Date(position.timestamp || Date.now()).toISOString();
-          nearestForm.dataset.originSource = "gps";
-        }
-        const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
+      // Check for approximate location (laptop Wi-Fi ~212m, or coarse cell triangulation > 300m)
+      const isApproximate = !accuracy || accuracy > 300;
 
-        try {
-          const response = await fetch(url);
-          if (!response.ok) {
-            throw new Error(`Network response was not ok: ${response.statusText}`);
+      // Update authoritative location state
+      authoritativeLocationState.latitude = latitude;
+      authoritativeLocationState.longitude = longitude;
+      authoritativeLocationState.accuracy = accuracy ? Math.round(accuracy) : null;
+      authoritativeLocationState.timestamp = posTimestamp;
+      authoritativeLocationState.source = "gps";
+      authoritativeLocationState.isApproximate = isApproximate;
+      authoritativeLocationState.userConfirmed = !isApproximate;
+
+      // Update Form Dataset
+      if (form) {
+        form.dataset.originLat = latitude;
+        form.dataset.originLon = longitude;
+        form.dataset.originAccuracy = accuracy ? Math.round(accuracy) : "";
+        form.dataset.originTimestamp = posTimestamp;
+        form.dataset.originSource = "gps";
+        form.dataset.originApproximate = isApproximate ? "true" : "false";
+      }
+
+      // Execute server-side reverse geocoding via /api/geocode
+      try {
+        const res = await fetch(`/api/geocode?lat=${latitude}&lon=${longitude}`);
+        if (!res.ok) throw new Error("Server reverse geocoding returned " + res.status);
+        const data = await res.json();
+
+        if (data && data.locality) {
+          const locality = data.locality;
+          const state = data.state || "Maharashtra";
+          const displayStr = `${locality}, ${state}`;
+
+          authoritativeLocationState.locality = locality;
+          authoritativeLocationState.district = data.district || locality;
+          authoritativeLocationState.state = state;
+          authoritativeLocationState.formattedAddress = data.formattedAddress || displayStr;
+
+          if (form) {
+            form.dataset.originLocality = locality;
+            form.dataset.originState = state;
           }
-          const data = await response.json();
 
-          if (data && data.address) {
-            const { address } = data;
-            // Fallback logic: city -> town -> village -> county (district)
-            const city = address.city || address.town || address.village || address.county;
-            const { state } = address;
+          if (locInput) {
+            locInput.value = displayStr;
+          }
 
-            if (city && state) {
-              buttonSpan.textContent = `📍 ${city}, ${state}`;
-              const nearestForm = detectLocationBtn.closest("form");
-              if (nearestForm) {
-                nearestForm.dataset.originLat = latitude;
-                nearestForm.dataset.originLon = longitude;
-              }
-              detectLocationBtn.classList.remove("is-denied");
-            } else {
-              throw new Error("Could not determine city and state from response.");
-            }
+          if (btnSpan) {
+            btnSpan.textContent = `📍 ${locality}`;
+          }
+
+          if (locBtn) {
+            locBtn.classList.remove("is-denied");
+            locBtn.classList.add("is-gps-active");
+          }
+
+          // If location is approximate (such as desktop/Wi-Fi positioning), display farmer-friendly warning
+          if (isApproximate) {
+            showLocationUncertaintyBanner(form, locality);
           } else {
-            throw new Error("Invalid API response format.");
+            hideLocationUncertaintyBanner(form);
           }
-        } catch (error) {
-          console.error("Reverse geocoding failed:", error);
-          buttonSpan.textContent = translations[currentLang]?.unableToDetectLocation || "Unable to detect location";
-          detectLocationBtn.classList.add("is-denied");
-        } finally {
-          detectLocationBtn.disabled = false;
-        }
-      };
-
-      const handleError = (error) => {
-        if (error.code === error.PERMISSION_DENIED) {
-          buttonSpan.textContent = translations[currentLang]?.locationNotAllowed || "Location access was not allowed.";
         } else {
-          buttonSpan.textContent = translations[currentLang]?.unableToDetectLocation || "Unable to detect location";
+          throw new Error("Invalid geocode data");
         }
-        detectLocationBtn.classList.add("is-denied");
-        detectLocationBtn.disabled = false;
-      };
+      } catch (geocodeErr) {
+        console.warn("[Location] Reverse geocode fallback:", geocodeErr.message);
+        const fallbackStr = "My Location";
+        if (locInput) locInput.value = fallbackStr;
+        if (btnSpan) btnSpan.textContent = "📍 My Location";
+        if (locBtn) {
+          locBtn.classList.remove("is-denied");
+          locBtn.classList.add("is-gps-active");
+        }
+        if (isApproximate) {
+          showLocationUncertaintyBanner(form, fallbackStr);
+        }
+      }
+    };
 
-      navigator.geolocation.getCurrentPosition(handleSuccess, handleError, {
-        enableHighAccuracy: true,
-        maximumAge: 0,
-        timeout: 20000
+    const handleAcquisitionError = (err, f, btn) => {
+      const bSpan = btn ? btn.querySelector("span") : null;
+      if (bSpan) {
+        if (err && err.code === 1) { // PERMISSION_DENIED
+          bSpan.textContent = translations[currentLang]?.locationNotAllowed || "Location access was not allowed.";
+        } else {
+          bSpan.textContent = translations[currentLang]?.unableToDetectLocation || "Unable to detect location";
+        }
+      }
+      if (btn) {
+        btn.classList.add("is-denied");
+        btn.classList.remove("is-gps-active");
+      }
+      if (f) {
+        invalidateFormLocation(f);
+      }
+    };
+
+    try {
+      watchId = navigator.geolocation.watchPosition(
+        (pos) => {
+          const { latitude, longitude, accuracy } = pos.coords;
+          if (typeof latitude === "number" && typeof longitude === "number" &&
+              latitude >= -90 && latitude <= 90 &&
+              longitude >= -180 && longitude <= 180) {
+            samples.push(pos);
+            if (accuracy && accuracy <= TARGET_HIGH_ACCURACY_M) {
+              processBestSample();
+            }
+          }
+        },
+        (err) => {
+          if (samples.length > 0) {
+            processBestSample();
+          } else {
+            settled = true;
+            stopTracking();
+            handleAcquisitionError(err, form, locBtn);
+          }
+        },
+        geoOptions
+      );
+
+      windowTimeoutId = setTimeout(() => {
+        processBestSample();
+      }, SAMPLES_WINDOW_MS);
+    } catch (e) {
+      settled = true;
+      stopTracking();
+      handleAcquisitionError(e, form, locBtn);
+    }
+  }
+
+  /**
+   * Sets up location button and manual input synchronization for a given form
+   */
+  function setupLocationController(form) {
+    if (!form || form._hasLocationController) return;
+    form._hasLocationController = true;
+
+    const locBtn = form.querySelector(".location-button, #detect-location-btn");
+    const locInput = form.querySelector('input[name="location"], input[placeholder*="Location"], input[placeholder*="स्थान"]');
+
+    if (locBtn) {
+      locBtn.addEventListener("click", () => {
+        acquireDeviceLocation(form, locBtn, locInput);
       });
-    });
+    }
+
+    if (locInput) {
+      // Manual typing or paste immediately invalidates previously detected GPS coordinates
+      locInput.addEventListener("input", () => {
+        invalidateFormLocation(form);
+      });
+      locInput.addEventListener("change", () => {
+        invalidateFormLocation(form);
+      });
+    }
+  }
+
+  // Bind hero form location controller
+  const heroLocationForm = document.querySelector(".hero-section form") || document.querySelector("form");
+  if (heroLocationForm) {
+    setupLocationController(heroLocationForm);
   }
 
   // --- Existing Animation & UI Logic ---
@@ -2738,19 +3053,35 @@
   // --- Farmer Origin Coordinates Resolver ---
   // Part 1: Uses actual user-entered or selected origin location, never silently uses IP location
   function resolveUserOriginCoords(userLocationStr, form) {
-    if (form && form.dataset && form.dataset.originLat && form.dataset.originLon) {
-      const lat = parseFloat(form.dataset.originLat);
-      const lon = parseFloat(form.dataset.originLon);
-      if (!isNaN(lat) && !isNaN(lon)) {
-        return {
-          lat,
-          lon,
-          name: userLocationStr || "Current Device GPS",
-          source: form.dataset.originSource || "gps",
-          accuracy: form.dataset.originAccuracy ? parseFloat(form.dataset.originAccuracy) : null,
-          timestamp: form.dataset.originTimestamp || new Date().toISOString(),
-          isFallback: false
-        };
+    if (form && form.dataset && form.dataset.originLat && form.dataset.originLon && form.dataset.originSource === "gps") {
+      const currentInputVal = (userLocationStr || extractUserLocation(form) || "").toLowerCase().trim();
+      const detectedLocality = (form.dataset.originLocality || "").toLowerCase().trim();
+
+      // Verification: if user manually edited the input to a different place, do NOT use stale GPS!
+      const isStillMatching = !detectedLocality ||
+                              currentInputVal.includes(detectedLocality) ||
+                              detectedLocality.includes(currentInputVal) ||
+                              currentInputVal.includes("gps") ||
+                              currentInputVal === "my location" ||
+                              currentInputVal === "";
+
+      if (isStillMatching) {
+        const lat = parseFloat(form.dataset.originLat);
+        const lon = parseFloat(form.dataset.originLon);
+        if (!isNaN(lat) && !isNaN(lon)) {
+          return {
+            lat,
+            lon,
+            name: userLocationStr || form.dataset.originLocality || "Current Device GPS",
+            source: "gps",
+            accuracy: form.dataset.originAccuracy ? parseFloat(form.dataset.originAccuracy) : null,
+            timestamp: form.dataset.originTimestamp || new Date().toISOString(),
+            isFallback: false
+          };
+        }
+      } else {
+        // User changed location text manually; invalidate dataset coordinates immediately
+        invalidateFormLocation(form);
       }
     }
 
@@ -3967,7 +4298,183 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
     return url;
   }
 
-  // --- PART 12 & PART 13: Simple Farmer-Friendly Result Cards ---
+  // --- INTERNAL DIAGNOSTIC RECORDER (PRESERVED FOR DEBUGGING & AUDIT LOGS) ---
+  function recordInternalLocationDiagnostics(origin, destMandi, routeData) {
+    // Technical diagnostic information preserved internally for debugging without cluttering farmer result UI
+    const sourceBadge = origin && origin.source === "gps"
+      ? '<span class="farmer-location-badge farmer-location-badge--gps">📡 Device GPS</span>'
+      : (origin && origin.source === "manual"
+          ? '<span class="farmer-location-badge farmer-location-badge--manual">✏️ Manually Entered</span>'
+          : '<span class="farmer-location-badge farmer-location-badge--fallback">⚠️ Reference Center (Thane)</span>');
+    const diag = {
+      panelId: "farmer-location-panel",
+      title: "Location & Route Transparency",
+      sourceBadge: sourceBadge,
+      origin: origin ? { lat: origin.lat, lon: origin.lon, accuracy: origin.accuracy, timestamp: origin.timestamp } : null,
+      destination: destMandi ? { name: destMandi.name, lat: destMandi.lat, lon: destMandi.lon } : null,
+      route: routeData || null
+    };
+    if (typeof window !== "undefined") {
+      window.__KRISHIWEB_LAST_DIAGNOSTICS__ = diag;
+    }
+    return diag;
+  }
+
+  // --- PHASE 01: FARMER-FRIENDLY RESULT UI RENDERING ---
+  // Renders both Recommended and Alternative market cards with 1 to 9 strict order:
+  // 1. Recommended Market label
+  // 2. Market name and city
+  // 3. Road distance in kilometres
+  // 4. Estimated travel time
+  // 5. Crop name and quantity
+  // 6. Total estimated selling amount
+  // 7. Estimated transport cost
+  // 8. Final estimated amount after transport cost, prominently displayed
+  // 9. View Route on Google Maps button
+  function renderSingleMarketCard(m, isBest, lang, t, defaultOrigin) {
+    const locM = getLocalizedMarket(m, lang);
+    const cropNameLocalized = getLocalizedCropName(m.crop, lang);
+    const origin = m.originCoords || defaultOrigin;
+
+    // Record internal diagnostics for debugging without exposing to farmer UI
+    recordInternalLocationDiagnostics(origin, m, { distanceKm: m.distanceKm, travelMinutes: m.travelMinutes });
+
+    const isRouteAvailable = (m.distanceKm !== null && m.distanceKm !== undefined && m.routeStatus !== "unavailable");
+    const isLoss = isRouteAvailable && m.estNet !== null && m.estNet < 0;
+    const isPriceAvailable = !m.priceUnavailable && m.pricePerQtl > 0;
+
+    // 1. Recommended / Alternative Market label
+    const badgeText = isBest
+      ? (t.recommendedMarketLabel || "Recommended Market")
+      : (t.alternativeMarketLabel || "Alternative Market");
+    const badgeClass = isBest ? "farmer-card-badge--best" : "farmer-card-badge--alt";
+
+    // 3. Road distance in km
+    const distText = isRouteAvailable 
+      ? (m.distanceKm + ' km') 
+      : (t.roadDistanceUnavailable || "Road distance unavailable");
+
+    // 4. Estimated travel time
+    const travelTimeText = isRouteAvailable 
+      ? formatTravelTime(m.travelMinutes, lang) 
+      : (t.travelTimeUnavailable || "Travel time unavailable");
+
+    // 5. Crop name and quantity
+    const cropAndQtyText = cropNameLocalized + ' • ' + (m.quantityKg || 100) + ' kg';
+
+    // 6. Total estimated selling amount
+    const grossText = isPriceAvailable 
+      ? ('₹' + m.grossCropValue.toLocaleString('en-IN')) 
+      : (t.priceUnavailable || "Price unavailable");
+
+    // 7. Estimated transport cost
+    const transportText = (isRouteAvailable && m.estTransport !== null) 
+      ? ('- ₹' + m.estTransport.toLocaleString('en-IN')) 
+      : (t.transportCostUnavailable || "Transport cost unavailable");
+
+    // 8. Final estimated amount after transport cost (Prominently displayed)
+    let netAmountHtml = "";
+    let payoutClass = "farmer-payout-box";
+    let payoutLead = "💵 " + (t.finalAmountInHandLabel || "Final Estimated Amount (In Hand)");
+    let payoutSubtext = t.finalAmountSubtext || "Take-home amount after deducting transport cost";
+
+    if (!isRouteAvailable || m.estNet === null) {
+      payoutClass += " farmer-payout-box--unavailable";
+      payoutLead = "ℹ️ " + (t.finalAmountInHandLabel || "Final Estimated Amount (In Hand)");
+      netAmountHtml = '<span class="farmer-payout-unavail-text">' + (t.finalAmountUnavailable || "Cannot estimate without distance") + '</span>';
+      payoutSubtext = t.roadDistanceUnavailable || "Road distance unavailable";
+    } else if (isLoss) {
+      payoutClass += " farmer-payout-box--loss";
+      payoutLead = "⚠️ " + (t.finalLossLabel || "Estimated Loss After Travel");
+      netAmountHtml = '<span class="farmer-payout-val farmer-payout-val--loss">' + formatRupees(m.estNet) + '</span>';
+      payoutSubtext = t.lossWarningText || "Travel cost may exceed your crop value";
+    } else {
+      payoutClass += " farmer-payout-box--profit";
+      netAmountHtml = '<span class="farmer-payout-val">₹' + m.estNet.toLocaleString('en-IN') + '</span>';
+    }
+
+    // 9. View Route on Google Maps button
+    const gmapsUrl = getGoogleMapsVerifyUrl(origin, m.lat, m.lon, m.placeId);
+    const viewRouteText = t.viewRouteGoogleMaps || "View Route on Google Maps";
+
+    // Required routing provider attribution in small readable footer
+    const attributionText = t.routeAttributionFooter || "Route data © OpenStreetMap / OSRM • Market rates: AGMARKNET";
+
+    const cardClass = isBest 
+      ? "farmer-result-card farmer-result-card--best" 
+      : "farmer-result-card farmer-result-card--alt";
+
+    return (
+      '<article class="' + cardClass + '">' +
+        // 1. Recommended Market label
+        '<div class="farmer-card-badge-wrap">' +
+          '<span class="farmer-card-badge ' + badgeClass + '">🌾 ' + badgeText + '</span>' +
+        '</div>' +
+
+        // 2. Market name and city
+        '<div class="farmer-card-market">' +
+          '<h3 class="farmer-card-name">' + locM.name + '</h3>' +
+          '<p class="farmer-card-city">📍 ' + locM.location + '</p>' +
+        '</div>' +
+
+        // 3 & 4. Road distance in kilometres & Estimated travel time
+        '<div class="farmer-card-travel-grid">' +
+          '<div class="farmer-travel-stat">' +
+            '<span class="farmer-stat-label">🛣️ ' + (t.roadDistanceLabel || "Road Distance") + '</span>' +
+            '<span class="farmer-stat-value ' + (!isRouteAvailable ? 'farmer-stat-value--muted' : '') + '">' + distText + '</span>' +
+          '</div>' +
+          '<div class="farmer-travel-stat">' +
+            '<span class="farmer-stat-label">⏱️ ' + (t.travelTimeLabel || "Estimated Travel Time") + '</span>' +
+            '<span class="farmer-stat-value ' + (!isRouteAvailable ? 'farmer-stat-value--muted' : '') + '">' + travelTimeText + '</span>' +
+          '</div>' +
+        '</div>' +
+
+        // 5, 6, 7. Crop & Financial breakdown
+        '<div class="farmer-card-financial-box">' +
+          // 5. Crop name and quantity
+          '<div class="farmer-finance-row">' +
+            '<span class="farmer-finance-label">🌱 ' + (t.cropAndQuantityLabel || "Crop & Quantity") + ':</span>' +
+            '<span class="farmer-finance-val"><strong>' + cropAndQtyText + '</strong></span>' +
+          '</div>' +
+
+          // 6. Total estimated selling amount
+          '<div class="farmer-finance-row">' +
+            '<span class="farmer-finance-label">💰 ' + (t.totalSellingValueLabel || "Total Estimated Selling Amount") + ':</span>' +
+            '<span class="farmer-finance-val"><strong>' + grossText + '</strong></span>' +
+          '</div>' +
+
+          // 7. Estimated transport cost
+          '<div class="farmer-finance-row">' +
+            '<span class="farmer-finance-label">🚚 ' + (t.transportCostLabel || "Estimated Transport Cost") + ':</span>' +
+            '<span class="farmer-finance-val ' + (m.estTransport !== null ? 'farmer-finance-val--deduct' : 'farmer-finance-val--muted') + '">' + transportText + '</span>' +
+          '</div>' +
+        '</div>' +
+
+        // 8. Final estimated amount after transport cost, prominently displayed
+        '<div class="' + payoutClass + '">' +
+          '<span class="farmer-payout-lead">' + payoutLead + '</span>' +
+          '<div class="farmer-payout-amount-wrap">' +
+            netAmountHtml +
+          '</div>' +
+          '<p class="farmer-payout-subtext">' + payoutSubtext + '</p>' +
+        '</div>' +
+
+        // 9. View Route on Google Maps button
+        '<div class="farmer-card-action-wrap">' +
+          '<a href="' + gmapsUrl + '" target="_blank" rel="noopener noreferrer" class="farmer-btn-gmaps" title="Verify on Google Maps" aria-label="Verify on Google Maps">' +
+            '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>' +
+            '<span>' + viewRouteText + ' ↗</span>' +
+          '</a>' +
+        '</div>' +
+
+        // Attribution footer (small, readable)
+        '<footer class="farmer-card-footer">' +
+          '<span>' + attributionText + '</span>' +
+        '</footer>' +
+      '</article>'
+    );
+  }
+
   function renderFarmerFriendlyModalHtml(markets, lang) {
     const t = translations[lang] || translations.en;
     if (!markets || !markets.length) {
@@ -3986,407 +4493,19 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
 
     const bestMarket = markets[0];
     const remainingMarkets = markets.slice(1);
-    const locBest = getLocalizedMarket(bestMarket, lang);
-    const cropNameLocalized = getLocalizedCropName(bestMarket.crop, lang);
+    const defaultOrigin = bestMarket.originCoords || { name: "Thane", source: "default_fallback", lat: 19.2183, lon: 72.9781 };
 
-    const isRouteAvailable = (bestMarket.distanceKm !== null && bestMarket.distanceKm !== undefined && bestMarket.routeStatus !== "unavailable");
-    const isLoss = isRouteAvailable && bestMarket.estNet !== null && bestMarket.estNet < 0;
-    const isBreakEven = isRouteAvailable && bestMarket.estNet !== null && bestMarket.estNet === 0;
-
-    // Recommendation badge text
-    let bestBadgeText = "🟢 " + (t.modalGoodOption || "Good option");
-    let bestBadgeClass = "farmer-best-pill farmer-best-pill--good";
-
-    if (!isRouteAvailable) {
-      bestBadgeText = "ℹ️ " + (t.roadDistanceUnavailable || "Road Distance Unavailable");
-      bestBadgeClass = "farmer-best-pill farmer-best-pill--neutral";
-    } else if (isLoss) {
-      bestBadgeText = "🔴 " + (t.modalNotGoodOption || "Not a good option");
-      bestBadgeClass = "farmer-best-pill farmer-best-pill--loss";
-    } else if (isBreakEven) {
-      bestBadgeText = "🟡 " + (t.modalBreakEven || "Break-even");
-      bestBadgeClass = "farmer-best-pill farmer-best-pill--neutral";
-    }
-
-    // Travel time & traffic badge (Part 5)
-    const bestTravelTimeText = isRouteAvailable ? formatTravelTime(bestMarket.travelMinutes, lang) : "Unavailable";
-    const bestTrafficBadgeHtml = isRouteAvailable
-      ? (bestMarket.isLiveRoute
-          ? '<span class="farmer-traffic-tag farmer-traffic-tag--live">🚦 ' + (t.liveTrafficTag || "Live route") + '</span>'
-          : '<span class="farmer-traffic-tag farmer-traffic-tag--est">⏱️ ' + (t.roadEstimateTag || "Road route") + '</span>')
-      : '<span class="farmer-traffic-tag farmer-traffic-tag--est" style="background:#fee2e2;color:#991b1b;">⚠️ Distance unavailable</span>';
-
-    // Data Provenance & Freshness Date (Part 10)
-    const formattedDate = formatMandiDate(bestMarket.arrivalDate, lang);
-    const daysAgo = getDaysAgo(bestMarket.arrivalDate);
-    const dateUpdatedTemplate = t.mandiPriceUpdatedLabel || "Mandi price updated: {date}";
-    const dateUpdatedText = dateUpdatedTemplate.replace("{date}", formattedDate);
-
-    let freshnessWarningHtml = "";
-    if (daysAgo > FASALO_CONFIG.FRESHNESS_THRESHOLD_DAYS) {
-      const warningTemplate = t.dataFreshnessWarning || "Latest available price is from {days} days ago.";
-      freshnessWarningHtml = '<span class="farmer-freshness-warning">⚠️ ' + warningTemplate.replace("{days}", daysAgo) + '</span>';
-    }
-
-    // Farmer-friendly explanation sentence (Part 12)
-    let simpleExplanation = "";
-    if (isRouteAvailable && bestMarket.estNet !== null) {
-      if (lang === "hi") {
-        simpleExplanation = "आपकी फसल की कीमत में से आने-जाने का अनुमानित खर्च घटाने के बाद लगभग ₹" + bestMarket.estNet.toLocaleString('en-IN') + " बच सकते हैं।";
-      } else if (lang === "mr") {
-        simpleExplanation = "तुमच्या शेतमालाच्या मूल्यातून येण्या-जाण्याचा अंदाजे खर्च वजा केल्यानंतर सुमारे ₹" + bestMarket.estNet.toLocaleString('en-IN') + " उरू शकतात.";
-      } else {
-        simpleExplanation = "After deducting estimated travel costs from your crop value, you may keep about ₹" + bestMarket.estNet.toLocaleString('en-IN') + ".";
-      }
-    } else {
-      simpleExplanation = "Road network distance could not be computed. Transport costs cannot be estimated.";
-    }
-
-    // Main Amount display
-    let mainResultHtml = "";
-    if (!isRouteAvailable || bestMarket.estNet === null) {
-      mainResultHtml = (
-        '<div class="farmer-main-result farmer-main-result--neutral" style="background: #f8fafc; border: 1.5px dashed #94a3b8;">' +
-          '<p class="farmer-main-result__lead" style="color: #475569;">📍 ROAD DISTANCE UNAVAILABLE</p>' +
-          '<p class="farmer-main-result__explanation" style="color: #64748b; margin-top: 6px;">' +
-            'Road distance cannot be verified for this origin and mandi. Net profit is not estimated to prevent misleading advice.' +
-          '</p>' +
-        '</div>'
-      );
-    } else if (isLoss) {
-      const lossAmt = formatRupees(bestMarket.estNet);
-      let warningText = t.modalTravelLossLead || "Travel may cost more than your crop value.";
-      mainResultHtml = (
-        '<div class="farmer-main-result farmer-main-result--loss">' +
-          '<p class="farmer-main-result__warning">⚠️ ' + warningText + '</p>' +
-          '<div class="farmer-main-result__amount-row">' +
-            '<span class="farmer-main-result__amount farmer-main-result__amount--loss">' + lossAmt + '</span>' +
-          '</div>' +
-          '<p class="farmer-main-result__subtext">' + (t.modalTravelLossSublead || "estimated loss after travel") + '</p>' +
-        '</div>'
-      );
-    } else {
-      const netAmt = "₹" + bestMarket.estNet.toLocaleString('en-IN');
-      const leadPhrase = t.modalLeftAfterTravelLead || "ESTIMATED MONEY LEFT";
-      mainResultHtml = (
-        '<div class="farmer-main-result">' +
-          '<p class="farmer-main-result__lead">💰 ' + leadPhrase + '</p>' +
-          '<div class="farmer-main-result__amount-row">' +
-            '<span class="farmer-main-result__amount">' + netAmt + '</span>' +
-          '</div>' +
-          '<p class="farmer-main-result__explanation">' + simpleExplanation + '</p>' +
-        '</div>'
-      );
-    }
-
-    // For your quantity line
-    let forYourCropText = "";
-    if (lang === "hi") {
-      forYourCropText = "आपके <strong>" + bestMarket.quantityKg + " kg " + cropNameLocalized + "</strong> के लिए:";
-    } else if (lang === "mr") {
-      forYourCropText = "तुमच्या <strong>" + bestMarket.quantityKg + " kg " + cropNameLocalized + "</strong> साठी:";
-    } else {
-      forYourCropText = "For your <strong>" + bestMarket.quantityKg + " kg " + cropNameLocalized + "</strong>:";
-    }
-
-    // Price unavailable notice
-    let priceNoticeHtml = "";
-    if (bestMarket.priceUnavailable) {
-      priceNoticeHtml = (
-        '<div class="farmer-price-unavailable-banner">' +
-          '<span>ℹ️</span>' +
-          '<span>' + (t.priceUnavailable || "Price data is currently unavailable for this market.") + '</span>' +
-        '</div>'
-      );
-    }
-
-    // PRIORITY 3: Transparent Location Panel Implementation
-    const origin = bestMarket.originCoords || { name: "Thane", source: "default_fallback", lat: 19.2183, lon: 72.9781 };
-    let sourceBadge = "";
-    if (origin.source === "gps") {
-      const accText = origin.accuracy ? (' (±' + origin.accuracy + 'm)') : '';
-      sourceBadge = '<span class="farmer-location-badge farmer-location-badge--gps">📡 Device GPS' + accText + '</span>';
-    } else if (origin.source === "manual") {
-      sourceBadge = '<span class="farmer-location-badge farmer-location-badge--manual">✏️ Manually Entered</span>';
-    } else {
-      sourceBadge = '<span class="farmer-location-badge farmer-location-badge--fallback">⚠️ Reference Center (Thane)</span>';
-    }
-
-    const latStr = typeof origin.lat === 'number' ? origin.lat.toFixed(4) + '° N' : '19.2183° N';
-    const lonStr = typeof origin.lon === 'number' ? origin.lon.toFixed(4) + '° E' : '72.9781° E';
-    const captureTime = origin.timestamp ? new Date(origin.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Recent';
-
-    const locationPanelHtml = (
-      '<div class="farmer-location-panel">' +
-        '<div class="farmer-location-panel__header">' +
-          '<span class="farmer-location-panel__title">📍 Location & Route Transparency</span>' +
-          sourceBadge +
-        '</div>' +
-        '<div class="farmer-location-grid">' +
-          '<div class="farmer-location-item">' +
-            '<span class="farmer-location-label">Farmer Origin</span>' +
-            '<span class="farmer-location-val">' + (origin.name || "Selected Origin") + '</span>' +
-          '</div>' +
-          '<div class="farmer-location-item">' +
-            '<span class="farmer-location-label">Destination APMC</span>' +
-            '<span class="farmer-location-val">' + locBest.name + '</span>' +
-          '</div>' +
-          '<div class="farmer-location-item">' +
-            '<span class="farmer-location-label">Origin Coordinates</span>' +
-            '<span class="farmer-location-val">' + latStr + ', ' + lonStr + '</span>' +
-          '</div>' +
-          '<div class="farmer-location-item">' +
-            '<span class="farmer-location-label">' + (bestMarket.routeSource || "Road Distance") + '</span>' +
-            '<span class="farmer-location-val">' + (isRouteAvailable ? (bestMarket.distanceKm + ' km (~' + bestTravelTimeText + ')') : 'Road distance unavailable') + '</span>' +
-          '</div>' +
-        '</div>' +
-        '<div class="farmer-route-attribution">' +
-          '<span>🛣️ ' + (bestMarket.routeAttribution || 'Route data © OpenStreetMap contributors / Google Maps') + '</span>' +
-        '</div>' +
-        '<div class="farmer-location-actions">' +
-          '<button type="button" class="farmer-loc-btn" id="retry-location-btn">🔄 Retry GPS Detection</button>' +
-          '<button type="button" class="farmer-loc-btn" id="change-origin-btn">✏️ Change Origin</button>' +
-        '</div>' +
-      '</div>'
-    );
-
-    // PRIORITY 4 & 5: Forecast & Actual Price Distinctions
-    let priceBadgeHtml = "";
-    if (bestMarket.priceBadgeType === "predicted") {
-      const fcLabel = bestMarket.sellingDateType === "tomorrow" ? "PREDICTED PRICE (TOMORROW)" : "PREDICTED PRICE (DAY AFTER TOMORROW)";
-      priceBadgeHtml = '<div class="farmer-price-badge farmer-price-badge--predicted">🔮 ' + fcLabel + '</div>';
-    } else {
-      priceBadgeHtml = '<div class="farmer-price-badge farmer-price-badge--actual">🟢 ACTUAL APMC MARKET PRICE</div>';
-    }
-
-    let forecastBoxHtml = "";
-    if (bestMarket.priceBadgeType === "predicted" && bestMarket.forecastInfo) {
-      const fc = bestMarket.forecastInfo;
-      const range = fc.uncertaintyRange ? ('₹' + fc.uncertaintyRange.low.toLocaleString('en-IN') + ' – ₹' + fc.uncertaintyRange.high.toLocaleString('en-IN') + ' (±₹' + fc.uncertaintyRange.delta + ')') : 'Estimated';
-      forecastBoxHtml = (
-        '<div class="farmer-forecast-box">' +
-          '<div class="farmer-forecast-header">' +
-            '<span>📈 Explainable Forecast Analysis</span>' +
-            '<span>Confidence: ' + (fc.confidence || 'Moderate') + '</span>' +
-          '</div>' +
-          '<div class="farmer-forecast-stat-row">' +
-            '<span>Predicted Modal Price: <strong>₹' + bestMarket.pricePerQtl.toLocaleString('en-IN') + ' / Qtl</strong></span>' +
-            '<span>Current Actual: ₹' + (bestMarket.actualModalPrice || bestMarket.pricePerQtl).toLocaleString('en-IN') + ' / Qtl</span>' +
-          '</div>' +
-          '<div class="farmer-forecast-stat-row">' +
-            '<span>Uncertainty Range: <strong>' + range + '</strong></span>' +
-            '<span>Trend: <strong>' + (fc.dailyTrendDirection || 'Stable') + '</strong></span>' +
-          '</div>' +
-        '</div>'
-      );
-    }
-
-    // PRIORITY 1: Stale Warning Banner if applicable
-    const meta = bestMarket.mandiDataMeta || {};
-    let staleBannerHtml = "";
-    if (meta.freshnessWarning) {
-      staleBannerHtml = (
-        '<div class="farmer-price-unavailable-banner" style="background:#fffbeb; border:1px solid #f59e0b; color:#92400e; margin-bottom:12px; border-radius:8px; padding:10px 12px; display:flex; gap:8px;">' +
-          '<span>⚠️</span>' +
-          '<span><strong>Data Notice:</strong> ' + meta.freshnessWarning + '</span>' +
-        '</div>'
-      );
-    }
-
-    const bestGmapsUrl = getGoogleMapsVerifyUrl(origin, bestMarket.lat, bestMarket.lon, bestMarket.placeId);
-    const bestVerifyGmapsButtonHtml = (
-      '<div class="farmer-verify-gmaps-wrap" style="margin-top: 10px; margin-bottom: 4px;">' +
-        '<a href="' + bestGmapsUrl + '" target="_blank" rel="noopener noreferrer" class="farmer-verify-gmaps-btn" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: #ffffff; border: 1.5px solid #2563eb; color: #1d4ed8; border-radius: 8px; font-weight: 600; font-size: 0.85rem; text-decoration: none; box-shadow: 0 1px 3px rgba(37,99,235,0.12); cursor: pointer;">' +
-          '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>' +
-          '<span>Verify on Google Maps ↗</span>' +
-        '</a>' +
-      '</div>'
-    );
-
-    const bestOptionHtml = (
-      '<article class="farmer-best-card">' +
-        '<div class="farmer-best-card__eyebrow">' +
-          '<span>🌾 ' + (t.bestNearbyMarketEyebrow || t.modalBestForYou || "BEST NEARBY MARKET") + '</span>' +
-        '</div>' +
-
-        '<div class="farmer-best-card__header">' +
-          '<h3 class="farmer-best-card__title">' + locBest.name + '</h3>' +
-          '<div class="farmer-best-card__meta">' +
-            '<span class="farmer-meta-item">📍 <strong>' + (isRouteAvailable ? (bestMarket.distanceKm + ' km ' + (t.modalAway || "away")) : 'Road distance unavailable') + '</strong></span>' +
-            '<span class="farmer-meta-dot">&bull;</span>' +
-            '<span class="farmer-meta-item">🕒 <strong>' + (isRouteAvailable ? bestTravelTimeText : 'N/A') + '</strong> ' + (isRouteAvailable ? bestTrafficBadgeHtml : '') + '</span>' +
-            '<span class="farmer-meta-dot">&bull;</span>' +
-            '<span class="farmer-meta-item">' + locBest.location + '</span>' +
-          '</div>' +
-          bestVerifyGmapsButtonHtml +
-        '</div>' +
-
-        '<div style="margin-top: 8px;">' +
-          priceBadgeHtml +
-        '</div>' +
-
-        '<div class="farmer-best-card__stats-grid">' +
-          '<div class="farmer-stat-pill">' +
-            '<span class="farmer-stat-pill__label">🌱 ' + cropNameLocalized + ' ' + (bestMarket.priceBadgeType === "predicted" ? "Predicted Rate" : (t.pricePerQtlLabel || "Price")) + ':</span>' +
-            '<span class="farmer-stat-pill__val">₹' + bestMarket.pricePerQtl.toLocaleString('en-IN') + ' / ' + (t.unitQuintal || "quintal") + '</span>' +
-          '</div>' +
-          '<div class="farmer-stat-pill">' +
-            '<span class="farmer-stat-pill__label">🚚 ' + (t.modalTravelCostLabel || "Travel cost") + ':</span>' +
-            '<span class="farmer-stat-pill__val">' + (bestMarket.estTransport !== null ? ('~₹' + bestMarket.estTransport.toLocaleString('en-IN') + ' <span class="farmer-stat-sub">(' + (t.modalApprox || "Est.") + ')</span>') : 'Unavailable') + '</span>' +
-          '</div>' +
-        '</div>' +
-
-        forecastBoxHtml +
-
-        '<div class="farmer-crop-for-line">' +
-          forYourCropText +
-        '</div>' +
-
-        mainResultHtml +
-        staleBannerHtml +
-        priceNoticeHtml +
-        locationPanelHtml +
-
-        '<div class="farmer-recommendation-bar">' +
-          '<span class="' + bestBadgeClass + '">' + bestBadgeText + '</span>' +
-        '</div>' +
-
-        '<details class="farmer-calc-accordion">' +
-          '<summary class="farmer-calc-toggle">' +
-            '<svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>' +
-            '<span>' + (t.modalHowCalculated || "How is this calculated?") + '</span>' +
-          '</summary>' +
-          '<div class="farmer-calc-body">' +
-            '<div class="farmer-calc-row">' +
-              '<span class="farmer-calc-label">' + (bestMarket.priceBadgeType === "predicted" ? "Estimated gross crop value" : (t.modalTodayCropValue || "Today's crop value")) + ':</span>' +
-              '<span class="farmer-calc-val">₹' + bestMarket.grossCropValue.toLocaleString('en-IN') + ' <span class="farmer-calc-sub">(₹' + bestMarket.pricePerKg.toFixed(2) + (t.modalPerKg || "/kg") + ')</span></span>' +
-            '</div>' +
-            '<div class="farmer-calc-row">' +
-              '<span class="farmer-calc-label">' + (t.modalTravelCostLabel || "Travel cost") + ':</span>' +
-              '<span class="farmer-calc-val">' + (bestMarket.estTransport !== null ? ('~₹' + bestMarket.estTransport.toLocaleString('en-IN') + ' <span class="farmer-calc-sub">(' + bestMarket.distanceKm + ' km @ ₹' + FASALO_CONFIG.TRANSPORT_RATE_PER_KM + '/km)</span>') : 'Unavailable') + '</span>' +
-            '</div>' +
-            '<div class="farmer-calc-divider"></div>' +
-            '<div class="farmer-calc-row farmer-calc-row--net">' +
-              '<span class="farmer-calc-label"><strong>' + (t.modalYouHaveLeftLabel || "You may have left") + ':</strong></span>' +
-              '<span class="farmer-calc-val ' + (isLoss ? 'farmer-calc-val--loss' : 'farmer-calc-profit') + '"><strong>' + (bestMarket.estNet !== null ? formatRupees(bestMarket.estNet) : 'N/A') + '</strong></span>' +
-            '</div>' +
-
-            '<div class="farmer-data-freshness-bar">' +
-              '<div class="farmer-data-source">' +
-                '<span>🏛️ ' + (bestMarket.source || "AGMARKNET / OGD India") + '</span>' +
-                '<span class="farmer-meta-dot">&bull;</span>' +
-                '<span>' + dateUpdatedText + '</span>' +
-              '</div>' +
-              freshnessWarningHtml +
-            '</div>' +
-            '<p style="font-size: 0.725rem; color: #6b7280; margin: 4px 0 0 0;">' + (t.transportEstimateNote || "* Real road distance from OSRM / Google Maps. Rate at ₹3.50/km.") + '</p>' +
-          '</div>' +
-        '</details>' +
-      '</article>'
-    );
+    const bestOptionHtml = renderSingleMarketCard(bestMarket, true, lang, t, defaultOrigin);
 
     let otherMarketsHtml = "";
     if (remainingMarkets.length > 0) {
+      const heading = t.otherNearbyMarketsHeading || t.otherMarketsHeading || "Other Nearby Markets";
       otherMarketsHtml = (
-        '<div class="other-markets-container">' +
-          '<h4 class="other-markets-heading">' + (t.otherNearbyMarketsHeading || t.modalOtherMarkets || "Other Nearby Markets") + '</h4>' +
-          '<div class="other-markets-list">' +
+        '<div class="farmer-other-markets-wrap">' +
+          '<h4 class="farmer-other-markets-title">' + heading + '</h4>' +
+          '<div class="farmer-other-markets-list">' +
             remainingMarkets.map(function(m) {
-              const locM = getLocalizedMarket(m, lang);
-              const mIsRouteAvailable = (m.distanceKm !== null && m.distanceKm !== undefined && m.routeStatus !== "unavailable");
-              const mIsLoss = mIsRouteAvailable && m.estNet !== null && m.estNet < 0;
-              const mIsBreakEven = mIsRouteAvailable && m.estNet !== null && m.estNet === 0;
-
-              let mBadgeText = "🟢 " + (t.modalGoodOption || "Good option");
-              let mBadgeClass = "farmer-compact-pill farmer-compact-pill--good";
-
-              if (!mIsRouteAvailable) {
-                mBadgeText = "ℹ️ " + (t.roadDistanceUnavailable || "Road Distance Unavailable");
-                mBadgeClass = "farmer-compact-pill farmer-compact-pill--neutral";
-              } else if (mIsLoss) {
-                mBadgeText = "🔴 " + (t.modalNotGoodOption || "Not a good option");
-                mBadgeClass = "farmer-compact-pill farmer-compact-pill--loss";
-              } else if (mIsBreakEven) {
-                mBadgeText = "🟡 " + (t.modalBreakEven || "Break-even");
-                mBadgeClass = "farmer-compact-pill farmer-compact-pill--neutral";
-              }
-
-              const mTravelTime = mIsRouteAvailable ? formatTravelTime(m.travelMinutes, lang) : "Unavailable";
-              const mTrafficBadge = mIsRouteAvailable
-                ? (m.isLiveRoute
-                    ? '<span class="farmer-traffic-tag farmer-traffic-tag--live">🚦 ' + (t.liveTrafficTag || "Live") + '</span>'
-                    : '<span class="farmer-traffic-tag farmer-traffic-tag--est">⏱️ ' + (t.roadEstimateTag || "Est.") + '</span>')
-                : '';
-
-              const mFormattedDate = formatMandiDate(m.arrivalDate, lang);
-              const mDateText = (t.mandiPriceUpdatedLabel || "Mandi price updated: {date}").replace("{date}", mFormattedDate);
-              const mGmapsUrl = getGoogleMapsVerifyUrl(m.originCoords || origin, m.lat, m.lon, m.placeId);
-              const mDistText = mIsRouteAvailable ? ('📍 <strong>' + m.distanceKm + ' km</strong> ' + (t.modalAway || "away")) : '📍 <strong>Road distance unavailable</strong>';
-
-              const mVerifyBtnHtml = (
-                '<div style="margin-top: 6px;">' +
-                  '<a href="' + mGmapsUrl + '" target="_blank" rel="noopener noreferrer" class="farmer-verify-gmaps-btn-sm" style="display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; background: #ffffff; border: 1.2px solid #2563eb; color: #1d4ed8; border-radius: 6px; font-weight: 600; font-size: 0.75rem; text-decoration: none;">' +
-                    '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>' +
-                    '<span>Verify on Google Maps ↗</span>' +
-                  '</a>' +
-                '</div>'
-              );
-
-              return (
-                '<article class="farmer-compact-card">' +
-                  '<div class="farmer-compact-card__header">' +
-                    '<div>' +
-                      '<h5 class="farmer-compact-card__title">' + locM.name + '</h5>' +
-                      '<p class="farmer-compact-card__meta">' +
-                        mDistText + ' &bull; ' +
-                        '🕒 <strong>' + mTravelTime + '</strong> ' + mTrafficBadge + ' &bull; ' +
-                        locM.location +
-                      '</p>' +
-                      mVerifyBtnHtml +
-                    '</div>' +
-                    '<span class="' + mBadgeClass + '">' + mBadgeText + '</span>' +
-                  '</div>' +
-
-                  '<div class="farmer-compact-summary-row">' +
-                    '<div class="farmer-compact-chip">' +
-                      '<span class="farmer-compact-chip__label">🌾 ' + (t.modalCropValueShort || "Crop value") + '</span>' +
-                      '<span class="farmer-compact-chip__val">₹' + m.grossCropValue.toLocaleString('en-IN') + '</span>' +
-                    '</div>' +
-                    '<div class="farmer-compact-chip">' +
-                      '<span class="farmer-compact-chip__label">🚚 ' + (t.modalTravelShort || "Travel") + '</span>' +
-                      '<span class="farmer-compact-chip__val">' + (m.estTransport !== null ? ('~₹' + m.estTransport.toLocaleString('en-IN')) : 'Unavailable') + '</span>' +
-                    '</div>' +
-                    '<div class="farmer-compact-chip farmer-compact-chip--net ' + (mIsLoss ? 'farmer-compact-chip--loss' : '') + '">' +
-                      '<span class="farmer-compact-chip__label">' + (mIsLoss ? (t.modalLossShort || "Loss") : (t.modalAboutLeftShort || "About left")) + '</span>' +
-                      '<span class="farmer-compact-chip__val ' + (mIsLoss ? 'farmer-metric-loss' : 'farmer-metric-profit') + '">' + (m.estNet !== null ? formatRupees(m.estNet) : 'N/A') + '</span>' +
-                    '</div>' +
-                  '</div>' +
-
-                  '<details class="farmer-compact-calc">' +
-                    '<summary class="farmer-compact-calc-toggle">' +
-                      '<span>' + (t.modalSeeDetails || "See details") + '</span>' +
-                    '</summary>' +
-                    '<div class="farmer-compact-calc-body">' +
-                      '<div class="farmer-calc-row">' +
-                        '<span>' + (t.modalTodayCropValue || "Today's crop value") + ':</span>' +
-                        '<span>₹' + m.grossCropValue.toLocaleString('en-IN') + ' (₹' + m.pricePerKg.toFixed(2) + (t.modalPerKg || "/kg") + ')</span>' +
-                      '</div>' +
-                      '<div class="farmer-calc-row">' +
-                        '<span>' + (t.modalTravelCostLabel || "Travel cost") + ':</span>' +
-                        '<span>' + (m.estTransport !== null ? ('~₹' + m.estTransport.toLocaleString('en-IN') + ' (' + m.distanceKm + ' km @ ₹' + FASALO_CONFIG.TRANSPORT_RATE_PER_KM + '/km)') : 'Unavailable') + '</span>' +
-                      '</div>' +
-                      '<div class="farmer-calc-divider"></div>' +
-                      '<div class="farmer-calc-row farmer-calc-row--net">' +
-                        '<span><strong>' + (t.modalYouHaveLeftLabel || "You may have left") + ':</strong></span>' +
-                        '<strong class="' + (mIsLoss ? 'farmer-calc-val--loss' : 'farmer-calc-profit') + '">' + (m.estNet !== null ? formatRupees(m.estNet) : 'N/A') + '</strong>' +
-                      '</div>' +
-                      '<div class="farmer-data-freshness-bar" style="margin-top: 4px;">' +
-                        '<span>🏛️ ' + (m.source || "AGMARKNET / OGD India") + ' &bull; ' + mDateText + '</span>' +
-                      '</div>' +
-                    '</div>' +
-                  '</details>' +
-                '</article>'
-              );
+              return renderSingleMarketCard(m, false, lang, t, defaultOrigin);
             }).join("") +
           '</div>' +
         '</div>'
@@ -5237,67 +5356,8 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
         });
       }
 
-      // E. Geolocation Button
-      const locBtn = form.querySelector(".location-button");
-      const locInput = form.querySelector('input[name="location"]');
-      if (locBtn) {
-        locBtn.addEventListener("click", () => {
-          const btnSpan = locBtn.querySelector("span");
-          if (!navigator.geolocation) {
-            if (btnSpan) btnSpan.textContent = translations[currentLang]?.geoNotSupported || "Geolocation is not supported by your browser";
-            return;
-          }
-          if (btnSpan) btnSpan.textContent = translations[currentLang]?.detectingLocation || "Detecting...";
-          locBtn.disabled = true;
-
-          navigator.geolocation.getCurrentPosition(
-            async (pos) => {
-              const { latitude, longitude, accuracy } = pos.coords;
-              form.dataset.originLat = latitude;
-              form.dataset.originLon = longitude;
-              form.dataset.originAccuracy = accuracy ? Math.round(accuracy) : "";
-              form.dataset.originTimestamp = new Date(pos.timestamp || Date.now()).toISOString();
-              form.dataset.originSource = "gps";
-
-              try {
-                const res = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`);
-                if (!res.ok) throw new Error("Network error");
-                const data = await res.json();
-                if (data && data.address) {
-                  const city = data.address.city || data.address.town || data.address.village || data.address.county || "My Location";
-                  const state = data.address.state || "Maharashtra";
-                  const locStr = `${city}, ${state}`;
-                  if (btnSpan) btnSpan.textContent = `📍 ${locStr} (GPS ±${Math.round(accuracy || 0)}m)`;
-                  if (locInput) locInput.value = locStr;
-                  locBtn.classList.remove("is-denied");
-                } else {
-                  throw new Error("Invalid address format");
-                }
-              } catch (err) {
-                if (btnSpan) btnSpan.textContent = `📍 GPS (${latitude.toFixed(2)}, ${longitude.toFixed(2)})`;
-                if (locInput) locInput.value = `${latitude.toFixed(4)}, ${longitude.toFixed(4)}`;
-                locBtn.classList.remove("is-denied");
-              } finally {
-                locBtn.disabled = false;
-              }
-            },
-            (err) => {
-              if (btnSpan) {
-                btnSpan.textContent = err.code === err.PERMISSION_DENIED
-                  ? (translations[currentLang]?.locationNotAllowed || "Location access was not allowed.")
-                  : (translations[currentLang]?.unableToDetectLocation || "Unable to detect location");
-              }
-              locBtn.classList.add("is-denied");
-              locBtn.disabled = false;
-            },
-            {
-              enableHighAccuracy: true,
-              maximumAge: 0,
-              timeout: 20000
-            }
-          );
-        });
-      }
+      // E. Geolocation Controller Setup (Phase 02)
+      setupLocationController(form);
     });
 
     // F. Prepopulate from URL Search Params

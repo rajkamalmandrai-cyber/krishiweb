@@ -15,6 +15,7 @@ if (dns.setDefaultResultOrder) {
 const mandiPricesHandler = require("./api/mandi-prices");
 const routesHandler = require("./api/routes");
 const healthHandler = require("./api/health");
+const geocodeHandler = require("./api/geocode");
 const {
   fetchMandiDataFromGov,
   computeRoute,
@@ -58,6 +59,9 @@ const server = http.createServer(async (req, res) => {
   }
   if (pathname === "/api/routes") {
     return routesHandler(req, res);
+  }
+  if (pathname === "/api/geocode") {
+    return geocodeHandler(req, res);
   }
   if (pathname === "/api/sync") {
     res.setHeader("Access-Control-Allow-Origin", "*");

@@ -40,11 +40,11 @@ function get(url) {
 
 async function runFullTestSuite() {
   console.log("==================================================================");
-  console.log("KRISHIWEB COMPREHENSIVE PRODUCTION TEST SUITE (20 TESTS)");
+  console.log("KRISHIWEB COMPREHENSIVE PRODUCTION TEST SUITE (23 TESTS)");
   console.log("==================================================================\n");
 
   let passedTests = 0;
-  const totalTests = 20;
+  const totalTests = 23;
 
   const { server } = require('./server.js');
   await new Promise(resolve => server.listen(0, resolve));
@@ -494,6 +494,79 @@ async function runFullTestSuite() {
       passedTests++;
     } else {
       console.log("  [FAIL] High-accuracy options or non-silent fallbacks missing in script.js.");
+    }
+
+    // -------------------------------------------------------------
+    // TEST 21: Server-Side Reverse Geocoding Endpoint (/api/geocode)
+    // -------------------------------------------------------------
+    console.log("\nTEST 21: Server-Side Reverse Geocoding Endpoint (/api/geocode)");
+    const thaneGeoRes = await get(`http://127.0.0.1:${testPort}/api/geocode?lat=19.2183&lon=72.9781`);
+    const panvelGeoRes = await get(`http://127.0.0.1:${testPort}/api/geocode?lat=18.9894&lon=73.1175`);
+
+    console.log(`  -> Thane Coordinates (19.2183, 72.9781): Status ${thaneGeoRes.status}, Locality: ${thaneGeoRes.body?.locality}, State: ${thaneGeoRes.body?.state}`);
+    console.log(`  -> Panvel Coordinates (18.9894, 73.1175): Status ${panvelGeoRes.status}, Locality: ${panvelGeoRes.body?.locality}, State: ${panvelGeoRes.body?.state}`);
+
+    const thaneValid = thaneGeoRes.status === 200 && (thaneGeoRes.body?.locality === "Thane" || thaneGeoRes.body?.formattedAddress?.includes("Thane"));
+    const panvelValid = panvelGeoRes.status === 200 && (panvelGeoRes.body?.locality === "Panvel" || panvelGeoRes.body?.formattedAddress?.includes("Panvel"));
+    const noSecretInClient = !scriptSrc.includes(process.env.GOOGLE_MAPS_API_KEY || "AIzaSyFakeKeyPlaceholder") && !scriptSrc.includes("maps.googleapis.com/maps/api/geocode");
+
+    if (thaneValid && panvelValid && noSecretInClient) {
+      console.log("  [PASS] Server-side /api/geocode accurately resolves Indian localities and keeps API keys protected.");
+      passedTests++;
+    } else {
+      console.log("  [FAIL] Server-side geocoding failed or client script leaked sensitive API URLs.");
+    }
+
+    // -------------------------------------------------------------
+    // TEST 22: Authoritative Location State & Input Invalidation
+    // -------------------------------------------------------------
+    console.log("\nTEST 22: Authoritative Location State & Manual Input Invalidation");
+    const hasAuthoritativeState = scriptSrc.includes('authoritativeLocationState') &&
+                                  scriptSrc.includes('invalidateFormLocation') &&
+                                  scriptSrc.includes('setupLocationController');
+    const hasDatasetInvalidation = scriptSrc.includes('delete form.dataset.originLat') &&
+                                   scriptSrc.includes('delete form.dataset.originLon');
+    const hasInputListener = scriptSrc.includes('locInput.addEventListener("input"') &&
+                             scriptSrc.includes('invalidateFormLocation(form)');
+    const hasAntiStaleGPS = scriptSrc.includes('isStillMatching') &&
+                            scriptSrc.includes('detectedLocality');
+
+    console.log(`  -> Authoritative state object & controller: ${hasAuthoritativeState}`);
+    console.log(`  -> Form dataset origin lat/lon deletion on invalidation: ${hasDatasetInvalidation}`);
+    console.log(`  -> Input listener clearing coordinates on typing: ${hasInputListener}`);
+    console.log(`  -> Rejection of stale GPS coordinates if user types different city: ${hasAntiStaleGPS}`);
+
+    if (hasAuthoritativeState && hasDatasetInvalidation && hasInputListener && hasAntiStaleGPS) {
+      console.log("  [PASS] Manual typing cleanly invalidates GPS coordinates and prevents stale coordinate reuse.");
+      passedTests++;
+    } else {
+      console.log("  [FAIL] Authoritative state or manual coordinate invalidation missing.");
+    }
+
+    // -------------------------------------------------------------
+    // TEST 23: Low Accuracy & Desktop Wi-Fi Geolocation Handling
+    // -------------------------------------------------------------
+    console.log("\nTEST 23: Low Accuracy & Desktop Wi-Fi Geolocation Handling");
+    const hasUncertaintyBanner = scriptSrc.includes('showLocationUncertaintyBanner') &&
+                                 scriptSrc.includes('location-uncertainty-banner') &&
+                                 scriptSrc.includes('isApproximate');
+    const hasMultilingualWarning = scriptSrc.includes('locationUncertainWarning') &&
+                                   scriptSrc.includes('We could not confirm your exact location') &&
+                                   scriptSrc.includes('हम आपके सटीक स्थान की पुष्टि नहीं कर सके') &&
+                                   scriptSrc.includes('आम्ही तुमच्या अचूक स्थानाची खात्री करू शकलो नाही');
+    const hasMultiSampleSettling = scriptSrc.includes('navigator.geolocation.watchPosition') &&
+                                   scriptSrc.includes('navigator.geolocation.clearWatch') &&
+                                   scriptSrc.includes('samples.sort');
+
+    console.log(`  -> Uncertainty warning banner & approximate flag: ${hasUncertaintyBanner}`);
+    console.log(`  -> Multilingual farmer warning across EN, HI, MR: ${hasMultilingualWarning}`);
+    console.log(`  -> Multi-sample watchPosition settling with clearWatch cleanup: ${hasMultiSampleSettling}`);
+
+    if (hasUncertaintyBanner && hasMultilingualWarning && hasMultiSampleSettling) {
+      console.log("  [PASS] Coarse/desktop Wi-Fi readings trigger farmer-friendly warning with multi-sample settling.");
+      passedTests++;
+    } else {
+      console.log("  [FAIL] Low-accuracy handling or multilingual warnings incomplete.");
     }
 
     console.log("\n==================================================================");

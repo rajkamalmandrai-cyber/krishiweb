@@ -2392,6 +2392,70 @@ noscript [data-animate] {
   line-height: 1.4;
 }
 
+.location-button.is-gps-active {
+  background-color: #f0fdf4;
+  border-color: #16a34a;
+  color: #166534;
+}
+
+/* Phase 02: Farmer-Friendly Location Feedback & Uncertainty Banner */
+.location-uncertainty-banner {
+  margin-top: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 4px solid #f59e0b;
+  border-radius: 8px;
+  animation: fadeInDown 0.25s ease-out;
+}
+
+.location-uncertainty-banner__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.location-uncertainty-banner__icon {
+  font-size: 1.1rem;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+
+.location-uncertainty-banner__body {
+  flex: 1;
+}
+
+.location-uncertainty-banner__text {
+  margin: 0;
+  font-size: 0.84rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #92400e;
+}
+
+.location-uncertainty-banner__actions {
+  margin-top: 0.45rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.location-confirm-btn {
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  padding: 0.25rem 0.65rem !important;
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+  border: 1px solid #f59e0b !important;
+  border-radius: 6px !important;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.location-confirm-btn:hover {
+  background-color: #fde68a !important;
+  color: #78350f !important;
+}
+
 .recommendation-preview {
   margin-top: var(--space-6);
   padding: var(--space-4);
@@ -4165,18 +4229,316 @@ body.modal-open {
   -webkit-overflow-scrolling: touch;
 }
 
-/* --- Farmer Friendly Ultra-Simple Result Cards --- */
-.farmer-best-card {
-  background: linear-gradient(165deg, #f0fdf4 0%, #ffffff 100%);
-  border: 2px solid #22c55e;
-  border-radius: 18px;
-  padding: var(--space-5);
-  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.12);
+/* --- Farmer Friendly Ultra-Simple Result Cards (Phase 01 Redesign) --- */
+.farmer-result-card {
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 16px;
+  padding: var(--space-4) var(--space-5);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: 12px;
   position: relative;
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
+
+.farmer-result-card--best {
+  background: linear-gradient(170deg, #f0fdf4 0%, #ffffff 60%);
+  border: 2px solid #22c55e;
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.12);
+}
+
+.farmer-result-card--alt {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+}
+
+.farmer-result-card--alt:hover {
+  border-color: #86efac;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* 1. Recommended / Alternative Market label */
+.farmer-card-badge-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.farmer-card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.farmer-card-badge--best {
+  background: #15803d;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(21, 128, 61, 0.25);
+}
+
+.farmer-card-badge--alt {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+/* 2. Market name and city */
+.farmer-card-market {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.farmer-card-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.farmer-result-card--best .farmer-card-name {
+  color: #052e16;
+}
+
+.farmer-card-city {
+  font-size: 0.9375rem;
+  color: #475569;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* 3 & 4. Travel Stats Grid: Distance & Time */
+.farmer-card-travel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.farmer-travel-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.farmer-stat-label {
+  font-size: 0.775rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.farmer-stat-value {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.farmer-stat-value--muted {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+/* 5, 6, 7. Crop & Financial breakdown box */
+.farmer-card-financial-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 8px 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.farmer-finance-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9375rem;
+}
+
+.farmer-finance-row:last-child {
+  border-bottom: none;
+}
+
+.farmer-finance-label {
+  color: #334155;
+  font-weight: 500;
+}
+
+.farmer-finance-val {
+  color: #0f172a;
+  font-size: 0.975rem;
+  text-align: right;
+}
+
+.farmer-finance-val strong {
+  font-weight: 700;
+}
+
+.farmer-finance-val--deduct {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.farmer-finance-val--muted {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+/* 8. Final estimated amount (In Hand), prominently displayed */
+.farmer-payout-box {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 2px solid #86efac;
+  border-radius: 14px;
+  padding: 14px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  box-shadow: 0 4px 12px rgba(22, 101, 52, 0.06);
+}
+
+.farmer-payout-lead {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #166534;
+  margin: 0;
+}
+
+.farmer-payout-amount-wrap {
+  margin: 2px 0;
+}
+
+.farmer-payout-val {
+  font-size: 2.35rem;
+  font-weight: 900;
+  color: #15803d;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.farmer-payout-val--loss {
+  color: #dc2626;
+}
+
+.farmer-payout-unavail-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #475569;
+  padding: 6px 0;
+  display: inline-block;
+}
+
+.farmer-payout-subtext {
+  font-size: 0.8125rem;
+  color: #166534;
+  margin: 0;
+  font-weight: 500;
+}
+
+.farmer-payout-box--loss {
+  background: #fff5f5;
+  border-color: #fca5a5;
+}
+
+.farmer-payout-box--loss .farmer-payout-lead,
+.farmer-payout-box--loss .farmer-payout-subtext {
+  color: #b91c1c;
+}
+
+.farmer-payout-box--unavailable {
+  background: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+}
+
+.farmer-payout-box--unavailable .farmer-payout-lead,
+.farmer-payout-box--unavailable .farmer-payout-subtext {
+  color: #64748b;
+}
+
+/* 9. View Route on Google Maps button */
+.farmer-card-action-wrap {
+  margin-top: 4px;
+}
+
+.farmer-btn-gmaps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  background: #16a34a;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(22, 163, 74, 0.22);
+  transition: background-color 160ms ease, transform 140ms ease;
+  cursor: pointer;
+}
+
+.farmer-btn-gmaps:hover {
+  background: #15803d;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.farmer-btn-gmaps:active {
+  transform: translateY(0);
+}
+
+/* Attribution footer */
+.farmer-card-footer {
+  text-align: center;
+  font-size: 0.725rem;
+  color: #94a3b8;
+  padding-top: 2px;
+}
+
+/* Alternative markets section */
+.farmer-other-markets-wrap {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.farmer-other-markets-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.farmer-other-markets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Backward compatibility aliases */
+.farmer-best-card { composes: farmer-result-card farmer-result-card--best; }
+.farmer-compact-card { composes: farmer-result-card farmer-result-card--alt; }
 
 .farmer-best-card__eyebrow {
   display: inline-flex;
