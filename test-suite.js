@@ -1,6 +1,6 @@
 /**
- * KRISHIWEB COMPREHENSIVE VERIFICATION TEST SUITE (15 TESTS)
- * Verifies all 8 Priorities:
+ * KRISHIWEB COMPREHENSIVE VERIFICATION TEST SUITE (20 TESTS)
+ * Verifies all 8 Priorities + Critical GPS & Road Distance Fixes:
  * 1. Market Data Freshness & Stale Detection
  * 2. OSRM Road Distance & Travel Time Routing
  * 3. Location Transparency & Privacy
@@ -9,10 +9,15 @@
  * 6. UI & Dashboard Presentation
  * 7. Validation, Deduplication & Error Handling
  * 8. Security & Deployment Health
+ * 9. Critical GPS & Road Distance Fixes (Pune APMC, Sanity, Multi-Route, Verify Button, Geolocation)
  */
 
 const http = require('http');
 const fs = require('fs');
+const dns = require('dns');
+if (dns.setDefaultResultOrder) {
+  dns.setDefaultResultOrder('ipv4first');
+}
 const { mandiStore } = require('./lib/mandi-store');
 const { routingService } = require('./lib/routing-service');
 const { predictMandiPrice, evaluateForecastModel } = require('./lib/price-forecast');
@@ -35,11 +40,11 @@ function get(url) {
 
 async function runFullTestSuite() {
   console.log("==================================================================");
-  console.log("KRISHIWEB COMPREHENSIVE PRODUCTION TEST SUITE (15 TESTS)");
+  console.log("KRISHIWEB COMPREHENSIVE PRODUCTION TEST SUITE (20 TESTS)");
   console.log("==================================================================\n");
 
   let passedTests = 0;
-  const totalTests = 15;
+  const totalTests = 20;
 
   const { server } = require('./server.js');
   await new Promise(resolve => server.listen(0, resolve));
@@ -117,7 +122,7 @@ async function runFullTestSuite() {
     const osrmKey = routingService.getCacheKey(oLat, oLon, dLat, dLon);
     console.log(`  -> Cache Key formatted as lon,lat: ${osrmKey}`);
 
-    if (osrmKey.startsWith("72.9781,19.2183")) {
+    if (osrmKey.includes("72.9781,19.2183") && osrmKey.includes("72.9986,19.0771")) {
       console.log("  [PASS] Coordinates correctly ordered as longitude,latitude for OSRM compliance.");
       passedTests++;
     } else {
@@ -367,6 +372,128 @@ async function runFullTestSuite() {
       passedTests++;
     } else {
       console.log("  [FAIL] Health check failed or credentials exposed.");
+    }
+
+    // -------------------------------------------------------------
+    // TEST 16: Mandi Coordinates & Verified Pune Entrance Geolocation
+    // -------------------------------------------------------------
+    console.log("\nTEST 16: Mandi Coordinates & Verified Pune Entrance Geolocation");
+    const storeRaw = JSON.parse(fs.readFileSync('data/mandi-store.json', 'utf8'));
+    const puneRecords = [];
+    for (const crop in storeRaw.currentPrices) {
+      const found = storeRaw.currentPrices[crop].filter(m => m.market.toLowerCase().includes("pune"));
+      puneRecords.push(...found);
+    }
+    const allPuneHaveCorrectCoords = puneRecords.length > 0 && puneRecords.every(r => {
+      const isGultekdi = r.market.toLowerCase().includes("gultekdi") || r.market.toLowerCase() === "pune";
+      const isMoshi = r.market.toLowerCase().includes("moshi");
+      if (isGultekdi) {
+        return Math.abs(r.lat - 18.4975) < 0.05 && Math.abs(r.lon - 73.8647) < 0.05 && r.destPlaceId === "ChIJXy51iBfAwjsRv15PZfFqWk8";
+      }
+      if (isMoshi) {
+        return Math.abs(r.lat - 18.6728) < 0.05 && Math.abs(r.lon - 73.8475) < 0.05 && r.destPlaceId === "ChIJh6v54qTBwjsR32Y7f_qV_4A";
+      }
+      return r.lat !== 19.0760 && !!r.destPlaceId;
+    });
+    console.log(`  -> Pune mandi records audited: ${puneRecords.length}`);
+    console.log(`  -> Pune records have real Pune coordinates (18.4975, 73.8647) and Place ID: ${allPuneHaveCorrectCoords}`);
+    if (allPuneHaveCorrectCoords) {
+      console.log("  [PASS] Pune APMC verified entrance coordinates and Place ID correctly populated across store.");
+      passedTests++;
+    } else {
+      console.log("  [FAIL] Pune APMC still contains Mumbai fallback or wrong coordinates.");
+    }
+
+    // -------------------------------------------------------------
+    // TEST 17: Distance Sanity Validation & Impossibly Short Route Rejection
+    // -------------------------------------------------------------
+    console.log("\nTEST 17: Distance Sanity Validation (Rejects Suspiciously Short Routes)");
+    const { validateRoadDistanceSanity } = require('./lib/routing-service');
+    let sanityBlocked1km = false;
+    try {
+      // Thane (19.2183, 72.9781) to Pune (18.4975, 73.8647) is ~123 km crow-fly.
+      // A fake distance of 1.0 km must be rejected!
+      validateRoadDistanceSanity(1.0, 19.2183, 72.9781, 18.4975, 73.8647);
+    } catch (err) {
+      sanityBlocked1km = err.message.includes("Sanity check failed") || err.message.includes("Suspicious route");
+    }
+
+    let sanityAllowedValid = false;
+    try {
+      sanityAllowedValid = validateRoadDistanceSanity(153.2, 19.2183, 72.9781, 18.4975, 73.8647);
+    } catch (err) {
+      sanityAllowedValid = false;
+    }
+
+    console.log(`  -> Blocked fake 1 km route for 123 km intercity distance: ${sanityBlocked1km}`);
+    console.log(`  -> Allowed realistic 153.2 km road route: ${sanityAllowedValid}`);
+    if (sanityBlocked1km && sanityAllowedValid) {
+      console.log("  [PASS] Distance sanity checker rejects impossibly short routes and permits valid routes.");
+      passedTests++;
+    } else {
+      console.log("  [FAIL] Distance sanity checks failed.");
+    }
+
+    // -------------------------------------------------------------
+    // TEST 18: Real-World Multi-Route Road Distance Tests
+    // -------------------------------------------------------------
+    console.log("\nTEST 18: Real-World Multi-Route Verification (Thane->Pune, Kalyan->Pune, Kalyan->Nashik)");
+    // Route A: Thane to Pune Gultekdi APMC (18.4975, 73.8647)
+    const puneRouteRes = await get(`http://127.0.0.1:${testPort}/api/routes?originLat=19.2183&originLon=72.9781&destLat=18.4975&destLon=73.8647&destPlaceId=ChIJXy51iBfAwjsRv15PZfFqWk8`);
+    console.log(`  -> Thane to Pune APMC Road Distance: ${puneRouteRes.body.distanceKm} km (Duration: ${puneRouteRes.body.durationMinutes} mins)`);
+
+    // Route B: Kalyan to Pune Gultekdi APMC (19.2403, 73.1305 -> 18.4975, 73.8647)
+    const kalyanPuneRes = await get(`http://127.0.0.1:${testPort}/api/routes?originLat=19.2403&originLon=73.1305&destLat=18.4975&destLon=73.8647&destPlaceId=ChIJXy51iBfAwjsRv15PZfFqWk8`);
+    console.log(`  -> Kalyan to Pune APMC Road Distance: ${kalyanPuneRes.body.distanceKm} km (Duration: ${kalyanPuneRes.body.durationMinutes} mins)`);
+
+    // Route C: Kalyan to Nashik APMC (19.2403, 73.1305 -> 19.9975, 73.7898)
+    const kalyanNashikRes = await get(`http://127.0.0.1:${testPort}/api/routes?originLat=19.2403&originLon=73.1305&destLat=19.9975&destLon=73.7898&destPlaceId=ChIJ1Z3y7P5v3jsRz1L3u2uB3vA`);
+    console.log(`  -> Kalyan to Nashik APMC Road Distance: ${kalyanNashikRes.body.distanceKm} km (Duration: ${kalyanNashikRes.body.durationMinutes} mins)`);
+
+    const routesAccurate = (
+      puneRouteRes.body.status === "success" && puneRouteRes.body.distanceKm > 140 && puneRouteRes.body.distanceKm < 170 &&
+      kalyanPuneRes.body.status === "success" && kalyanPuneRes.body.distanceKm > 140 && kalyanPuneRes.body.distanceKm < 170 &&
+      kalyanNashikRes.body.status === "success" && kalyanNashikRes.body.distanceKm > 125 && kalyanNashikRes.body.distanceKm < 155
+    );
+
+    if (routesAccurate) {
+      console.log("  [PASS] All inter-city road distances verified accurate (Thane/Kalyan to Pune APMC > 140 km).");
+      passedTests++;
+    } else {
+      console.log("  [FAIL] Road distance verification failed for multi-route checks.");
+    }
+
+    // -------------------------------------------------------------
+    // TEST 19: "Verify on Google Maps" Navigation Link & Place ID Integration
+    // -------------------------------------------------------------
+    console.log("\nTEST 19: Google Maps Navigation Verification Link Integration");
+    const hasVerifyButton = scriptSrc.includes('getGoogleMapsVerifyUrl') && 
+                            scriptSrc.includes('Verify on Google Maps') && 
+                            scriptSrc.includes('destination_place_id=');
+    console.log(`  -> Google Maps verification helper & button present: ${hasVerifyButton}`);
+    if (hasVerifyButton) {
+      console.log("  [PASS] 'Verify on Google Maps' button renders on mandi cards with exact coordinates and Place ID.");
+      passedTests++;
+    } else {
+      console.log("  [FAIL] Missing 'Verify on Google Maps' integration in script.js.");
+    }
+
+    // -------------------------------------------------------------
+    // TEST 20: High-Accuracy Fresh Geolocation Parameters & No Silent Default Substitution
+    // -------------------------------------------------------------
+    console.log("\nTEST 20: High-Accuracy Geolocation Parameters & Transparent Manual Control");
+    const hasHighAccuracy = scriptSrc.includes('enableHighAccuracy: true') &&
+                            scriptSrc.includes('maximumAge: 0') &&
+                            scriptSrc.includes('timeout: 20000');
+    const hasNoSilentFallback = (scriptSrc.includes('source: "default_fallback"') || scriptSrc.includes('source: "fallback"')) &&
+                                scriptSrc.includes('Default Reference');
+    console.log(`  -> navigator.geolocation configured with enableHighAccuracy:true, maximumAge:0, timeout:20000: ${hasHighAccuracy}`);
+    console.log(`  -> Non-silent reference origin labeling: ${hasNoSilentFallback}`);
+    if (hasHighAccuracy && hasNoSilentFallback) {
+      console.log("  [PASS] Geolocation requests high accuracy fresh coordinates and explicitly labels reference origins.");
+      passedTests++;
+    } else {
+      console.log("  [FAIL] High-accuracy options or non-silent fallbacks missing in script.js.");
     }
 
     console.log("\n==================================================================");

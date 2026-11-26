@@ -123,6 +123,13 @@ function generateHistoricalDates() {
 
 function runSeed() {
   console.log("Seeding KrishiWeb persistent data store...");
+
+  // Reset store to completely wipe stale coordinates
+  for (const crop of ["onion", "tomato", "potato", "cotton", "soybean", "wheat", "rice"]) {
+    mandiStore.store.currentPrices[crop] = [];
+    mandiStore.store.history[crop] = {};
+  }
+
   const historicalDates = generateHistoricalDates();
   console.log(`Generated 14 chronological market days: ${historicalDates[0].dateStr} to ${historicalDates[historicalDates.length - 1].dateStr}`);
 

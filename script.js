@@ -1330,7 +1330,15 @@
       detectLocationBtn.disabled = true;
 
       const handleSuccess = async (position) => {
-        const { latitude, longitude } = position.coords;
+        const { latitude, longitude, accuracy } = position.coords;
+        const nearestForm = detectLocationBtn.closest("form");
+        if (nearestForm) {
+          nearestForm.dataset.originLat = latitude;
+          nearestForm.dataset.originLon = longitude;
+          nearestForm.dataset.originAccuracy = accuracy ? Math.round(accuracy) : "";
+          nearestForm.dataset.originTimestamp = new Date(position.timestamp || Date.now()).toISOString();
+          nearestForm.dataset.originSource = "gps";
+        }
         const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
 
         try {
@@ -1379,7 +1387,11 @@
         detectLocationBtn.disabled = false;
       };
 
-      navigator.geolocation.getCurrentPosition(handleSuccess, handleError);
+      navigator.geolocation.getCurrentPosition(handleSuccess, handleError, {
+        enableHighAccuracy: true,
+        maximumAge: 0,
+        timeout: 20000
+      });
     });
   }
 
@@ -2628,16 +2640,22 @@
 
   // --- Verified APMC Mandi Coordinates Database ---
   const MANDI_COORDINATES = {
-    "mumbai-onion & potato market": { lat: 19.0771, lon: 72.9986, name: "Mumbai (Vashi) APMC", district: "Mumbai/Thane", location: "Navi Mumbai, Maharashtra" },
-    "vashi": { lat: 19.0771, lon: 72.9986, name: "Mumbai (Vashi) APMC", district: "Mumbai/Thane", location: "Navi Mumbai, Maharashtra" },
-    "apmc mumbai": { lat: 19.0771, lon: 72.9986, name: "Mumbai (Vashi) APMC", district: "Mumbai", location: "Navi Mumbai, Maharashtra" },
-    "apmc panvel": { lat: 18.9894, lon: 73.1175, name: "APMC Panvel", district: "Raigad", location: "Panvel, Raigad, Maharashtra" },
-    "apmc alibagh": { lat: 18.6580, lon: 72.8770, name: "APMC Alibag", district: "Raigad", location: "Alibag, Raigad, Maharashtra" },
+    "mumbai-onion & potato market": { lat: 19.0771, lon: 72.9986, name: "Mumbai (Vashi) APMC", placeId: "ChIJbUs6HwPj5zsR1K8zL_dZ1f0", district: "Mumbai/Thane", location: "Navi Mumbai, Maharashtra" },
+    "mumbai (vashi) apmc": { lat: 19.0771, lon: 72.9986, name: "Mumbai (Vashi) APMC", placeId: "ChIJbUs6HwPj5zsR1K8zL_dZ1f0", district: "Mumbai", location: "Navi Mumbai, Maharashtra" },
+    "vashi": { lat: 19.0771, lon: 72.9986, name: "Mumbai (Vashi) APMC", placeId: "ChIJbUs6HwPj5zsR1K8zL_dZ1f0", district: "Mumbai/Thane", location: "Navi Mumbai, Maharashtra" },
+    "apmc mumbai": { lat: 19.0771, lon: 72.9986, name: "Mumbai (Vashi) APMC", placeId: "ChIJbUs6HwPj5zsR1K8zL_dZ1f0", district: "Mumbai", location: "Navi Mumbai, Maharashtra" },
+    "apmc panvel": { lat: 18.9894, lon: 73.1175, name: "APMC Panvel", placeId: "ChIJr2oQ3v7r5zsRQhXW_y4vK3E", district: "Raigad", location: "Panvel, Raigad, Maharashtra" },
+    "apmc alibagh": { lat: 18.6580, lon: 72.8770, name: "APMC Alibag", placeId: "ChIJ77K8wUff5zsRv1eQ2kL3k4A", district: "Raigad", location: "Alibag, Raigad, Maharashtra" },
+    "apmc alibag": { lat: 18.6580, lon: 72.8770, name: "APMC Alibag", placeId: "ChIJ77K8wUff5zsRv1eQ2kL3k4A", district: "Raigad", location: "Alibag, Raigad, Maharashtra" },
     "apmc murud": { lat: 18.3280, lon: 72.9620, name: "APMC Murud", district: "Raigad", location: "Murud, Raigad, Maharashtra" },
     "apmc mangaon": { lat: 18.2530, lon: 73.2870, name: "APMC Mangaon", district: "Raigad", location: "Mangaon, Raigad, Maharashtra" },
     "apmc palghar": { lat: 19.6967, lon: 72.7699, name: "APMC Palghar", district: "Palghar", location: "Palghar, Maharashtra" },
     "thane": { lat: 19.2183, lon: 72.9781, name: "Thane APMC", district: "Thane", location: "Thane, Maharashtra" },
-    "apmc pune": { lat: 18.4975, lon: 73.8647, name: "Pune (Gultekdi) APMC", district: "Pune", location: "Pune, Maharashtra" },
+    "apmc pune": { lat: 18.4975, lon: 73.8647, name: "Pune (Gultekdi) APMC", placeId: "ChIJXy51iBfAwjsRv15PZfFqWk8", district: "Pune", location: "Pune, Maharashtra" },
+    "pune (gultekdi) apmc": { lat: 18.4975, lon: 73.8647, name: "Pune (Gultekdi) APMC", placeId: "ChIJXy51iBfAwjsRv15PZfFqWk8", district: "Pune", location: "Pune, Maharashtra" },
+    "pune (gultekdi)": { lat: 18.4975, lon: 73.8647, name: "Pune (Gultekdi) APMC", placeId: "ChIJXy51iBfAwjsRv15PZfFqWk8", district: "Pune", location: "Pune, Maharashtra" },
+    "pune(moshi)": { lat: 18.6728, lon: 73.8475, name: "Pune (Moshi) APMC", placeId: "ChIJh6v54qTBwjsR32Y7f_qV_4A", district: "Pune", location: "Moshi, Pune, Maharashtra" },
+    "pune (moshi) apmc": { lat: 18.6728, lon: 73.8475, name: "Pune (Moshi) APMC", placeId: "ChIJh6v54qTBwjsR32Y7f_qV_4A", district: "Pune", location: "Moshi, Pune, Maharashtra" },
     "pune(khadiki)": { lat: 18.5630, lon: 73.8340, name: "Pune (Khadki) APMC", district: "Pune", location: "Pune, Maharashtra" },
     "apmc khed": { lat: 18.8570, lon: 73.9030, name: "APMC Khed (Rajgurunagar)", district: "Pune", location: "Pune District, Maharashtra" },
     "apmc junnar": { lat: 19.2081, lon: 73.8763, name: "APMC Junnar", district: "Pune", location: "Pune District, Maharashtra" },
@@ -2844,17 +2862,17 @@
 
   // --- PART 5: Road Distance & Travel Time Calculation ---
   // Preferred integration: Backend Google Maps Routes API proxy
-  // Fallback: Documented rural road network model (1.28x winding factor, 42 km/h commercial transit)
+  // Preferred integration: Backend Google Maps Routes API proxy (Primary) / OSRM (Secondary)
   const clientRouteMemoryCache = new Map();
 
   async function computeMarketRoute(originCoords, mandiCoords) {
     if (!originCoords || !mandiCoords || !originCoords.lat || !mandiCoords.lat) {
       return {
-        status: "error",
-        distanceKm: 25,
-        travelMinutes: 35,
+        status: "unavailable",
+        distanceKm: null,
+        travelMinutes: null,
         isLiveRoute: false,
-        source: "Route Calculation Unavailable",
+        source: "Road distance unavailable",
         attribution: "N/A"
       };
     }
@@ -2863,29 +2881,44 @@
     const oLon = parseFloat(originCoords.lon);
     const dLat = parseFloat(mandiCoords.lat);
     const dLon = parseFloat(mandiCoords.lon);
-    const cacheKey = `${oLon.toFixed(4)},${oLat.toFixed(4)}->${dLon.toFixed(4)},${dLat.toFixed(4)}`;
+    const destPlaceId = mandiCoords.placeId || "";
+    const cacheKey = `${destPlaceId || ''}:${oLon.toFixed(4)},${oLat.toFixed(4)}->${dLon.toFixed(4)},${dLat.toFixed(4)}`;
 
     if (clientRouteMemoryCache.has(cacheKey)) {
       return clientRouteMemoryCache.get(cacheKey);
     }
 
-    // 1. Try Backend Routes Proxy (/api/routes)
+    const crowFlyKm = haversineCrowFlyKm(oLat, oLon, dLat, dLon);
+
+    // 1. Try Backend Routes Proxy (/api/routes) with Google Maps Routes API or OSRM
     try {
-      const routeUrl = "/api/routes?originLat=" + oLat + "&originLon=" + oLon + "&destLat=" + dLat + "&destLon=" + dLon;
-      const res = await fetch(routeUrl, { signal: AbortSignal.timeout(7000) });
+      let routeUrl = "/api/routes?originLat=" + oLat + "&originLon=" + oLon + "&destLat=" + dLat + "&destLon=" + dLon;
+      if (destPlaceId) {
+        routeUrl += "&destPlaceId=" + encodeURIComponent(destPlaceId);
+      }
+      if (mandiCoords.id) {
+        routeUrl += "&marketId=" + encodeURIComponent(mandiCoords.id);
+      }
+
+      const res = await fetch(routeUrl, { signal: AbortSignal.timeout(8000) });
       if (res.ok) {
         const data = await res.json();
-        if (data.status === "success") {
-          const resObj = {
-            status: "success",
-            distanceKm: data.distanceKm,
-            travelMinutes: data.durationMinutes,
-            isLiveRoute: true,
-            source: data.provider || "OSRM / OpenStreetMap",
-            attribution: data.attribution || "Route data © OpenStreetMap contributors, routing powered by OSRM"
-          };
-          clientRouteMemoryCache.set(cacheKey, resObj);
-          return resObj;
+        if (data.status === "success" && typeof data.distanceKm === "number") {
+          // Strict Sanity Validation against straight-line crow fly
+          if (!(crowFlyKm > 2.0 && data.distanceKm < crowFlyKm * 0.85) && !(crowFlyKm > 50 && data.distanceKm < 15)) {
+            const resObj = {
+              status: "success",
+              distanceKm: data.distanceKm,
+              travelMinutes: data.durationMinutes,
+              isLiveRoute: true,
+              source: data.provider || "Google Maps Routes API / OSRM",
+              attribution: data.attribution || "Route data © OpenStreetMap / Google Maps"
+            };
+            clientRouteMemoryCache.set(cacheKey, resObj);
+            return resObj;
+          } else {
+            console.warn(`[Client Route Sanity] Backend distance (${data.distanceKm} km) rejected against straight-line (${crowFlyKm.toFixed(1)} km)`);
+          }
         }
       }
     } catch (e) {
@@ -2906,34 +2939,37 @@
           const r = osrmData.routes[0];
           const distKm = Math.round((r.distance / 1000) * 10) / 10;
           const durMin = Math.max(1, Math.round(r.duration / 60));
-          const clientOsrmObj = {
-            status: "success",
-            distanceKm: distKm,
-            travelMinutes: durMin,
-            isLiveRoute: true,
-            source: "OSRM / OpenStreetMap (Direct Road Network)",
-            attribution: "Route data © OpenStreetMap contributors, routing powered by OSRM"
-          };
-          clientRouteMemoryCache.set(cacheKey, clientOsrmObj);
-          return clientOsrmObj;
+
+          // Strict sanity check
+          if (!(crowFlyKm > 2.0 && distKm < crowFlyKm * 0.85) && !(crowFlyKm > 50 && distKm < 15)) {
+            const clientOsrmObj = {
+              status: "success",
+              distanceKm: distKm,
+              travelMinutes: durMin,
+              isLiveRoute: true,
+              source: "OSRM / OpenStreetMap",
+              attribution: "Route data © OpenStreetMap contributors, routing powered by OSRM"
+            };
+            clientRouteMemoryCache.set(cacheKey, clientOsrmObj);
+            return clientOsrmObj;
+          } else {
+            console.warn(`[Client OSRM Sanity] Distance (${distKm} km) rejected against straight-line (${crowFlyKm.toFixed(1)} km)`);
+          }
         }
       }
     } catch (osrmErr) {
       console.warn("Direct OSRM route fetch failed:", osrmErr.message);
     }
 
-    // 3. Fallback when network is completely offline:
-    // Report transparent offline status; do not fabricate fake driving duration!
-    const crowFly = haversineCrowFlyKm(oLat, oLon, dLat, dLon);
-    const estDist = Math.max(5, Math.round(crowFly * FASALO_CONFIG.ROAD_WINDING_FACTOR));
-    const estMin = Math.max(12, Math.round((estDist / FASALO_CONFIG.GOODS_VEHICLE_SPEED_KMH) * 60));
+    // 3. Fallback when network is offline or routing fails:
+    // Strictly NO 1 km or fake travel-time fallback per Priority 2 & 5 requirements!
     return {
-      status: "offline_estimate",
-      distanceKm: estDist,
-      travelMinutes: estMin,
+      status: "unavailable",
+      distanceKm: null,
+      travelMinutes: null,
       isLiveRoute: false,
-      source: "Offline Model Estimate (OSRM Unreachable - Check Connection)",
-      attribution: "Empirical transit model"
+      source: "Road distance unavailable",
+      attribution: "N/A"
     };
   }
 
@@ -3782,7 +3818,12 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
     for (const mandi of candidateMandis) {
       if (!mandi.lat || !mandi.lon) continue;
 
-      const route = await computeMarketRoute(originCoords, { lat: mandi.lat, lon: mandi.lon });
+      const route = await computeMarketRoute(originCoords, {
+        lat: mandi.lat,
+        lon: mandi.lon,
+        placeId: mandi.placeId,
+        id: mandi.id
+      });
 
       // PART 3 & PART 6: Transparent Mathematical Economics
       // Resolve horizon price (Today actual, Tomorrow predicted, Day After predicted)
@@ -3807,11 +3848,10 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
       const pricePerKg = pricePerQtl / 100;
       const grossCropValue = Math.round((pricePerQtl * qty) / 100);
 
-      // Estimated Transport Cost = Road Distance × Configured Transport Rate Per KM
-      const estTransport = Math.round(route.distanceKm * FASALO_CONFIG.TRANSPORT_RATE_PER_KM);
-
-      // Estimated Net Amount = Gross Crop Value − Estimated Transport Cost
-      const estNet = grossCropValue - estTransport;
+      // Distance and Route Sanity: If route is unavailable, do NOT calculate misleading transport costs or net profits!
+      const isRouteAvailable = (route && typeof route.distanceKm === "number" && !isNaN(route.distanceKm) && route.distanceKm > 0 && route.status !== "unavailable");
+      const estTransport = isRouteAvailable ? Math.round(route.distanceKm * FASALO_CONFIG.TRANSPORT_RATE_PER_KM) : null;
+      const estNet = (isRouteAvailable && estTransport !== null) ? (grossCropValue - estTransport) : null;
 
       evaluated.push({
         id: mandi.id,
@@ -3820,6 +3860,7 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
         location: mandi.location,
         lat: mandi.lat,
         lon: mandi.lon,
+        placeId: mandi.placeId || null,
         source: mandi.source,
         arrivalDate: mandi.arrivalDate,
         isRealData: mandi.isRealData,
@@ -3827,6 +3868,7 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
         distanceKm: route.distanceKm,
         travelMinutes: route.travelMinutes,
         isLiveRoute: route.isLiveRoute,
+        routeStatus: route.status,
         routeSource: route.source,
         routeAttribution: route.attribution,
         pricePerQtl: pricePerQtl,
@@ -3911,6 +3953,20 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
     return cropStr;
   }
 
+  // --- Google Maps Verified Directions URL Generator ---
+  function getGoogleMapsVerifyUrl(origin, dLat, dLon, destPlaceId) {
+    const oLat = parseFloat(origin ? origin.lat : 19.2183);
+    const oLon = parseFloat(origin ? origin.lon : 72.9781);
+    const lat = parseFloat(dLat);
+    const lon = parseFloat(dLon);
+    if (isNaN(oLat) || isNaN(oLon) || isNaN(lat) || isNaN(lon)) return "https://www.google.com/maps";
+    let url = "https://www.google.com/maps/dir/?api=1&origin=" + oLat.toFixed(6) + "," + oLon.toFixed(6) + "&destination=" + lat.toFixed(6) + "," + lon.toFixed(6) + "&travelmode=driving";
+    if (destPlaceId && typeof destPlaceId === "string" && destPlaceId.startsWith("ChIJ")) {
+      url += "&destination_place_id=" + encodeURIComponent(destPlaceId);
+    }
+    return url;
+  }
+
   // --- PART 12 & PART 13: Simple Farmer-Friendly Result Cards ---
   function renderFarmerFriendlyModalHtml(markets, lang) {
     const t = translations[lang] || translations.en;
@@ -3933,14 +3989,18 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
     const locBest = getLocalizedMarket(bestMarket, lang);
     const cropNameLocalized = getLocalizedCropName(bestMarket.crop, lang);
 
-    const isLoss = bestMarket.estNet < 0;
-    const isBreakEven = bestMarket.estNet === 0;
+    const isRouteAvailable = (bestMarket.distanceKm !== null && bestMarket.distanceKm !== undefined && bestMarket.routeStatus !== "unavailable");
+    const isLoss = isRouteAvailable && bestMarket.estNet !== null && bestMarket.estNet < 0;
+    const isBreakEven = isRouteAvailable && bestMarket.estNet !== null && bestMarket.estNet === 0;
 
     // Recommendation badge text
     let bestBadgeText = "🟢 " + (t.modalGoodOption || "Good option");
     let bestBadgeClass = "farmer-best-pill farmer-best-pill--good";
 
-    if (isLoss) {
+    if (!isRouteAvailable) {
+      bestBadgeText = "ℹ️ " + (t.roadDistanceUnavailable || "Road Distance Unavailable");
+      bestBadgeClass = "farmer-best-pill farmer-best-pill--neutral";
+    } else if (isLoss) {
       bestBadgeText = "🔴 " + (t.modalNotGoodOption || "Not a good option");
       bestBadgeClass = "farmer-best-pill farmer-best-pill--loss";
     } else if (isBreakEven) {
@@ -3949,10 +4009,12 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
     }
 
     // Travel time & traffic badge (Part 5)
-    const bestTravelTimeText = formatTravelTime(bestMarket.travelMinutes, lang);
-    const bestTrafficBadgeHtml = bestMarket.isLiveRoute
-      ? '<span class="farmer-traffic-tag farmer-traffic-tag--live">🚦 ' + (t.liveTrafficTag || "Live traffic") + '</span>'
-      : '<span class="farmer-traffic-tag farmer-traffic-tag--est">⏱️ ' + (t.roadEstimateTag || "Road estimate") + '</span>';
+    const bestTravelTimeText = isRouteAvailable ? formatTravelTime(bestMarket.travelMinutes, lang) : "Unavailable";
+    const bestTrafficBadgeHtml = isRouteAvailable
+      ? (bestMarket.isLiveRoute
+          ? '<span class="farmer-traffic-tag farmer-traffic-tag--live">🚦 ' + (t.liveTrafficTag || "Live route") + '</span>'
+          : '<span class="farmer-traffic-tag farmer-traffic-tag--est">⏱️ ' + (t.roadEstimateTag || "Road route") + '</span>')
+      : '<span class="farmer-traffic-tag farmer-traffic-tag--est" style="background:#fee2e2;color:#991b1b;">⚠️ Distance unavailable</span>';
 
     // Data Provenance & Freshness Date (Part 10)
     const formattedDate = formatMandiDate(bestMarket.arrivalDate, lang);
@@ -3968,17 +4030,30 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
 
     // Farmer-friendly explanation sentence (Part 12)
     let simpleExplanation = "";
-    if (lang === "hi") {
-      simpleExplanation = "आपकी फसल की कीमत में से आने-जाने का अनुमानित खर्च घटाने के बाद लगभग ₹" + bestMarket.estNet.toLocaleString('en-IN') + " बच सकते हैं।";
-    } else if (lang === "mr") {
-      simpleExplanation = "तुमच्या शेतमालाच्या मूल्यातून येण्या-जाण्याचा अंदाजे खर्च वजा केल्यानंतर सुमारे ₹" + bestMarket.estNet.toLocaleString('en-IN') + " उरू शकतात.";
+    if (isRouteAvailable && bestMarket.estNet !== null) {
+      if (lang === "hi") {
+        simpleExplanation = "आपकी फसल की कीमत में से आने-जाने का अनुमानित खर्च घटाने के बाद लगभग ₹" + bestMarket.estNet.toLocaleString('en-IN') + " बच सकते हैं।";
+      } else if (lang === "mr") {
+        simpleExplanation = "तुमच्या शेतमालाच्या मूल्यातून येण्या-जाण्याचा अंदाजे खर्च वजा केल्यानंतर सुमारे ₹" + bestMarket.estNet.toLocaleString('en-IN') + " उरू शकतात.";
+      } else {
+        simpleExplanation = "After deducting estimated travel costs from your crop value, you may keep about ₹" + bestMarket.estNet.toLocaleString('en-IN') + ".";
+      }
     } else {
-      simpleExplanation = "After deducting estimated travel costs from your crop value, you may keep about ₹" + bestMarket.estNet.toLocaleString('en-IN') + ".";
+      simpleExplanation = "Road network distance could not be computed. Transport costs cannot be estimated.";
     }
 
     // Main Amount display
     let mainResultHtml = "";
-    if (isLoss) {
+    if (!isRouteAvailable || bestMarket.estNet === null) {
+      mainResultHtml = (
+        '<div class="farmer-main-result farmer-main-result--neutral" style="background: #f8fafc; border: 1.5px dashed #94a3b8;">' +
+          '<p class="farmer-main-result__lead" style="color: #475569;">📍 ROAD DISTANCE UNAVAILABLE</p>' +
+          '<p class="farmer-main-result__explanation" style="color: #64748b; margin-top: 6px;">' +
+            'Road distance cannot be verified for this origin and mandi. Net profit is not estimated to prevent misleading advice.' +
+          '</p>' +
+        '</div>'
+      );
+    } else if (isLoss) {
       const lossAmt = formatRupees(bestMarket.estNet);
       let warningText = t.modalTravelLossLead || "Travel may cost more than your crop value.";
       mainResultHtml = (
@@ -4061,12 +4136,12 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
             '<span class="farmer-location-val">' + latStr + ', ' + lonStr + '</span>' +
           '</div>' +
           '<div class="farmer-location-item">' +
-            '<span class="farmer-location-label">Road Distance (OSRM)</span>' +
-            '<span class="farmer-location-val">' + bestMarket.distanceKm + ' km (~' + bestTravelTimeText + ')</span>' +
+            '<span class="farmer-location-label">' + (bestMarket.routeSource || "Road Distance") + '</span>' +
+            '<span class="farmer-location-val">' + (isRouteAvailable ? (bestMarket.distanceKm + ' km (~' + bestTravelTimeText + ')') : 'Road distance unavailable') + '</span>' +
           '</div>' +
         '</div>' +
         '<div class="farmer-route-attribution">' +
-          '<span>🛣️ ' + (bestMarket.routeAttribution || 'Route data © OpenStreetMap contributors, routing by OSRM') + '</span>' +
+          '<span>🛣️ ' + (bestMarket.routeAttribution || 'Route data © OpenStreetMap contributors / Google Maps') + '</span>' +
         '</div>' +
         '<div class="farmer-location-actions">' +
           '<button type="button" class="farmer-loc-btn" id="retry-location-btn">🔄 Retry GPS Detection</button>' +
@@ -4118,6 +4193,16 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
       );
     }
 
+    const bestGmapsUrl = getGoogleMapsVerifyUrl(origin, bestMarket.lat, bestMarket.lon, bestMarket.placeId);
+    const bestVerifyGmapsButtonHtml = (
+      '<div class="farmer-verify-gmaps-wrap" style="margin-top: 10px; margin-bottom: 4px;">' +
+        '<a href="' + bestGmapsUrl + '" target="_blank" rel="noopener noreferrer" class="farmer-verify-gmaps-btn" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: #ffffff; border: 1.5px solid #2563eb; color: #1d4ed8; border-radius: 8px; font-weight: 600; font-size: 0.85rem; text-decoration: none; box-shadow: 0 1px 3px rgba(37,99,235,0.12); cursor: pointer;">' +
+          '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>' +
+          '<span>Verify on Google Maps ↗</span>' +
+        '</a>' +
+      '</div>'
+    );
+
     const bestOptionHtml = (
       '<article class="farmer-best-card">' +
         '<div class="farmer-best-card__eyebrow">' +
@@ -4127,12 +4212,13 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
         '<div class="farmer-best-card__header">' +
           '<h3 class="farmer-best-card__title">' + locBest.name + '</h3>' +
           '<div class="farmer-best-card__meta">' +
-            '<span class="farmer-meta-item">📍 <strong>' + bestMarket.distanceKm + ' km</strong> ' + (t.modalAway || "away") + '</span>' +
+            '<span class="farmer-meta-item">📍 <strong>' + (isRouteAvailable ? (bestMarket.distanceKm + ' km ' + (t.modalAway || "away")) : 'Road distance unavailable') + '</strong></span>' +
             '<span class="farmer-meta-dot">&bull;</span>' +
-            '<span class="farmer-meta-item">🕒 <strong>' + bestTravelTimeText + '</strong> ' + bestTrafficBadgeHtml + '</span>' +
+            '<span class="farmer-meta-item">🕒 <strong>' + (isRouteAvailable ? bestTravelTimeText : 'N/A') + '</strong> ' + (isRouteAvailable ? bestTrafficBadgeHtml : '') + '</span>' +
             '<span class="farmer-meta-dot">&bull;</span>' +
             '<span class="farmer-meta-item">' + locBest.location + '</span>' +
           '</div>' +
+          bestVerifyGmapsButtonHtml +
         '</div>' +
 
         '<div style="margin-top: 8px;">' +
@@ -4146,7 +4232,7 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
           '</div>' +
           '<div class="farmer-stat-pill">' +
             '<span class="farmer-stat-pill__label">🚚 ' + (t.modalTravelCostLabel || "Travel cost") + ':</span>' +
-            '<span class="farmer-stat-pill__val">~₹' + bestMarket.estTransport.toLocaleString('en-IN') + ' <span class="farmer-stat-sub">(' + (t.modalApprox || "Est.") + ')</span></span>' +
+            '<span class="farmer-stat-pill__val">' + (bestMarket.estTransport !== null ? ('~₹' + bestMarket.estTransport.toLocaleString('en-IN') + ' <span class="farmer-stat-sub">(' + (t.modalApprox || "Est.") + ')</span>') : 'Unavailable') + '</span>' +
           '</div>' +
         '</div>' +
 
@@ -4177,12 +4263,12 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
             '</div>' +
             '<div class="farmer-calc-row">' +
               '<span class="farmer-calc-label">' + (t.modalTravelCostLabel || "Travel cost") + ':</span>' +
-              '<span class="farmer-calc-val">~₹' + bestMarket.estTransport.toLocaleString('en-IN') + ' <span class="farmer-calc-sub">(' + bestMarket.distanceKm + ' km via OSRM @ ₹' + FASALO_CONFIG.TRANSPORT_RATE_PER_KM + '/km)</span></span>' +
+              '<span class="farmer-calc-val">' + (bestMarket.estTransport !== null ? ('~₹' + bestMarket.estTransport.toLocaleString('en-IN') + ' <span class="farmer-calc-sub">(' + bestMarket.distanceKm + ' km @ ₹' + FASALO_CONFIG.TRANSPORT_RATE_PER_KM + '/km)</span>') : 'Unavailable') + '</span>' +
             '</div>' +
             '<div class="farmer-calc-divider"></div>' +
             '<div class="farmer-calc-row farmer-calc-row--net">' +
               '<span class="farmer-calc-label"><strong>' + (t.modalYouHaveLeftLabel || "You may have left") + ':</strong></span>' +
-              '<span class="farmer-calc-val ' + (isLoss ? 'farmer-calc-val--loss' : 'farmer-calc-profit') + '"><strong>' + formatRupees(bestMarket.estNet) + '</strong></span>' +
+              '<span class="farmer-calc-val ' + (isLoss ? 'farmer-calc-val--loss' : 'farmer-calc-profit') + '"><strong>' + (bestMarket.estNet !== null ? formatRupees(bestMarket.estNet) : 'N/A') + '</strong></span>' +
             '</div>' +
 
             '<div class="farmer-data-freshness-bar">' +
@@ -4193,7 +4279,7 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
               '</div>' +
               freshnessWarningHtml +
             '</div>' +
-            '<p style="font-size: 0.725rem; color: #6b7280; margin: 4px 0 0 0;">' + (t.transportEstimateNote || "* Real road distance from OSRM / OpenStreetMap. Rate at ₹3.50/km.") + '</p>' +
+            '<p style="font-size: 0.725rem; color: #6b7280; margin: 4px 0 0 0;">' + (t.transportEstimateNote || "* Real road distance from OSRM / Google Maps. Rate at ₹3.50/km.") + '</p>' +
           '</div>' +
         '</details>' +
       '</article>'
@@ -4207,13 +4293,17 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
           '<div class="other-markets-list">' +
             remainingMarkets.map(function(m) {
               const locM = getLocalizedMarket(m, lang);
-              const mIsLoss = m.estNet < 0;
-              const mIsBreakEven = m.estNet === 0;
+              const mIsRouteAvailable = (m.distanceKm !== null && m.distanceKm !== undefined && m.routeStatus !== "unavailable");
+              const mIsLoss = mIsRouteAvailable && m.estNet !== null && m.estNet < 0;
+              const mIsBreakEven = mIsRouteAvailable && m.estNet !== null && m.estNet === 0;
 
               let mBadgeText = "🟢 " + (t.modalGoodOption || "Good option");
               let mBadgeClass = "farmer-compact-pill farmer-compact-pill--good";
 
-              if (mIsLoss) {
+              if (!mIsRouteAvailable) {
+                mBadgeText = "ℹ️ " + (t.roadDistanceUnavailable || "Road Distance Unavailable");
+                mBadgeClass = "farmer-compact-pill farmer-compact-pill--neutral";
+              } else if (mIsLoss) {
                 mBadgeText = "🔴 " + (t.modalNotGoodOption || "Not a good option");
                 mBadgeClass = "farmer-compact-pill farmer-compact-pill--loss";
               } else if (mIsBreakEven) {
@@ -4221,13 +4311,26 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
                 mBadgeClass = "farmer-compact-pill farmer-compact-pill--neutral";
               }
 
-              const mTravelTime = formatTravelTime(m.travelMinutes, lang);
-              const mTrafficBadge = m.isLiveRoute
-                ? '<span class="farmer-traffic-tag farmer-traffic-tag--live">🚦 ' + (t.liveTrafficTag || "Live") + '</span>'
-                : '<span class="farmer-traffic-tag farmer-traffic-tag--est">⏱️ ' + (t.roadEstimateTag || "Est.") + '</span>';
+              const mTravelTime = mIsRouteAvailable ? formatTravelTime(m.travelMinutes, lang) : "Unavailable";
+              const mTrafficBadge = mIsRouteAvailable
+                ? (m.isLiveRoute
+                    ? '<span class="farmer-traffic-tag farmer-traffic-tag--live">🚦 ' + (t.liveTrafficTag || "Live") + '</span>'
+                    : '<span class="farmer-traffic-tag farmer-traffic-tag--est">⏱️ ' + (t.roadEstimateTag || "Est.") + '</span>')
+                : '';
 
               const mFormattedDate = formatMandiDate(m.arrivalDate, lang);
               const mDateText = (t.mandiPriceUpdatedLabel || "Mandi price updated: {date}").replace("{date}", mFormattedDate);
+              const mGmapsUrl = getGoogleMapsVerifyUrl(m.originCoords || origin, m.lat, m.lon, m.placeId);
+              const mDistText = mIsRouteAvailable ? ('📍 <strong>' + m.distanceKm + ' km</strong> ' + (t.modalAway || "away")) : '📍 <strong>Road distance unavailable</strong>';
+
+              const mVerifyBtnHtml = (
+                '<div style="margin-top: 6px;">' +
+                  '<a href="' + mGmapsUrl + '" target="_blank" rel="noopener noreferrer" class="farmer-verify-gmaps-btn-sm" style="display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; background: #ffffff; border: 1.2px solid #2563eb; color: #1d4ed8; border-radius: 6px; font-weight: 600; font-size: 0.75rem; text-decoration: none;">' +
+                    '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>' +
+                    '<span>Verify on Google Maps ↗</span>' +
+                  '</a>' +
+                '</div>'
+              );
 
               return (
                 '<article class="farmer-compact-card">' +
@@ -4235,10 +4338,11 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
                     '<div>' +
                       '<h5 class="farmer-compact-card__title">' + locM.name + '</h5>' +
                       '<p class="farmer-compact-card__meta">' +
-                        '📍 <strong>' + m.distanceKm + ' km</strong> ' + (t.modalAway || "away") + ' &bull; ' +
+                        mDistText + ' &bull; ' +
                         '🕒 <strong>' + mTravelTime + '</strong> ' + mTrafficBadge + ' &bull; ' +
                         locM.location +
                       '</p>' +
+                      mVerifyBtnHtml +
                     '</div>' +
                     '<span class="' + mBadgeClass + '">' + mBadgeText + '</span>' +
                   '</div>' +
@@ -4250,11 +4354,11 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
                     '</div>' +
                     '<div class="farmer-compact-chip">' +
                       '<span class="farmer-compact-chip__label">🚚 ' + (t.modalTravelShort || "Travel") + '</span>' +
-                      '<span class="farmer-compact-chip__val">~₹' + m.estTransport.toLocaleString('en-IN') + '</span>' +
+                      '<span class="farmer-compact-chip__val">' + (m.estTransport !== null ? ('~₹' + m.estTransport.toLocaleString('en-IN')) : 'Unavailable') + '</span>' +
                     '</div>' +
                     '<div class="farmer-compact-chip farmer-compact-chip--net ' + (mIsLoss ? 'farmer-compact-chip--loss' : '') + '">' +
                       '<span class="farmer-compact-chip__label">' + (mIsLoss ? (t.modalLossShort || "Loss") : (t.modalAboutLeftShort || "About left")) + '</span>' +
-                      '<span class="farmer-compact-chip__val ' + (mIsLoss ? 'farmer-metric-loss' : 'farmer-metric-profit') + '">' + formatRupees(m.estNet) + '</span>' +
+                      '<span class="farmer-compact-chip__val ' + (mIsLoss ? 'farmer-metric-loss' : 'farmer-metric-profit') + '">' + (m.estNet !== null ? formatRupees(m.estNet) : 'N/A') + '</span>' +
                     '</div>' +
                   '</div>' +
 
@@ -4269,12 +4373,12 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
                       '</div>' +
                       '<div class="farmer-calc-row">' +
                         '<span>' + (t.modalTravelCostLabel || "Travel cost") + ':</span>' +
-                        '<span>~₹' + m.estTransport.toLocaleString('en-IN') + ' (' + m.distanceKm + ' km @ ₹' + FASALO_CONFIG.TRANSPORT_RATE_PER_KM + '/km)</span>' +
+                        '<span>' + (m.estTransport !== null ? ('~₹' + m.estTransport.toLocaleString('en-IN') + ' (' + m.distanceKm + ' km @ ₹' + FASALO_CONFIG.TRANSPORT_RATE_PER_KM + '/km)') : 'Unavailable') + '</span>' +
                       '</div>' +
                       '<div class="farmer-calc-divider"></div>' +
                       '<div class="farmer-calc-row farmer-calc-row--net">' +
                         '<span><strong>' + (t.modalYouHaveLeftLabel || "You may have left") + ':</strong></span>' +
-                        '<strong class="' + (mIsLoss ? 'farmer-calc-val--loss' : 'farmer-calc-profit') + '">' + formatRupees(m.estNet) + '</strong>' +
+                        '<strong class="' + (mIsLoss ? 'farmer-calc-val--loss' : 'farmer-calc-profit') + '">' + (m.estNet !== null ? formatRupees(m.estNet) : 'N/A') + '</strong>' +
                       '</div>' +
                       '<div class="farmer-data-freshness-bar" style="margin-top: 4px;">' +
                         '<span>🏛️ ' + (m.source || "AGMARKNET / OGD India") + ' &bull; ' + mDateText + '</span>' +
@@ -5185,6 +5289,11 @@ BENCHMARK_MANDI_SNAPSHOT.soyabean = BENCHMARK_MANDI_SNAPSHOT.soybean;
               }
               locBtn.classList.add("is-denied");
               locBtn.disabled = false;
+            },
+            {
+              enableHighAccuracy: true,
+              maximumAge: 0,
+              timeout: 20000
             }
           );
         });

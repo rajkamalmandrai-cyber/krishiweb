@@ -7,6 +7,10 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
+const dns = require("dns");
+if (dns.setDefaultResultOrder) {
+  dns.setDefaultResultOrder("ipv4first");
+}
 
 const mandiPricesHandler = require("./api/mandi-prices");
 const routesHandler = require("./api/routes");

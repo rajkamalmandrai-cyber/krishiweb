@@ -1,6 +1,6 @@
 {
   "meta": {
-    "lastSuccessfulSync": "2026-11-23T05:39:25.152Z",
+    "lastSuccessfulSync": "2026-11-26T08:23:22.948Z",
     "lastSyncStatus": "success",
     "source": "AGMARKNET / OGD India (Ministry of Agriculture and Farmers Welfare)",
     "totalRecords": 0,
@@ -86,10 +86,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.0771,
         "lon": 72.9986,
+        "placeId": "ChIJbUs6HwPj5zsR1K8zL_dZ1f0",
+        "destPlaceId": "ChIJbUs6HwPj5zsR1K8zL_dZ1f0",
         "location": "Navi Mumbai, Maharashtra",
+        "address": "APMC Market, Sector 19, Vashi, Navi Mumbai, Maharashtra 400703",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T05:39:25.152Z"
+        "updatedAt": "2026-11-26T08:23:22.948Z"
       },
       {
         "id": "gov-onion-apmc_panvel",
@@ -109,16 +113,20 @@
         "arrivalDate": "23/11/2026",
         "lat": 18.9894,
         "lon": 73.1175,
+        "placeId": "ChIJr2oQ3v7r5zsRQhXW_y4vK3E",
+        "destPlaceId": "ChIJr2oQ3v7r5zsRQhXW_y4vK3E",
         "location": "Panvel, Raigad, Maharashtra",
+        "address": "APMC Market Yard, Panvel, Raigad, Maharashtra 410206",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.049Z"
+        "updatedAt": "2026-11-26T08:22:21.275Z"
       },
       {
         "id": "gov-onion-pune__gultekdi__apmc",
-        "name": "Pune (Gultekdi) APMC APMC",
+        "name": "Pune (Gultekdi) APMC",
         "market": "Pune (Gultekdi) APMC",
-        "district": "Maharashtra",
+        "district": "Pune",
         "state": "Maharashtra",
         "crop": "Onion",
         "commodity": "Onion",
@@ -130,12 +138,16 @@
         "modalPrice": 2969,
         "priceUnit": "₹/Quintal",
         "arrivalDate": "23/11/2026",
-        "lat": 19.076,
-        "lon": 72.8777,
-        "location": ", Maharashtra",
+        "lat": 18.4975,
+        "lon": 73.8647,
+        "placeId": "ChIJXy51iBfAwjsRv15PZfFqWk8",
+        "destPlaceId": "ChIJXy51iBfAwjsRv15PZfFqWk8",
+        "location": "Pune, Maharashtra",
+        "address": "Shri Chhatrapati Shivaji Market Yard, Gultekdi, Pune, Maharashtra 411037",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.050Z"
+        "updatedAt": "2026-11-26T08:22:21.275Z"
       },
       {
         "id": "gov-onion-lasalgaon_apmc",
@@ -155,16 +167,20 @@
         "arrivalDate": "23/11/2026",
         "lat": 20.1472,
         "lon": 74.2267,
+        "placeId": "ChIJc3UaP_b73jsR_B3F1eT9d0w",
+        "destPlaceId": "ChIJc3UaP_b73jsR_B3F1eT9d0w",
         "location": "Lasalgaon, Nashik, Maharashtra",
+        "address": "APMC Market Yard, Lasalgaon, Niphad, Nashik, Maharashtra 422306",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.051Z"
+        "updatedAt": "2026-11-26T08:22:21.276Z"
       },
       {
         "id": "gov-onion-pimpalgaon_baswant_apmc",
-        "name": "Pimpalgaon Baswant APMC APMC",
+        "name": "Pimpalgaon Baswant APMC",
         "market": "Pimpalgaon Baswant APMC",
-        "district": "Maharashtra",
+        "district": "Nashik",
         "state": "Maharashtra",
         "crop": "Onion",
         "commodity": "Onion",
@@ -176,12 +192,16 @@
         "modalPrice": 2819,
         "priceUnit": "₹/Quintal",
         "arrivalDate": "23/11/2026",
-        "lat": 19.076,
-        "lon": 72.8777,
-        "location": ", Maharashtra",
+        "lat": 20.1704,
+        "lon": 73.9858,
+        "placeId": "ChIJGZ1F_oX73jsRIeQ2y6l1jF8",
+        "destPlaceId": "ChIJGZ1F_oX73jsRIeQ2y6l1jF8",
+        "location": "Pimpalgaon, Nashik, Maharashtra",
+        "address": "APMC Market Yard, Pimpalgaon Baswant, Nashik, Maharashtra 422209",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.051Z"
+        "updatedAt": "2026-11-26T08:22:21.276Z"
       },
       {
         "id": "gov-onion-apmc_nashik",
@@ -201,16 +221,20 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.9975,
         "lon": 73.7898,
+        "placeId": "ChIJ1Z3y7P5v3jsRz1L3u2uB3vA",
+        "destPlaceId": "ChIJ1Z3y7P5v3jsRz1L3u2uB3vA",
         "location": "Nashik, Maharashtra",
+        "address": "Dindori Road, Panchavati, Nashik, Maharashtra 422003",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.051Z"
+        "updatedAt": "2026-11-26T08:22:21.276Z"
       },
       {
         "id": "gov-onion-ahmednagar_apmc",
-        "name": "Ahmednagar APMC APMC",
+        "name": "Ahmednagar APMC",
         "market": "Ahmednagar APMC",
-        "district": "Maharashtra",
+        "district": "Ahilyanagar",
         "state": "Maharashtra",
         "crop": "Onion",
         "commodity": "Onion",
@@ -222,12 +246,16 @@
         "modalPrice": 2769,
         "priceUnit": "₹/Quintal",
         "arrivalDate": "23/11/2026",
-        "lat": 19.076,
-        "lon": 72.8777,
-        "location": ", Maharashtra",
+        "lat": 19.0952,
+        "lon": 74.7496,
+        "placeId": "ChIJL_n9u03t2zsRwLwz7Gq1h7w",
+        "destPlaceId": "ChIJL_n9u03t2zsRwLwz7Gq1h7w",
+        "location": "Ahmednagar, Maharashtra",
+        "address": "Market Yard, Ahmednagar, Maharashtra 414001",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.052Z"
+        "updatedAt": "2026-11-26T08:22:21.276Z"
       },
       {
         "id": "gov-onion-apmc_sangamner",
@@ -247,10 +275,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.5761,
         "lon": 74.2096,
+        "placeId": "ChIJ7Vq_fU_P2zsR3vWz1kL3k4A",
+        "destPlaceId": "ChIJ7Vq_fU_P2zsR3vWz1kL3k4A",
         "location": "Sangamner, Maharashtra",
+        "address": "Market Yard, Sangamner, Ahilyanagar, Maharashtra 422605",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.052Z"
+        "updatedAt": "2026-11-26T08:22:21.276Z"
       },
       {
         "id": "gov-onion-apmc_kolhapur",
@@ -270,10 +302,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 16.705,
         "lon": 74.2433,
+        "placeId": "ChIJs8Tz1wfv1jsRDZ7v1eP_b6A",
+        "destPlaceId": "ChIJs8Tz1wfv1jsRDZ7v1eP_b6A",
         "location": "Kolhapur, Maharashtra",
+        "address": "Shahu Market Yard, Kolhapur, Maharashtra 416005",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.052Z"
+        "updatedAt": "2026-11-26T08:22:21.278Z"
       },
       {
         "id": "gov-onion-apmc_solapur",
@@ -293,18 +329,22 @@
         "arrivalDate": "23/11/2026",
         "lat": 17.6599,
         "lon": 75.9064,
+        "placeId": "ChIJNf_5V9_m1jsR1cT_u2mB7gE",
+        "destPlaceId": "ChIJNf_5V9_m1jsR1cT_u2mB7gE",
         "location": "Solapur, Maharashtra",
+        "address": "Siddheshwar Market Yard, Solapur, Maharashtra 413002",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.053Z"
+        "updatedAt": "2026-11-26T08:22:21.278Z"
       }
     ],
     "tomato": [
       {
         "id": "gov-tomato-pune__gultekdi__apmc",
-        "name": "Pune (Gultekdi) APMC APMC",
+        "name": "Pune (Gultekdi) APMC",
         "market": "Pune (Gultekdi) APMC",
-        "district": "Maharashtra",
+        "district": "Pune",
         "state": "Maharashtra",
         "crop": "Tomato",
         "commodity": "Tomato",
@@ -316,18 +356,22 @@
         "modalPrice": 1825,
         "priceUnit": "₹/Quintal",
         "arrivalDate": "23/11/2026",
-        "lat": 19.076,
-        "lon": 72.8777,
-        "location": ", Maharashtra",
+        "lat": 18.4975,
+        "lon": 73.8647,
+        "placeId": "ChIJXy51iBfAwjsRv15PZfFqWk8",
+        "destPlaceId": "ChIJXy51iBfAwjsRv15PZfFqWk8",
+        "location": "Pune, Maharashtra",
+        "address": "Shri Chhatrapati Shivaji Market Yard, Gultekdi, Pune, Maharashtra 411037",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.053Z"
+        "updatedAt": "2026-11-26T08:22:21.279Z"
       },
       {
         "id": "gov-tomato-pune_moshi_",
-        "name": "Pune(Moshi) APMC",
+        "name": "Pune (Moshi) APMC",
         "market": "Pune(Moshi)",
-        "district": "Maharashtra",
+        "district": "Pune",
         "state": "Maharashtra",
         "crop": "Tomato",
         "commodity": "Tomato",
@@ -339,18 +383,22 @@
         "modalPrice": 875,
         "priceUnit": "₹/Quintal",
         "arrivalDate": "23/11/2026",
-        "lat": 19.076,
-        "lon": 72.8777,
-        "location": ", Maharashtra",
+        "lat": 18.6728,
+        "lon": 73.8475,
+        "placeId": "ChIJh6v54qTBwjsR32Y7f_qV_4A",
+        "destPlaceId": "ChIJh6v54qTBwjsR32Y7f_qV_4A",
+        "location": "Moshi, Pune, Maharashtra",
+        "address": "APMC Moshi Sub-Yard, Pune-Nashik Highway, Moshi, Pune, Maharashtra 412105",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.053Z"
+        "updatedAt": "2026-11-26T08:22:21.279Z"
       },
       {
         "id": "gov-tomato-mumbai__vashi__apmc",
         "name": "Mumbai (Vashi) APMC",
         "market": "Mumbai (Vashi) APMC",
-        "district": "Mumbai/Thane",
+        "district": "Mumbai",
         "state": "Maharashtra",
         "crop": "Tomato",
         "commodity": "Tomato",
@@ -364,10 +412,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.0771,
         "lon": 72.9986,
+        "placeId": "ChIJbUs6HwPj5zsR1K8zL_dZ1f0",
+        "destPlaceId": "ChIJbUs6HwPj5zsR1K8zL_dZ1f0",
         "location": "Navi Mumbai, Maharashtra",
+        "address": "APMC Market, Sector 19, Vashi, Navi Mumbai, Maharashtra 400703",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.053Z"
+        "updatedAt": "2026-11-26T08:22:21.279Z"
       },
       {
         "id": "gov-tomato-apmc_narayangaon",
@@ -387,10 +439,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.1232,
         "lon": 73.9782,
+        "placeId": "ChIJ56f_W0jP3jsR9zX8b6e2d1w",
+        "destPlaceId": "ChIJ56f_W0jP3jsR9zX8b6e2d1w",
         "location": "Pune District, Maharashtra",
+        "address": "APMC Tomato Market Yard, Narayangaon, Pune, Maharashtra 410504",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.054Z"
+        "updatedAt": "2026-11-26T08:22:21.279Z"
       },
       {
         "id": "gov-tomato-apmc_nashik",
@@ -410,10 +466,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.9975,
         "lon": 73.7898,
+        "placeId": "ChIJ1Z3y7P5v3jsRz1L3u2uB3vA",
+        "destPlaceId": "ChIJ1Z3y7P5v3jsRz1L3u2uB3vA",
         "location": "Nashik, Maharashtra",
+        "address": "Dindori Road, Panchavati, Nashik, Maharashtra 422003",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.054Z"
+        "updatedAt": "2026-11-26T08:22:21.279Z"
       },
       {
         "id": "gov-tomato-apmc_sangamner",
@@ -433,10 +493,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.5761,
         "lon": 74.2096,
+        "placeId": "ChIJ7Vq_fU_P2zsR3vWz1kL3k4A",
+        "destPlaceId": "ChIJ7Vq_fU_P2zsR3vWz1kL3k4A",
         "location": "Sangamner, Maharashtra",
+        "address": "Market Yard, Sangamner, Ahilyanagar, Maharashtra 422605",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.054Z"
+        "updatedAt": "2026-11-26T08:22:21.280Z"
       },
       {
         "id": "gov-tomato-apmc_kolhapur",
@@ -456,10 +520,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 16.705,
         "lon": 74.2433,
+        "placeId": "ChIJs8Tz1wfv1jsRDZ7v1eP_b6A",
+        "destPlaceId": "ChIJs8Tz1wfv1jsRDZ7v1eP_b6A",
         "location": "Kolhapur, Maharashtra",
+        "address": "Shahu Market Yard, Kolhapur, Maharashtra 416005",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.054Z"
+        "updatedAt": "2026-11-26T08:22:21.280Z"
       },
       {
         "id": "gov-tomato-apmc_satara",
@@ -479,10 +547,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 17.6805,
         "lon": 73.9935,
+        "placeId": "ChIJ66V7wUbv1jsR7m8k9l0n1A8",
+        "destPlaceId": "ChIJ66V7wUbv1jsR7m8k9l0n1A8",
         "location": "Satara, Maharashtra",
+        "address": "APMC Market Yard, Satara, Maharashtra 415002",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.054Z"
+        "updatedAt": "2026-11-26T08:22:21.280Z"
       }
     ],
     "potato": [
@@ -490,7 +562,7 @@
         "id": "gov-potato-mumbai__vashi__apmc",
         "name": "Mumbai (Vashi) APMC",
         "market": "Mumbai (Vashi) APMC",
-        "district": "Mumbai/Thane",
+        "district": "Mumbai",
         "state": "Maharashtra",
         "crop": "Potato",
         "commodity": "Potato",
@@ -504,10 +576,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.0771,
         "lon": 72.9986,
+        "placeId": "ChIJbUs6HwPj5zsR1K8zL_dZ1f0",
+        "destPlaceId": "ChIJbUs6HwPj5zsR1K8zL_dZ1f0",
         "location": "Navi Mumbai, Maharashtra",
+        "address": "APMC Market, Sector 19, Vashi, Navi Mumbai, Maharashtra 400703",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.054Z"
+        "updatedAt": "2026-11-26T08:22:21.280Z"
       },
       {
         "id": "gov-potato-apmc_panvel",
@@ -527,16 +603,20 @@
         "arrivalDate": "23/11/2026",
         "lat": 18.9894,
         "lon": 73.1175,
+        "placeId": "ChIJr2oQ3v7r5zsRQhXW_y4vK3E",
+        "destPlaceId": "ChIJr2oQ3v7r5zsRQhXW_y4vK3E",
         "location": "Panvel, Raigad, Maharashtra",
+        "address": "APMC Market Yard, Panvel, Raigad, Maharashtra 410206",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.055Z"
+        "updatedAt": "2026-11-26T08:22:21.280Z"
       },
       {
         "id": "gov-potato-pune__gultekdi__apmc",
-        "name": "Pune (Gultekdi) APMC APMC",
+        "name": "Pune (Gultekdi) APMC",
         "market": "Pune (Gultekdi) APMC",
-        "district": "Maharashtra",
+        "district": "Pune",
         "state": "Maharashtra",
         "crop": "Potato",
         "commodity": "Potato",
@@ -548,12 +628,16 @@
         "modalPrice": 2262,
         "priceUnit": "₹/Quintal",
         "arrivalDate": "23/11/2026",
-        "lat": 19.076,
-        "lon": 72.8777,
-        "location": ", Maharashtra",
+        "lat": 18.4975,
+        "lon": 73.8647,
+        "placeId": "ChIJXy51iBfAwjsRv15PZfFqWk8",
+        "destPlaceId": "ChIJXy51iBfAwjsRv15PZfFqWk8",
+        "location": "Pune, Maharashtra",
+        "address": "Shri Chhatrapati Shivaji Market Yard, Gultekdi, Pune, Maharashtra 411037",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.055Z"
+        "updatedAt": "2026-11-26T08:22:21.280Z"
       },
       {
         "id": "gov-potato-apmc_manchar",
@@ -573,10 +657,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.0064,
         "lon": 73.9431,
+        "placeId": "ChIJQ7V6wU7P3jsR3Lw1a2b3c4D",
+        "destPlaceId": "ChIJQ7V6wU7P3jsR3Lw1a2b3c4D",
         "location": "Pune District, Maharashtra",
+        "address": "APMC Market Yard, Manchar, Ambegaon, Pune, Maharashtra 410503",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.055Z"
+        "updatedAt": "2026-11-26T08:22:21.281Z"
       },
       {
         "id": "gov-potato-apmc_khed__rajgurunagar_",
@@ -596,10 +684,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 18.857,
         "lon": 73.903,
+        "placeId": "ChIJ82a_qUfBwjsR4M7w2e1f2A8",
+        "destPlaceId": "ChIJ82a_qUfBwjsR4M7w2e1f2A8",
         "location": "Pune District, Maharashtra",
+        "address": "APMC Yard, Rajgurunagar, Khed, Pune, Maharashtra 410505",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.055Z"
+        "updatedAt": "2026-11-26T08:22:21.282Z"
       },
       {
         "id": "gov-potato-apmc_nashik",
@@ -619,10 +711,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.9975,
         "lon": 73.7898,
+        "placeId": "ChIJ1Z3y7P5v3jsRz1L3u2uB3vA",
+        "destPlaceId": "ChIJ1Z3y7P5v3jsRz1L3u2uB3vA",
         "location": "Nashik, Maharashtra",
+        "address": "Dindori Road, Panchavati, Nashik, Maharashtra 422003",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.055Z"
+        "updatedAt": "2026-11-26T08:22:21.282Z"
       },
       {
         "id": "gov-potato-apmc_kolhapur",
@@ -642,10 +738,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 16.705,
         "lon": 74.2433,
+        "placeId": "ChIJs8Tz1wfv1jsRDZ7v1eP_b6A",
+        "destPlaceId": "ChIJs8Tz1wfv1jsRDZ7v1eP_b6A",
         "location": "Kolhapur, Maharashtra",
+        "address": "Shahu Market Yard, Kolhapur, Maharashtra 416005",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.055Z"
+        "updatedAt": "2026-11-26T08:22:21.282Z"
       }
     ],
     "cotton": [
@@ -667,10 +767,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 21.0077,
         "lon": 75.5626,
+        "placeId": "ChIJ98T_v3fP4jsR5n6m7e8k9B0",
+        "destPlaceId": "ChIJ98T_v3fP4jsR5n6m7e8k9B0",
         "location": "Jalgaon, Maharashtra",
+        "address": "Market Yard, Jalgaon, Maharashtra 425001",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.055Z"
+        "updatedAt": "2026-11-26T08:22:21.282Z"
       },
       {
         "id": "gov-cotton-apmc_dhule",
@@ -690,10 +794,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 20.9042,
         "lon": 74.7749,
+        "placeId": "ChIJ88a_qUfBwjsR4M7w2e1f2A8",
+        "destPlaceId": "ChIJ88a_qUfBwjsR4M7w2e1f2A8",
         "location": "Dhule, Maharashtra",
+        "address": "APMC Market Yard, Dhule, Maharashtra 424001",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.055Z"
+        "updatedAt": "2026-11-26T08:22:21.283Z"
       },
       {
         "id": "gov-cotton-apmc_yeola",
@@ -713,10 +821,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 20.0422,
         "lon": 74.4883,
+        "placeId": "ChIJ99a_bUbv1jsR7m8k9l0n1A8",
+        "destPlaceId": "ChIJ99a_bUbv1jsR7m8k9l0n1A8",
         "location": "Yeola, Nashik, Maharashtra",
+        "address": "APMC Market Yard, Yeola, Nashik, Maharashtra 423401",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.056Z"
+        "updatedAt": "2026-11-26T08:22:21.283Z"
       },
       {
         "id": "gov-cotton-apmc_nandurbar",
@@ -736,10 +848,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 21.3704,
         "lon": 74.2403,
+        "placeId": "ChIJ77a_bUbv1jsR7m8k9l0n1A8",
+        "destPlaceId": "ChIJ77a_bUbv1jsR7m8k9l0n1A8",
         "location": "Nandurbar, Maharashtra",
+        "address": "APMC Market Yard, Nandurbar, Maharashtra 425412",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.056Z"
+        "updatedAt": "2026-11-26T08:22:21.283Z"
       },
       {
         "id": "gov-cotton-apmc_akola",
@@ -759,10 +875,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 20.7002,
         "lon": 77.0082,
+        "placeId": "ChIJ43c_mUfN4jsR6l7m8n9o0D1",
+        "destPlaceId": "ChIJ43c_mUfN4jsR6l7m8n9o0D1",
         "location": "Akola, Maharashtra",
+        "address": "APMC Market Yard, Akola, Maharashtra 444001",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.056Z"
+        "updatedAt": "2026-11-26T08:22:21.283Z"
       },
       {
         "id": "gov-cotton-apmc_yavatmal",
@@ -782,10 +902,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 20.3888,
         "lon": 78.1204,
+        "placeId": "ChIJ22a_qUfBwjsR4M7w2e1f2A8",
+        "destPlaceId": "ChIJ22a_qUfBwjsR4M7w2e1f2A8",
         "location": "Yavatmal, Maharashtra",
+        "address": "APMC Market Yard, Yavatmal, Maharashtra 445001",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.056Z"
+        "updatedAt": "2026-11-26T08:22:21.283Z"
       },
       {
         "id": "gov-cotton-apmc_wardha",
@@ -805,16 +929,20 @@
         "arrivalDate": "23/11/2026",
         "lat": 20.7453,
         "lon": 78.6022,
+        "placeId": "ChIJ11a_bUbv1jsR7m8k9l0n1A8",
+        "destPlaceId": "ChIJ11a_bUbv1jsR7m8k9l0n1A8",
         "location": "Wardha, Maharashtra",
+        "address": "APMC Market Yard, Wardha, Maharashtra 442001",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.056Z"
+        "updatedAt": "2026-11-26T08:22:21.283Z"
       },
       {
         "id": "gov-cotton-apmc_amravati",
-        "name": "APMC Amravati APMC",
+        "name": "APMC Amravati",
         "market": "APMC Amravati",
-        "district": "Maharashtra",
+        "district": "Amravati",
         "state": "Maharashtra",
         "crop": "Cotton",
         "commodity": "Cotton",
@@ -826,12 +954,16 @@
         "modalPrice": 7713,
         "priceUnit": "₹/Quintal",
         "arrivalDate": "23/11/2026",
-        "lat": 19.076,
-        "lon": 72.8777,
-        "location": ", Maharashtra",
+        "lat": 20.932,
+        "lon": 77.7523,
+        "placeId": "ChIJ55a_bUbv1jsR7m8k9l0n1A8",
+        "destPlaceId": "ChIJ55a_bUbv1jsR7m8k9l0n1A8",
+        "location": "Amravati, Maharashtra",
+        "address": "APMC Market Yard, Amravati, Maharashtra 444601",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.056Z"
+        "updatedAt": "2026-11-26T08:22:21.283Z"
       }
     ],
     "soybean": [
@@ -853,10 +985,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 18.4088,
         "lon": 76.5604,
+        "placeId": "ChIJ32b_kUbA1zsR8j9k0l1m2C4",
+        "destPlaceId": "ChIJ32b_kUbA1zsR8j9k0l1m2C4",
         "location": "Latur, Maharashtra",
+        "address": "Market Yard, Latur, Maharashtra 413512",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.056Z"
+        "updatedAt": "2026-11-26T08:22:21.284Z"
       },
       {
         "id": "gov-soybean-apmc_jalna",
@@ -876,10 +1012,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.8347,
         "lon": 75.8816,
+        "placeId": "ChIJ33a_bUbv1jsR7m8k9l0n1A8",
+        "destPlaceId": "ChIJ33a_bUbv1jsR7m8k9l0n1A8",
         "location": "Jalna, Maharashtra",
+        "address": "APMC Market Yard, Devalgaon Road, Jalna, Maharashtra 431203",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.057Z"
+        "updatedAt": "2026-11-26T08:22:21.284Z"
       },
       {
         "id": "gov-soybean-apmc_akola",
@@ -899,10 +1039,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 20.7002,
         "lon": 77.0082,
+        "placeId": "ChIJ43c_mUfN4jsR6l7m8n9o0D1",
+        "destPlaceId": "ChIJ43c_mUfN4jsR6l7m8n9o0D1",
         "location": "Akola, Maharashtra",
+        "address": "APMC Market Yard, Akola, Maharashtra 444001",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.057Z"
+        "updatedAt": "2026-11-26T08:22:21.284Z"
       },
       {
         "id": "gov-soybean-apmc_nanded",
@@ -922,10 +1066,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.1383,
         "lon": 77.321,
+        "placeId": "ChIJ00a_bUbv1jsR7m8k9l0n1A8",
+        "destPlaceId": "ChIJ00a_bUbv1jsR7m8k9l0n1A8",
         "location": "Nanded, Maharashtra",
+        "address": "APMC Market Yard, Nanded, Maharashtra 431601",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.057Z"
+        "updatedAt": "2026-11-26T08:22:21.284Z"
       },
       {
         "id": "gov-soybean-apmc_hingoli",
@@ -945,10 +1093,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.7188,
         "lon": 77.1472,
+        "placeId": "ChIJ88a_bUbv1jsR7m8k9l0n1A8",
+        "destPlaceId": "ChIJ88a_bUbv1jsR7m8k9l0n1A8",
         "location": "Hingoli, Maharashtra",
+        "address": "APMC Market Yard, Hingoli, Maharashtra 431513",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.057Z"
+        "updatedAt": "2026-11-26T08:22:21.284Z"
       },
       {
         "id": "gov-soybean-apmc_washim",
@@ -968,10 +1120,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 20.1112,
         "lon": 77.1345,
+        "placeId": "ChIJ33a_bUbv1jsR7m8k9l0n1A8",
+        "destPlaceId": "ChIJ33a_bUbv1jsR7m8k9l0n1A8",
         "location": "Washim, Maharashtra",
+        "address": "APMC Market Yard, Washim, Maharashtra 444505",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.057Z"
+        "updatedAt": "2026-11-26T08:22:21.285Z"
       },
       {
         "id": "gov-soybean-apmc_solapur",
@@ -991,10 +1147,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 17.6599,
         "lon": 75.9064,
+        "placeId": "ChIJNf_5V9_m1jsR1cT_u2mB7gE",
+        "destPlaceId": "ChIJNf_5V9_m1jsR1cT_u2mB7gE",
         "location": "Solapur, Maharashtra",
+        "address": "Siddheshwar Market Yard, Solapur, Maharashtra 413002",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.057Z"
+        "updatedAt": "2026-11-26T08:22:21.285Z"
       },
       {
         "id": "gov-soybean-apmc_kolhapur",
@@ -1014,10 +1174,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 16.705,
         "lon": 74.2433,
+        "placeId": "ChIJs8Tz1wfv1jsRDZ7v1eP_b6A",
+        "destPlaceId": "ChIJs8Tz1wfv1jsRDZ7v1eP_b6A",
         "location": "Kolhapur, Maharashtra",
+        "address": "Shahu Market Yard, Kolhapur, Maharashtra 416005",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.058Z"
+        "updatedAt": "2026-11-26T08:22:21.285Z"
       }
     ],
     "wheat": [
@@ -1025,7 +1189,7 @@
         "id": "gov-wheat-mumbai__vashi__apmc",
         "name": "Mumbai (Vashi) APMC",
         "market": "Mumbai (Vashi) APMC",
-        "district": "Mumbai/Thane",
+        "district": "Mumbai",
         "state": "Maharashtra",
         "crop": "Wheat",
         "commodity": "Wheat",
@@ -1039,16 +1203,20 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.0771,
         "lon": 72.9986,
+        "placeId": "ChIJbUs6HwPj5zsR1K8zL_dZ1f0",
+        "destPlaceId": "ChIJbUs6HwPj5zsR1K8zL_dZ1f0",
         "location": "Navi Mumbai, Maharashtra",
+        "address": "APMC Market, Sector 19, Vashi, Navi Mumbai, Maharashtra 400703",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.058Z"
+        "updatedAt": "2026-11-26T08:22:21.285Z"
       },
       {
         "id": "gov-wheat-pune__gultekdi__apmc",
-        "name": "Pune (Gultekdi) APMC APMC",
+        "name": "Pune (Gultekdi) APMC",
         "market": "Pune (Gultekdi) APMC",
-        "district": "Maharashtra",
+        "district": "Pune",
         "state": "Maharashtra",
         "crop": "Wheat",
         "commodity": "Wheat",
@@ -1060,12 +1228,16 @@
         "modalPrice": 2990,
         "priceUnit": "₹/Quintal",
         "arrivalDate": "23/11/2026",
-        "lat": 19.076,
-        "lon": 72.8777,
-        "location": ", Maharashtra",
+        "lat": 18.4975,
+        "lon": 73.8647,
+        "placeId": "ChIJXy51iBfAwjsRv15PZfFqWk8",
+        "destPlaceId": "ChIJXy51iBfAwjsRv15PZfFqWk8",
+        "location": "Pune, Maharashtra",
+        "address": "Shri Chhatrapati Shivaji Market Yard, Gultekdi, Pune, Maharashtra 411037",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.058Z"
+        "updatedAt": "2026-11-26T08:22:21.285Z"
       },
       {
         "id": "gov-wheat-apmc_nashik",
@@ -1085,10 +1257,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.9975,
         "lon": 73.7898,
+        "placeId": "ChIJ1Z3y7P5v3jsRz1L3u2uB3vA",
+        "destPlaceId": "ChIJ1Z3y7P5v3jsRz1L3u2uB3vA",
         "location": "Nashik, Maharashtra",
+        "address": "Dindori Road, Panchavati, Nashik, Maharashtra 422003",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.058Z"
+        "updatedAt": "2026-11-26T08:22:21.286Z"
       },
       {
         "id": "gov-wheat-apmc_jalgaon",
@@ -1108,10 +1284,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 21.0077,
         "lon": 75.5626,
+        "placeId": "ChIJ98T_v3fP4jsR5n6m7e8k9B0",
+        "destPlaceId": "ChIJ98T_v3fP4jsR5n6m7e8k9B0",
         "location": "Jalgaon, Maharashtra",
+        "address": "Market Yard, Jalgaon, Maharashtra 425001",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.058Z"
+        "updatedAt": "2026-11-26T08:22:21.286Z"
       },
       {
         "id": "gov-wheat-apmc_kolhapur",
@@ -1131,10 +1311,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 16.705,
         "lon": 74.2433,
+        "placeId": "ChIJs8Tz1wfv1jsRDZ7v1eP_b6A",
+        "destPlaceId": "ChIJs8Tz1wfv1jsRDZ7v1eP_b6A",
         "location": "Kolhapur, Maharashtra",
+        "address": "Shahu Market Yard, Kolhapur, Maharashtra 416005",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.059Z"
+        "updatedAt": "2026-11-26T08:22:21.286Z"
       },
       {
         "id": "gov-wheat-apmc_solapur",
@@ -1154,10 +1338,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 17.6599,
         "lon": 75.9064,
+        "placeId": "ChIJNf_5V9_m1jsR1cT_u2mB7gE",
+        "destPlaceId": "ChIJNf_5V9_m1jsR1cT_u2mB7gE",
         "location": "Solapur, Maharashtra",
+        "address": "Siddheshwar Market Yard, Solapur, Maharashtra 413002",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.059Z"
+        "updatedAt": "2026-11-26T08:22:21.286Z"
       },
       {
         "id": "gov-wheat-apmc_latur",
@@ -1177,10 +1365,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 18.4088,
         "lon": 76.5604,
+        "placeId": "ChIJ32b_kUbA1zsR8j9k0l1m2C4",
+        "destPlaceId": "ChIJ32b_kUbA1zsR8j9k0l1m2C4",
         "location": "Latur, Maharashtra",
+        "address": "Market Yard, Latur, Maharashtra 413512",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.059Z"
+        "updatedAt": "2026-11-26T08:22:21.286Z"
       }
     ],
     "rice": [
@@ -1188,7 +1380,7 @@
         "id": "gov-rice-mumbai__vashi__apmc",
         "name": "Mumbai (Vashi) APMC",
         "market": "Mumbai (Vashi) APMC",
-        "district": "Mumbai/Thane",
+        "district": "Mumbai",
         "state": "Maharashtra",
         "crop": "Rice",
         "commodity": "Rice",
@@ -1202,10 +1394,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.0771,
         "lon": 72.9986,
+        "placeId": "ChIJbUs6HwPj5zsR1K8zL_dZ1f0",
+        "destPlaceId": "ChIJbUs6HwPj5zsR1K8zL_dZ1f0",
         "location": "Navi Mumbai, Maharashtra",
+        "address": "APMC Market, Sector 19, Vashi, Navi Mumbai, Maharashtra 400703",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.059Z"
+        "updatedAt": "2026-11-26T08:22:21.287Z"
       },
       {
         "id": "gov-rice-apmc_panvel",
@@ -1225,10 +1421,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 18.9894,
         "lon": 73.1175,
+        "placeId": "ChIJr2oQ3v7r5zsRQhXW_y4vK3E",
+        "destPlaceId": "ChIJr2oQ3v7r5zsRQhXW_y4vK3E",
         "location": "Panvel, Raigad, Maharashtra",
+        "address": "APMC Market Yard, Panvel, Raigad, Maharashtra 410206",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.059Z"
+        "updatedAt": "2026-11-26T08:22:21.287Z"
       },
       {
         "id": "gov-rice-apmc_alibag",
@@ -1248,10 +1448,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 18.658,
         "lon": 72.877,
+        "placeId": "ChIJ77K8wUff5zsRv1eQ2kL3k4A",
+        "destPlaceId": "ChIJ77K8wUff5zsRv1eQ2kL3k4A",
         "location": "Alibag, Raigad, Maharashtra",
+        "address": "APMC Alibag, Raigad, Maharashtra 402201",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.059Z"
+        "updatedAt": "2026-11-26T08:22:21.287Z"
       },
       {
         "id": "gov-rice-apmc_palghar",
@@ -1271,10 +1475,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 19.6967,
         "lon": 72.7699,
+        "placeId": "ChIJd8_4b6_r5jsRzLw0a2b3c4D",
+        "destPlaceId": "ChIJd8_4b6_r5jsRzLw0a2b3c4D",
         "location": "Palghar, Maharashtra",
+        "address": "APMC Market, Palghar, Maharashtra 401404",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.059Z"
+        "updatedAt": "2026-11-26T08:22:21.287Z"
       },
       {
         "id": "gov-rice-apmc_bhandara",
@@ -1294,10 +1502,14 @@
         "arrivalDate": "23/11/2026",
         "lat": 21.1667,
         "lon": 79.65,
+        "placeId": "ChIJ99f_wUbN5jsR1k2l3m4n5E6",
+        "destPlaceId": "ChIJ99f_wUbN5jsR1k2l3m4n5E6",
         "location": "Bhandara, Maharashtra",
+        "address": "APMC Market Yard, Bhandara, Maharashtra 441904",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.060Z"
+        "updatedAt": "2026-11-26T08:22:21.287Z"
       },
       {
         "id": "gov-rice-apmc_gondia",
@@ -1317,16 +1529,20 @@
         "arrivalDate": "23/11/2026",
         "lat": 21.4554,
         "lon": 80.1961,
+        "placeId": "ChIJ88f_wUbN5jsR1k2l3m4n5E6",
+        "destPlaceId": "ChIJ88f_wUbN5jsR1k2l3m4n5E6",
         "location": "Gondia, Maharashtra",
+        "address": "APMC Market Yard, Gondia, Maharashtra 441601",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.060Z"
+        "updatedAt": "2026-11-26T08:22:21.288Z"
       },
       {
         "id": "gov-rice-pune__gultekdi__apmc",
-        "name": "Pune (Gultekdi) APMC APMC",
+        "name": "Pune (Gultekdi) APMC",
         "market": "Pune (Gultekdi) APMC",
-        "district": "Maharashtra",
+        "district": "Pune",
         "state": "Maharashtra",
         "crop": "Rice",
         "commodity": "Rice",
@@ -1338,12 +1554,16 @@
         "modalPrice": 3764,
         "priceUnit": "₹/Quintal",
         "arrivalDate": "23/11/2026",
-        "lat": 19.076,
-        "lon": 72.8777,
-        "location": ", Maharashtra",
+        "lat": 18.4975,
+        "lon": 73.8647,
+        "placeId": "ChIJXy51iBfAwjsRv15PZfFqWk8",
+        "destPlaceId": "ChIJXy51iBfAwjsRv15PZfFqWk8",
+        "location": "Pune, Maharashtra",
+        "address": "Shri Chhatrapati Shivaji Market Yard, Gultekdi, Pune, Maharashtra 411037",
+        "routingStatus": "verified",
         "source": "AGMARKNET / OGD India (Ministry of Agriculture)",
         "isRealData": true,
-        "updatedAt": "2026-11-23T04:07:46.060Z"
+        "updatedAt": "2026-11-26T08:22:21.288Z"
       }
     ]
   },

@@ -1,7 +1,5 @@
-
 .env
-
-
-scratch/
-.vercel
 .env*
+.vercel
+.vscode/
+scratch/
